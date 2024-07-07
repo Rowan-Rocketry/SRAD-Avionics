@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "MAX_M10M_00B")(type "KiCad")(uri "${KIPRJMOD}/lib/MAX_M10M_00B/MAX_M10M_00B.kicad_sym")(options "")(descr ""))
+  (lib (name "LT3960EMSE_TRPBF")(type "KiCad")(uri "${KIPRJMOD}/lib/LT3960EMSE_TRPBF/LT3960EMSE_TRPBF.kicad_sym")(options "")(descr ""))
+)
