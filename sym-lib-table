@@ -2,4 +2,6 @@
   (version 7)
   (lib (name "MAX_M10M_00B")(type "KiCad")(uri "${KIPRJMOD}/lib/MAX_M10M_00B/MAX_M10M_00B.kicad_sym")(options "")(descr ""))
   (lib (name "LT3960EMSE_TRPBF")(type "KiCad")(uri "${KIPRJMOD}/lib/LT3960EMSE_TRPBF/LT3960EMSE_TRPBF.kicad_sym")(options "")(descr ""))
+  (lib (name "APAE1575R1840AADB7-T")(type "KiCad")(uri "${KIPRJMOD}/lib/APAE1575R1840AADB7-T/APAE1575R1840AADB7-T.kicad_sym")(options "")(descr ""))
+  (lib (name "BH-18650-PC")(type "KiCad")(uri "${KIPRJMOD}/lib/BAT_BH_18650_PC/BH-18650-PC.kicad_sym")(options "")(descr ""))
 )
