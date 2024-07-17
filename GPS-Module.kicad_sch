@@ -5,7 +5,7 @@
 	(uuid "acc63f22-7eb8-450a-9af4-da5f4b8157d9")
 	(paper "A4")
 	(lib_symbols
-		(symbol "APAE1575R1840AADB7-T:APAE1575R1840AADB7-T"
+		(symbol "APAE1590R2540AKDB1-T:APAE1590R2540AKDB1-T"
 			(pin_names
 				(offset 1.016)
 			)
@@ -21,7 +21,7 @@
 					(justify left bottom)
 				)
 			)
-			(property "Value" "APAE1575R1840AADB7-T"
+			(property "Value" "APAE1590R2540AKDB1-T"
 				(at 2.6732 3.813 0)
 				(effects
 					(font
@@ -30,7 +30,7 @@
 					(justify left bottom)
 				)
 			)
-			(property "Footprint" "APAE1575R1840AADB7-T:XDCR_APAE1575R1840AADB7-T"
+			(property "Footprint" "APAE1590R2540AKDB1-T:XDCR_APAE1590R2540AKDB1-T"
 				(at 0 0 0)
 				(effects
 					(font
@@ -68,27 +68,7 @@
 					(hide yes)
 				)
 			)
-			(property "MANUFACTURER" "Abracon"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "SNAPEDA_PN" "APAE1575R1820ABDC1-T"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "MAXIMUM_PACKAGE_HEIGHT" "2.7mm"
+			(property "SNAPEDA_PN" "APAE1590R2540AKDB1-T"
 				(at 0 0 0)
 				(effects
 					(font
@@ -108,7 +88,27 @@
 					(hide yes)
 				)
 			)
-			(symbol "APAE1575R1840AADB7-T_0_0"
+			(property "MAXIMUM_PACKAGE_HEIGHT" "4.7mm"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MANUFACTURER" "Abracon"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(symbol "APAE1590R2540AKDB1-T_0_0"
 				(polyline
 					(pts
 						(xy 0 2.54) (xy -2.667 8.001)
@@ -171,6 +171,264 @@
 						(effects
 							(font
 								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Filter:B39162B8813P810"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "FL"
+				(at 2.54 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "B39162B8813P810"
+				(at 0 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Filter:Filter_1109-5_1.1x0.9mm"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://product.tdk.com/search-template/en/documents/data_sheet/40/ds/mc/B9482.pdf"
+				(at -1.778 0.762 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "1582.47MHz SAW filter, SMD 1109"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "SAW filter"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Filter*1109*1.1x0.9mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "B39162B8813P810_0_1"
+				(rectangle
+					(start -5.08 5.08)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(arc
+					(start -0.762 1.524)
+					(mid -0.1988 2.0511)
+					(end 0 2.794)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -0.762) (xy -1.27 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 -1.27) (xy -1.524 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 -0.762) (xy -1.27 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -1.27) (xy -2.032 -1.27) (xy -2.032 0) (xy 2.286 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 -0.762) (xy 2.032 -0.762) (xy 2.032 -2.032) (xy -2.286 -2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 2.794)
+					(mid 0.2065 2.0558)
+					(end 0.762 1.524)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "B39162B8813P810_1_1"
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54) hide
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
 							)
 						)
 					)
@@ -836,16 +1094,6 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 22.86) (xy 29.21 22.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3492f084-6fc5-4964-b5a8-50708e86af2d")
-	)
-	(wire
-		(pts
 			(xy 125.73 86.36) (xy 129.54 86.36)
 		)
 		(stroke
@@ -886,16 +1134,6 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 96.52) (xy 176.53 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "da907d4a-b706-41af-ae5b-f75f5edd3ab0")
-	)
-	(wire
-		(pts
 			(xy 125.73 88.9) (xy 129.54 88.9)
 		)
 		(stroke
@@ -903,16 +1141,6 @@
 			(type default)
 		)
 		(uuid "e6974706-17d0-4753-9afd-e49d5ded2b49")
-	)
-	(wire
-		(pts
-			(xy 39.37 19.05) (xy 29.21 19.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e95fa591-c1c7-49b9-8f88-3ecce994c26d")
 	)
 	(wire
 		(pts
@@ -936,30 +1164,6 @@
 		)
 		(uuid "353835a1-dffe-49b0-8ac9-066e835e1ba8")
 	)
-	(hierarchical_label "GNDD"
-		(shape input)
-		(at 29.21 22.86 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "6a422805-6f0c-4e29-ac2e-c5589d6d5677")
-	)
-	(hierarchical_label "+3.3V"
-		(shape input)
-		(at 29.21 19.05 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "e0e0501f-c8a9-4dfa-93cb-8084d3ca7be6")
-	)
 	(hierarchical_label "GPS_RX"
 		(shape input)
 		(at 125.73 86.36 180)
@@ -973,17 +1177,33 @@
 		(uuid "e5f0e2db-90a0-4698-bad1-47dfa73fed86")
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 39.37 19.05 270)
+		(lib_id "Filter:B39162B8813P810")
+		(at 173.99 92.71 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "1af3ec52-7de1-4f59-a04a-87510854d7a6")
-		(property "Reference" "#PWR03"
-			(at 35.56 19.05 0)
+		(uuid "4a03c5b0-6192-4a59-9eff-e5af7ef55d7c")
+		(property "Reference" "FL1"
+			(at 173.99 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "B39162B8813P810"
+			(at 173.99 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Filter:Filter_1109-5_1.1x0.9mm"
+			(at 173.99 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -991,17 +1211,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
-			(at 43.18 19.0499 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 39.37 19.05 0)
+		(property "Datasheet" "https://product.tdk.com/search-template/en/documents/data_sheet/40/ds/mc/B9482.pdf"
+			(at 172.212 91.948 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1009,8 +1220,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 39.37 19.05 0)
+		(property "Description" "1582.47MHz SAW filter, SMD 1109"
+			(at 173.99 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1018,140 +1229,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 39.37 19.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
+		(pin "5"
+			(uuid "318eedbe-c712-4357-aa46-b1d8ebf24a90")
+		)
+		(pin "3"
+			(uuid "04a2e823-d4ca-4131-be88-da66bc28d0a3")
+		)
+		(pin "4"
+			(uuid "d3efbb12-65e3-43bc-a064-6c494d9dd71f")
 		)
 		(pin "1"
-			(uuid "01497ebb-a259-4edf-9deb-46bdd5ed09af")
+			(uuid "24c21cf6-6bd9-4c45-8e13-1a842ad40488")
+		)
+		(pin "2"
+			(uuid "e35da635-1f4f-4427-8056-7532647146e3")
 		)
 		(instances
 			(project ""
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c22c9a69-42ec-4021-b411-433679e5e1b2"
-					(reference "#PWR03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "APAE1575R1840AADB7-T:APAE1575R1840AADB7-T")
-		(at 176.53 91.44 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "397cf950-73e0-405a-9ec2-098b4c45088d")
-		(property "Reference" "E1"
-			(at 180.34 88.7094 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "APAE1575R1840AADB7-T"
-			(at 180.34 91.2494 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "RF_Antenna:Abracon_APAES868R8060C16-T"
-			(at 176.53 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 176.53 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 176.53 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "PARTREV" "-"
-			(at 176.53 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "MANUFACTURER" "Abracon"
-			(at 176.53 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "SNAPEDA_PN" "APAE1575R1820ABDC1-T"
-			(at 176.53 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "MAXIMUM_PACKAGE_HEIGHT" "2.7mm"
-			(at 176.53 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "STANDARD" "IPC-7351B"
-			(at 176.53 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ca29d6d9-36ed-4bb1-b477-719bf9e7a50d")
-		)
-		(instances
-			(project ""
-				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c22c9a69-42ec-4021-b411-433679e5e1b2"
-					(reference "E1")
+					(reference "FL1")
 					(unit 1)
 				)
 			)
@@ -1407,44 +1503,45 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GNDD")
-		(at 39.37 22.86 90)
+		(lib_id "APAE1590R2540AKDB1-T:APAE1590R2540AKDB1-T")
+		(at 193.04 91.44 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "e9682302-c41e-44d1-903b-a805283a7aaa")
-		(property "Reference" "#PWR04"
-			(at 45.72 22.86 0)
+		(uuid "df458bb6-62f4-491c-899b-a5028ea65c10")
+		(property "Reference" "E1"
+			(at 196.85 88.7094 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+				(justify left)
 			)
 		)
-		(property "Value" "GNDD"
-			(at 43.18 22.8599 90)
+		(property "Value" "APAE1590R2540AKDB1-T"
+			(at 196.85 91.2494 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 39.37 22.86 0)
+		(property "Footprint" "APAE1590R2540AKDB1_T:XDCR_APAE1590R2540AKDB1-T"
+			(at 193.04 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify bottom)
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 39.37 22.86 0)
+			(at 193.04 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1452,22 +1549,72 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
-			(at 39.37 22.86 0)
+		(property "Description" ""
+			(at 193.04 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "-"
+			(at 193.04 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SNAPEDA_PN" "APAE1590R2540AKDB1-T"
+			(at 193.04 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "IPC-7351B"
+			(at 193.04 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "4.7mm"
+			(at 193.04 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "Abracon"
+			(at 193.04 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
 				(hide yes)
 			)
 		)
 		(pin "1"
-			(uuid "5ef352ee-b1ee-44a8-a443-f7b1f7578759")
+			(uuid "53723719-d2c0-4c36-bb32-b3dfcb70f9d3")
 		)
 		(instances
 			(project ""
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c22c9a69-42ec-4021-b411-433679e5e1b2"
-					(reference "#PWR04")
+					(reference "E1")
 					(unit 1)
 				)
 			)

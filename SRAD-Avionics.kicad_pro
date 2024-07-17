@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 0.6,
+          "height": 1.8,
+          "width": 1.0
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -603,6 +603,10 @@
     [
       "b23d16a1-3c5b-4321-8b30-5d6992e2f62d",
       "USB C Interface"
+    ],
+    [
+      "60cb3ed2-d119-4f53-8d04-570ad94c5f39",
+      "CAN Interface"
     ]
   ],
   "text_variables": {}
