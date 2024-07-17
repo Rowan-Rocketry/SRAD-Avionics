@@ -3455,6 +3455,16 @@
 	)
 	(wire
 		(pts
+			(xy 130.81 124.46) (xy 115.57 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "958d33c8-3f6f-4af2-aaed-0c7ee3654c33")
+	)
+	(wire
+		(pts
 			(xy 250.19 76.2) (xy 236.22 76.2)
 		)
 		(stroke
@@ -3522,6 +3532,26 @@
 			(type default)
 		)
 		(uuid "c4aa4d7a-877b-48e0-b5cd-027648567f48")
+	)
+	(wire
+		(pts
+			(xy 49.53 173.99) (xy 49.53 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9699c53-7198-48e1-82ab-3ab0ced32481")
+	)
+	(wire
+		(pts
+			(xy 130.81 121.92) (xy 115.57 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d73f323d-5871-4496-a655-597f085a26fd")
 	)
 	(wire
 		(pts
@@ -3605,6 +3635,17 @@
 		)
 		(uuid "17d2b0e1-e421-42a6-9c57-a1d2a727e454")
 	)
+	(label "FDCAN_RX"
+		(at 130.81 124.46 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "50762096-ca3b-49e8-a7ef-022cba2a6294")
+	)
 	(label "USB_D_P"
 		(at 250.19 76.2 180)
 		(fields_autoplaced yes)
@@ -3659,6 +3700,17 @@
 			(justify right bottom)
 		)
 		(uuid "82b2dcf0-22d4-4c7d-84f8-36c6bfedc737")
+	)
+	(label "FDCAN_TX"
+		(at 130.81 121.92 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "aa59764e-4344-447b-b686-bcc18408bef1")
 	)
 	(label "GPS_TX"
 		(at 67.31 52.07 180)
@@ -5652,7 +5704,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDD")
-		(at 49.53 172.72 0)
+		(at 49.53 173.99 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5661,7 +5713,7 @@
 		(fields_autoplaced yes)
 		(uuid "e3482587-1a1e-492d-82b2-9315ed67c3e3")
 		(property "Reference" "#PWR026"
-			(at 49.53 179.07 0)
+			(at 49.53 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5670,7 +5722,7 @@
 			)
 		)
 		(property "Value" "GNDD"
-			(at 49.53 176.53 0)
+			(at 49.53 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5678,7 +5730,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 49.53 172.72 0)
+			(at 49.53 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5687,7 +5739,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 49.53 172.72 0)
+			(at 49.53 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5696,7 +5748,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
-			(at 49.53 172.72 0)
+			(at 49.53 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5811,6 +5863,26 @@
 				)
 				(justify left top)
 			)
+		)
+		(pin "FDCAN_RX" input
+			(at 115.57 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "732c79a4-15e1-4334-a579-7038b2c31d82")
+		)
+		(pin "FDCAN_TX" input
+			(at 115.57 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "06dbfbd2-9d2c-4d85-ae44-c36fa22356c1")
 		)
 		(instances
 			(project "SRAD-Avionics"
