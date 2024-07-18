@@ -5,4 +5,5 @@
   (lib (name "BH-18650-PC")(type "KiCad")(uri "${KIPRJMOD}/lib/BAT_BH_18650_PC/BH-18650-PC.kicad_sym")(options "")(descr ""))
   (lib (name "2024-07-15_00-58-56")(type "KiCad")(uri "${KIPRJMOD}/lib/ESDA7P60_1U1M/2024-07-15_00-58-56.kicad_sym")(options "")(descr ""))
   (lib (name "APAE1590R2540AKDB1-T")(type "KiCad")(uri "${KIPRJMOD}/lib/APAE1590R2540AKDB1_T/APAE1590R2540AKDB1-T.kicad_sym")(options "")(descr ""))
+  (lib (name "2024-07-18_00-52-40")(type "KiCad")(uri "${KIPRJMOD}/lib/ADXL375BCCZ/2024-07-18_00-52-40.kicad_sym")(options "")(descr ""))
 )

@@ -3002,7 +3002,7 @@
 		(uuid "1279e97b-69c0-4e83-824f-e173ef816260")
 	)
 	(junction
-		(at 36.83 92.71)
+		(at 31.75 121.92)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "138087ec-a031-4bc7-bcaa-b8e65d2f0a3f")
@@ -3080,7 +3080,7 @@
 		(uuid "bfa8ed1e-913a-4484-b202-893a2c0054d3")
 	)
 	(junction
-		(at 49.53 163.83)
+		(at 156.21 166.37)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cd212fd5-956a-47d9-a0e5-3ddc187789d8")
@@ -3195,7 +3195,7 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 163.83) (xy 58.42 163.83)
+			(xy 156.21 166.37) (xy 165.1 166.37)
 		)
 		(stroke
 			(width 0)
@@ -3235,7 +3235,7 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 92.71) (xy 36.83 92.71)
+			(xy 22.86 121.92) (xy 31.75 121.92)
 		)
 		(stroke
 			(width 0)
@@ -3265,7 +3265,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 124.46) (xy 57.15 124.46)
+			(xy 66.04 153.67) (xy 52.07 153.67)
 		)
 		(stroke
 			(width 0)
@@ -3292,16 +3292,6 @@
 			(type default)
 		)
 		(uuid "4a2721fc-4361-4b8e-913f-d871b10ee3fd")
-	)
-	(wire
-		(pts
-			(xy 67.31 54.61) (xy 53.34 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "50e3cd41-d0cf-4114-acad-2779f0fb4a1e")
 	)
 	(wire
 		(pts
@@ -3345,7 +3335,7 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 163.83) (xy 49.53 165.1)
+			(xy 156.21 166.37) (xy 156.21 167.64)
 		)
 		(stroke
 			(width 0)
@@ -3355,7 +3345,7 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 162.56) (xy 49.53 163.83)
+			(xy 156.21 165.1) (xy 156.21 166.37)
 		)
 		(stroke
 			(width 0)
@@ -3455,7 +3445,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 124.46) (xy 115.57 124.46)
+			(xy 66.04 180.34) (xy 50.8 180.34)
 		)
 		(stroke
 			(width 0)
@@ -3485,7 +3475,7 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 121.92) (xy 36.83 121.92)
+			(xy 22.86 151.13) (xy 31.75 151.13)
 		)
 		(stroke
 			(width 0)
@@ -3495,7 +3485,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 92.71) (xy 38.1 92.71)
+			(xy 31.75 121.92) (xy 33.02 121.92)
 		)
 		(stroke
 			(width 0)
@@ -3525,7 +3515,7 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 121.92) (xy 27.94 92.71)
+			(xy 22.86 151.13) (xy 22.86 121.92)
 		)
 		(stroke
 			(width 0)
@@ -3535,7 +3525,7 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 173.99) (xy 49.53 172.72)
+			(xy 156.21 176.53) (xy 156.21 175.26)
 		)
 		(stroke
 			(width 0)
@@ -3545,7 +3535,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 121.92) (xy 115.57 121.92)
+			(xy 66.04 177.8) (xy 50.8 177.8)
 		)
 		(stroke
 			(width 0)
@@ -3565,7 +3555,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 127) (xy 57.15 127)
+			(xy 66.04 156.21) (xy 52.07 156.21)
 		)
 		(stroke
 			(width 0)
@@ -3603,16 +3593,6 @@
 		)
 		(uuid "f8d384c7-e121-4680-a78d-e67012701d52")
 	)
-	(wire
-		(pts
-			(xy 67.31 52.07) (xy 53.34 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fd8137a2-50e9-424f-903a-303069482a1e")
-	)
 	(label "USB_D_N"
 		(at 250.19 73.66 180)
 		(fields_autoplaced yes)
@@ -3624,19 +3604,8 @@
 		)
 		(uuid "13ec2899-d034-4623-878c-aa20577d4d7a")
 	)
-	(label "GPS_RX"
-		(at 67.31 54.61 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "17d2b0e1-e421-42a6-9c57-a1d2a727e454")
-	)
 	(label "FDCAN_RX"
-		(at 130.81 124.46 180)
+		(at 66.04 180.34 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3669,7 +3638,7 @@
 		(uuid "5ac72386-7e27-46a4-9ca8-ba526ab81087")
 	)
 	(label "USB_D_P"
-		(at 71.12 124.46 180)
+		(at 66.04 153.67 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3691,7 +3660,7 @@
 		(uuid "75fd9c45-b45c-4f75-98be-deae23f0f3f0")
 	)
 	(label "BOOT0"
-		(at 58.42 163.83 180)
+		(at 165.1 166.37 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3702,7 +3671,7 @@
 		(uuid "82b2dcf0-22d4-4c7d-84f8-36c6bfedc737")
 	)
 	(label "FDCAN_TX"
-		(at 130.81 121.92 180)
+		(at 66.04 177.8 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3711,17 +3680,6 @@
 			(justify right bottom)
 		)
 		(uuid "aa59764e-4344-447b-b686-bcc18408bef1")
-	)
-	(label "GPS_TX"
-		(at 67.31 52.07 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b2fc56e5-0ba0-4ccb-ab29-9e3de4fd5d38")
 	)
 	(label "FDCAN_TX"
 		(at 251.46 106.68 180)
@@ -3735,7 +3693,7 @@
 		(uuid "d3cec33c-4a44-4e35-a741-70c9243dd2d9")
 	)
 	(label "USB_D_N"
-		(at 71.12 127 180)
+		(at 66.04 156.21 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3871,73 +3829,6 @@
 			(project "SRAD-Avionics"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4"
 					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 105.41 36.83 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "04cc2671-7540-4128-9d31-53b77bf894e1")
-		(property "Reference" "TP2"
-			(at 107.95 32.2579 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 107.95 34.7979 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 110.49 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 110.49 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 105.41 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a068dcab-11ab-4b72-89f6-1aa1ed8b60ab")
-		)
-		(instances
-			(project "SRAD-Avionics"
-				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4"
-					(reference "TP2")
 					(unit 1)
 				)
 			)
@@ -4173,7 +4064,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Loop_D2.60mm_Drill1.6mm_Beaded"
 			(at 97.79 36.83 0)
 			(effects
 				(font
@@ -4273,6 +4164,73 @@
 			(project ""
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4"
 					(reference "#PWR025")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 105.41 36.83 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "20c0a182-c90f-400e-99ed-a6bce6412b2e")
+		(property "Reference" "TP2"
+			(at 107.95 32.2579 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 107.95 34.7979 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Loop_D2.60mm_Drill1.6mm_Beaded"
+			(at 110.49 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 110.49 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 105.41 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0a145af1-b9fd-4bc2-9a5b-5b0ea2e892d9")
+		)
+		(instances
+			(project "SRAD-Avionics"
+				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4"
+					(reference "TP2")
 					(unit 1)
 				)
 			)
@@ -5177,7 +5135,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 243.5352 39.37 0)
 			(effects
 				(font
@@ -5214,6 +5172,73 @@
 			(project "SRAD-Avionics"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4"
 					(reference "C14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 118.11 36.83 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9601e58d-99fa-49c3-a7d1-038412ac2877")
+		(property "Reference" "TP3"
+			(at 120.65 32.2579 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 120.65 34.7979 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Loop_D2.60mm_Drill1.6mm_Beaded"
+			(at 123.19 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 123.19 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 118.11 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7dc40d14-c16b-4b0d-95ab-ff33e9a21ff4")
+		)
+		(instances
+			(project "SRAD-Avionics"
+				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4"
+					(reference "TP3")
 					(unit 1)
 				)
 			)
@@ -5287,7 +5312,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_DIP_x01")
-		(at 49.53 154.94 90)
+		(at 156.21 157.48 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5296,7 +5321,7 @@
 		(fields_autoplaced yes)
 		(uuid "aba2acfb-da24-4399-8c2b-8a93d030802b")
 		(property "Reference" "SW1"
-			(at 53.34 153.6699 90)
+			(at 160.02 156.2099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5305,7 +5330,7 @@
 			)
 		)
 		(property "Value" "SW_DIP_x01"
-			(at 53.34 156.2099 90)
+			(at 160.02 158.7499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5313,8 +5338,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 49.53 154.94 0)
+		(property "Footprint" "Button_Switch_SMD:SW_DIP_SPSTx01_Slide_Copal_CHS-01B_W7.62mm_P1.27mm"
+			(at 156.21 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5323,7 +5348,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 49.53 154.94 0)
+			(at 156.21 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5332,7 +5357,7 @@
 			)
 		)
 		(property "Description" "1x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol"
-			(at 49.53 154.94 0)
+			(at 156.21 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5426,75 +5451,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 118.11 36.83 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "bdcaf4b3-7cc0-426e-b1fb-0929deddf7f9")
-		(property "Reference" "TP3"
-			(at 120.65 32.2579 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 120.65 34.7979 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 123.19 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 123.19 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 118.11 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4a35d489-07f7-4523-8f4f-86b02cee4bf6")
-		)
-		(instances
-			(project "SRAD-Avionics"
-				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4"
-					(reference "TP3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_US")
-		(at 49.53 168.91 0)
+		(at 156.21 171.45 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5503,7 +5461,7 @@
 		(fields_autoplaced yes)
 		(uuid "c66eceae-7e86-4602-8531-714cc38fcbc9")
 		(property "Reference" "R6"
-			(at 52.07 167.6399 0)
+			(at 158.75 170.1799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5512,7 +5470,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 52.07 170.1799 0)
+			(at 158.75 172.7199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5521,7 +5479,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 50.546 169.164 90)
+			(at 157.226 171.704 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5530,7 +5488,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 49.53 168.91 0)
+			(at 156.21 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5539,7 +5497,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 49.53 168.91 0)
+			(at 156.21 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5704,7 +5662,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDD")
-		(at 49.53 173.99 0)
+		(at 156.21 176.53 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5713,7 +5671,7 @@
 		(fields_autoplaced yes)
 		(uuid "e3482587-1a1e-492d-82b2-9315ed67c3e3")
 		(property "Reference" "#PWR026"
-			(at 49.53 180.34 0)
+			(at 156.21 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5722,7 +5680,7 @@
 			)
 		)
 		(property "Value" "GNDD"
-			(at 49.53 177.8 0)
+			(at 156.21 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5730,7 +5688,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 49.53 173.99 0)
+			(at 156.21 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5739,7 +5697,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 49.53 173.99 0)
+			(at 156.21 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5748,7 +5706,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
-			(at 49.53 173.99 0)
+			(at 156.21 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5770,7 +5728,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 49.53 147.32 0)
+		(at 156.21 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5779,7 +5737,7 @@
 		(fields_autoplaced yes)
 		(uuid "ec553d1d-a9e6-44c2-97b9-35c00aa8abe1")
 		(property "Reference" "#PWR027"
-			(at 49.53 151.13 0)
+			(at 156.21 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5788,7 +5746,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 49.53 142.24 0)
+			(at 156.21 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5796,7 +5754,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 49.53 147.32 0)
+			(at 156.21 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5805,7 +5763,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 49.53 147.32 0)
+			(at 156.21 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5814,7 +5772,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 49.53 147.32 0)
+			(at 156.21 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5835,7 +5793,145 @@
 		)
 	)
 	(sheet
-		(at 96.52 116.84)
+		(at 31.75 73.66)
+		(size 21.59 31.75)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3e9e0b47-da2c-4332-b911-05c7ab3ede69")
+		(property "Sheetname" "Sensors"
+			(at 31.75 72.9484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sensors.kicad_sch"
+			(at 31.75 105.9946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "accel_miso" output
+			(at 53.34 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "902c2945-29bc-41ef-90f2-8ba73d1a4dbb")
+		)
+		(pin "accel_sclk" bidirectional
+			(at 53.34 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "139d9023-1189-44f4-859e-b158de897ea0")
+		)
+		(pin "accel_mosi" input
+			(at 53.34 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "c34c85ad-9b2b-4bd1-8c16-2ac467aeb612")
+		)
+		(pin "accel_cs" input
+			(at 53.34 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "9dd193fa-bf2b-4b89-bba3-a1603f37879f")
+		)
+		(pin "accel_int2" output
+			(at 53.34 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "a930c57d-a161-453f-ab7d-95b679bb6f3b")
+		)
+		(pin "accel_int1" output
+			(at 53.34 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "e5946a13-d2aa-4cf6-b401-1f7446b905ed")
+		)
+		(pin "pres_miso" output
+			(at 53.34 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "16c652d1-6251-45fd-a47b-56141ba884ce")
+		)
+		(pin "pres_cs" input
+			(at 53.34 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "60af7c0d-5a3d-4772-ac1f-d6e9c23c7806")
+		)
+		(pin "pres_sclk" bidirectional
+			(at 53.34 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "ffa449ce-fc38-4b02-a9eb-9f3d620d8695")
+		)
+		(pin "pres_mosi" input
+			(at 53.34 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "08f2cc38-83ef-4f7f-86f5-6aecab2639f7")
+		)
+		(instances
+			(project "SRAD-Avionics"
+				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 31.75 172.72)
 		(size 19.05 12.7)
 		(fields_autoplaced yes)
 		(stroke
@@ -5847,7 +5943,7 @@
 		)
 		(uuid "60cb3ed2-d119-4f53-8d04-570ad94c5f39")
 		(property "Sheetname" "CAN Interface"
-			(at 96.52 116.1284 0)
+			(at 31.75 172.0084 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5856,7 +5952,7 @@
 			)
 		)
 		(property "Sheetfile" "CAN-Interface.kicad_sch"
-			(at 96.52 130.1246 0)
+			(at 31.75 186.0046 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5865,7 +5961,7 @@
 			)
 		)
 		(pin "FDCAN_RX" input
-			(at 115.57 124.46 0)
+			(at 50.8 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5875,7 +5971,7 @@
 			(uuid "732c79a4-15e1-4334-a579-7038b2c31d82")
 		)
 		(pin "FDCAN_TX" input
-			(at 115.57 121.92 0)
+			(at 50.8 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5893,7 +5989,7 @@
 		)
 	)
 	(sheet
-		(at 36.83 118.11)
+		(at 31.75 147.32)
 		(size 20.32 17.78)
 		(fields_autoplaced yes)
 		(stroke
@@ -5905,7 +6001,7 @@
 		)
 		(uuid "b23d16a1-3c5b-4321-8b30-5d6992e2f62d")
 		(property "Sheetname" "USB C Interface"
-			(at 36.83 117.3984 0)
+			(at 31.75 146.6084 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5914,7 +6010,7 @@
 			)
 		)
 		(property "Sheetfile" "USB-C-Interface.kicad_sch"
-			(at 36.83 136.4746 0)
+			(at 31.75 165.6846 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5923,7 +6019,7 @@
 			)
 		)
 		(pin "V_USB" input
-			(at 36.83 121.92 180)
+			(at 31.75 151.13 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5933,7 +6029,7 @@
 			(uuid "e157d4cd-549a-40d8-9d05-425b2900f900")
 		)
 		(pin "USB_D_P" input
-			(at 57.15 124.46 0)
+			(at 52.07 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5943,7 +6039,7 @@
 			(uuid "575398ec-5f91-4cda-ac1f-228b7b3eae15")
 		)
 		(pin "USB_D_N" input
-			(at 57.15 127 0)
+			(at 52.07 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5961,7 +6057,7 @@
 		)
 	)
 	(sheet
-		(at 36.83 87.63)
+		(at 31.75 116.84)
 		(size 20.32 20.32)
 		(fields_autoplaced yes)
 		(stroke
@@ -5973,7 +6069,7 @@
 		)
 		(uuid "b5b03a48-538a-4431-9fe0-db318c963946")
 		(property "Sheetname" "Battery Management"
-			(at 36.83 86.9184 0)
+			(at 31.75 116.1284 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5982,7 +6078,7 @@
 			)
 		)
 		(property "Sheetfile" "Battery-Management.kicad_sch"
-			(at 36.83 108.5346 0)
+			(at 31.75 137.7446 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5991,7 +6087,7 @@
 			)
 		)
 		(pin "V_USB" input
-			(at 36.83 92.71 180)
+			(at 31.75 121.92 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6004,64 +6100,6 @@
 			(project "SRAD-Avionics"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4"
 					(page "3")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 31.75 44.45)
-		(size 21.59 16.51)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "c22c9a69-42ec-4021-b411-433679e5e1b2")
-		(property "Sheetname" "GPS Module"
-			(at 31.75 43.7384 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "GPS-Module.kicad_sch"
-			(at 31.75 61.5446 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "GPS_TX" input
-			(at 53.34 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "fcc5d2f4-8111-47bd-bf1b-e52aaaf2fd02")
-		)
-		(pin "GPS_RX" input
-			(at 53.34 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "4e0506af-6d4d-46cb-b339-1b45cf80c507")
-		)
-		(instances
-			(project "SRAD-Avionics"
-				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4"
-					(page "2")
 				)
 			)
 		)
