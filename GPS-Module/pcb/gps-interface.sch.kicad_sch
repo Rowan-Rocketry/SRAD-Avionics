@@ -2,7 +2,7 @@
 	(version 20231120)
 	(generator "eeschema")
 	(generator_version "8.0")
-	(uuid "acc63f22-7eb8-450a-9af4-da5f4b8157d9")
+	(uuid "43b9a8c3-806f-44d6-9afb-464eea3a27a1")
 	(paper "A4")
 	(lib_symbols
 		(symbol "APAE1590R2540AKDB1-T:APAE1590R2540AKDB1-T"
@@ -1069,104 +1069,92 @@
 		)
 	)
 	(junction
-		(at 139.7 78.74)
+		(at 127 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "12ac8a8b-54a9-4683-9588-9226c97ef868")
+		(uuid "8e63c5cb-36cc-4900-8f37-190c06b948fe")
 	)
 	(no_connect
-		(at 128.27 96.52)
-		(uuid "190c17c9-b738-4574-9bba-47b8bbd8b266")
+		(at 115.57 95.25)
+		(uuid "93d6f6f1-1021-40c1-9532-be7a013ede0f")
 	)
 	(no_connect
-		(at 128.27 93.98)
-		(uuid "6c8f8dc3-d39a-4eba-beb3-e2bee0be5655")
+		(at 115.57 97.79)
+		(uuid "d00912ee-ba21-440b-abca-0073cda6a7f3")
 	)
 	(wire
 		(pts
-			(xy 144.78 119.38) (xy 144.78 114.3)
+			(xy 132.08 120.65) (xy 132.08 115.57)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "252f51d6-0c5d-46b3-8895-ee8ead741c4b")
+		(uuid "0131d235-c3a2-49ea-a1dd-6ad382c2153f")
 	)
 	(wire
 		(pts
-			(xy 125.73 86.36) (xy 129.54 86.36)
+			(xy 127 80.01) (xy 129.54 80.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "717e6cdd-2e3b-48f4-a826-c039f0788858")
+		(uuid "016eb9a5-04f6-42b5-8cf4-98753cf7a9a8")
 	)
 	(wire
 		(pts
-			(xy 139.7 78.74) (xy 142.24 78.74)
+			(xy 115.57 95.25) (xy 116.84 95.25)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "83297161-d32e-4562-a9f2-e80b9d94c7af")
+		(uuid "29fc55de-fe82-4f12-acc3-b42a56e2ff52")
 	)
 	(wire
 		(pts
-			(xy 139.7 71.12) (xy 139.7 78.74)
+			(xy 113.03 87.63) (xy 116.84 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b589e960-8952-4b21-a8a2-9872e697c749")
+		(uuid "4d5b1bdc-e61b-437a-a343-4ff2e1fed969")
 	)
 	(wire
 		(pts
-			(xy 128.27 96.52) (xy 129.54 96.52)
+			(xy 127 72.39) (xy 127 80.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b7046608-2095-4b2a-9694-9de86c19b7b1")
+		(uuid "83baa29d-01f7-4531-a1d4-f5a31f90a4b5")
 	)
 	(wire
 		(pts
-			(xy 125.73 88.9) (xy 129.54 88.9)
+			(xy 115.57 97.79) (xy 116.84 97.79)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e6974706-17d0-4753-9afd-e49d5ded2b49")
+		(uuid "cc146fde-4731-4a82-aec9-325fc82792a1")
 	)
 	(wire
 		(pts
-			(xy 128.27 93.98) (xy 129.54 93.98)
+			(xy 113.03 90.17) (xy 116.84 90.17)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "eb2f3df2-db63-432d-8478-a522e3a3b9de")
-	)
-	(hierarchical_label "GPS_TX"
-		(shape input)
-		(at 125.73 88.9 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "353835a1-dffe-49b0-8ac9-066e835e1ba8")
+		(uuid "fccb310d-129d-475d-9b80-632da57285b4")
 	)
 	(hierarchical_label "GPS_RX"
 		(shape input)
-		(at 125.73 86.36 180)
+		(at 113.03 87.63 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1174,96 +1162,31 @@
 			)
 			(justify right)
 		)
-		(uuid "e5f0e2db-90a0-4698-bad1-47dfa73fed86")
+		(uuid "5510e9cb-d843-49a5-81a4-765a195113e2")
 	)
-	(symbol
-		(lib_id "Filter:B39162B8813P810")
-		(at 173.99 92.71 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
+	(hierarchical_label "GPS_TX"
+		(shape input)
+		(at 113.03 90.17 180)
 		(fields_autoplaced yes)
-		(uuid "4a03c5b0-6192-4a59-9eff-e5af7ef55d7c")
-		(property "Reference" "FL1"
-			(at 173.99 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify right)
 		)
-		(property "Value" "B39162B8813P810"
-			(at 173.99 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Filter:Filter_1109-5_1.1x0.9mm"
-			(at 173.99 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://product.tdk.com/search-template/en/documents/data_sheet/40/ds/mc/B9482.pdf"
-			(at 172.212 91.948 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "1582.47MHz SAW filter, SMD 1109"
-			(at 173.99 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "5"
-			(uuid "318eedbe-c712-4357-aa46-b1d8ebf24a90")
-		)
-		(pin "3"
-			(uuid "04a2e823-d4ca-4131-be88-da66bc28d0a3")
-		)
-		(pin "4"
-			(uuid "d3efbb12-65e3-43bc-a064-6c494d9dd71f")
-		)
-		(pin "1"
-			(uuid "24c21cf6-6bd9-4c45-8e13-1a842ad40488")
-		)
-		(pin "2"
-			(uuid "e35da635-1f4f-4427-8056-7532647146e3")
-		)
-		(instances
-			(project ""
-				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c22c9a69-42ec-4021-b411-433679e5e1b2"
-					(reference "FL1")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "68aea6a1-3b6b-4916-bce9-b65ab07672e0")
 	)
 	(symbol
 		(lib_id "power:GNDD")
-		(at 144.78 119.38 0)
+		(at 132.08 120.65 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "50c879b3-bc24-4e43-b794-39a15dfbde64")
+		(uuid "17ba9e51-605d-49a0-94f3-884e26b50567")
 		(property "Reference" "#PWR02"
-			(at 144.78 125.73 0)
+			(at 132.08 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1272,7 +1195,7 @@
 			)
 		)
 		(property "Value" "GNDD"
-			(at 144.78 123.19 0)
+			(at 132.08 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1280,7 +1203,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 144.78 119.38 0)
+			(at 132.08 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1289,7 +1212,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 144.78 119.38 0)
+			(at 132.08 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1298,7 +1221,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
-			(at 144.78 119.38 0)
+			(at 132.08 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1307,11 +1230,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "cfb87477-50d5-44d7-b61a-fced5cb1eb54")
+			(uuid "2cd181dd-33ff-416d-9666-44a78cfb2cdf")
 		)
 		(instances
-			(project "SRAD-Avionics"
-				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c22c9a69-42ec-4021-b411-433679e5e1b2"
+			(project "GPS-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/f4383c06-cfae-4b6b-8591-014188dc9624"
 					(reference "#PWR02")
 					(unit 1)
 				)
@@ -1319,44 +1242,33 @@
 		)
 	)
 	(symbol
-		(lib_id "RF_GPS:MAX-8C")
-		(at 144.78 96.52 0)
+		(lib_id "Filter:B39162B8813P810")
+		(at 161.29 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "589e8090-3953-4925-8e42-087dfd0f3148")
-		(property "Reference" "U1"
-			(at 146.9741 114.3 0)
+		(uuid "1be23775-a86f-4a90-a6dc-fb2dc149268e")
+		(property "Reference" "FL1"
+			(at 161.29 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "MAX-8C"
-			(at 146.9741 116.84 0)
+		(property "Value" "B39162B8813P810"
+			(at 161.29 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "RF_GPS:ublox_MAX"
-			(at 154.94 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.u-blox.com/sites/default/files/MAX-8_DataSheet_%28UBX-16000093%29.pdf"
-			(at 144.78 96.52 0)
+		(property "Footprint" "Filter:Filter_1109-5_1.1x0.9mm"
+			(at 161.29 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1364,8 +1276,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "GNSS Module MAX M8, VCC 1.65V to 3.6V"
-			(at 144.78 96.52 0)
+		(property "Datasheet" "https://product.tdk.com/search-template/en/documents/data_sheet/40/ds/mc/B9482.pdf"
+			(at 159.512 93.218 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1373,64 +1285,34 @@
 				(hide yes)
 			)
 		)
-		(pin "8"
-			(uuid "afec2470-3aef-419a-a513-87224769ef77")
-		)
-		(pin "7"
-			(uuid "76d50d4f-97ba-4d37-a9e1-11e5a65ea743")
-		)
-		(pin "2"
-			(uuid "229eaa08-830c-4e71-9bd8-aa16560ee946")
-		)
-		(pin "10"
-			(uuid "6437742e-43cd-4340-9e5d-2ef927006b36")
-		)
-		(pin "15"
-			(uuid "28630d4e-c9eb-43e0-a15e-23cf30c0c03d")
-		)
-		(pin "12"
-			(uuid "2fbce0b3-04cc-4b96-bc49-b7fbad3e93f1")
-		)
-		(pin "18"
-			(uuid "7cbdfcaf-6922-4d66-adcd-16ee0f02d38e")
+		(property "Description" "1582.47MHz SAW filter, SMD 1109"
+			(at 161.29 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
 		)
 		(pin "5"
-			(uuid "9000c6d8-833b-47b3-badd-b608138942f1")
+			(uuid "34c279da-e887-4f21-8744-18355badb84a")
 		)
 		(pin "3"
-			(uuid "68b4e2be-9629-4a81-be69-3595d91c66ef")
-		)
-		(pin "11"
-			(uuid "83fa7291-5be3-4e71-b3b6-a34b9db36784")
-		)
-		(pin "13"
-			(uuid "52dbd741-6883-46ab-b33b-fcb930293546")
-		)
-		(pin "9"
-			(uuid "8ba760b6-ddbc-44e6-a069-6cffaf55b7e5")
-		)
-		(pin "1"
-			(uuid "1cdc0e34-6bab-4f9f-ad05-9367a2bdd7b9")
-		)
-		(pin "14"
-			(uuid "312e1557-de73-4919-afe0-3ba10a7e1eb8")
-		)
-		(pin "17"
-			(uuid "e9aaa476-5a1e-44bf-9774-2356e21be690")
-		)
-		(pin "16"
-			(uuid "0e1aaee1-0245-40d6-9cb1-2cff60bb5efe")
+			(uuid "8a40c84a-4171-40f5-9900-2d19989c49e4")
 		)
 		(pin "4"
-			(uuid "5f87f307-9962-419f-ac42-ece18eb74829")
+			(uuid "0e5f1e7f-9979-4751-9f6d-cc580a7ccad6")
 		)
-		(pin "6"
-			(uuid "7f652dcd-9024-4fb2-9ffb-b4c18bae3f3a")
+		(pin "1"
+			(uuid "78fea77d-ffe5-4c6a-926f-7a6fc97f336c")
+		)
+		(pin "2"
+			(uuid "06fbe00c-8c20-4a40-a681-fa7a999096ac")
 		)
 		(instances
-			(project "SRAD-Avionics"
-				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c22c9a69-42ec-4021-b411-433679e5e1b2"
-					(reference "U1")
+			(project "GPS-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/f4383c06-cfae-4b6b-8591-014188dc9624"
+					(reference "FL1")
 					(unit 1)
 				)
 			)
@@ -1438,16 +1320,16 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 139.7 71.12 0)
+		(at 127 72.39 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "96a3ff4f-73be-404d-96d6-f3e3397d982d")
+		(uuid "236a317f-5546-4a71-8032-cb483588763f")
 		(property "Reference" "#PWR01"
-			(at 139.7 74.93 0)
+			(at 127 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1456,7 +1338,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 139.7 66.04 0)
+			(at 127 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1464,7 +1346,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 139.7 71.12 0)
+			(at 127 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1473,7 +1355,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 139.7 71.12 0)
+			(at 127 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1482,7 +1364,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 139.7 71.12 0)
+			(at 127 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1491,11 +1373,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "d6553e18-aa00-451e-b452-44ce9ed60c9d")
+			(uuid "603de2d0-dce0-4c17-a07b-2f1fca7377c7")
 		)
 		(instances
-			(project "SRAD-Avionics"
-				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c22c9a69-42ec-4021-b411-433679e5e1b2"
+			(project "GPS-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/f4383c06-cfae-4b6b-8591-014188dc9624"
 					(reference "#PWR01")
 					(unit 1)
 				)
@@ -1504,16 +1386,16 @@
 	)
 	(symbol
 		(lib_id "APAE1590R2540AKDB1-T:APAE1590R2540AKDB1-T")
-		(at 193.04 91.44 0)
+		(at 180.34 92.71 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "df458bb6-62f4-491c-899b-a5028ea65c10")
+		(uuid "61334db6-833a-4ea2-8203-9e8c17932db0")
 		(property "Reference" "E1"
-			(at 196.85 88.7094 0)
+			(at 184.15 89.9794 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1522,7 +1404,7 @@
 			)
 		)
 		(property "Value" "APAE1590R2540AKDB1-T"
-			(at 196.85 91.2494 0)
+			(at 184.15 92.5194 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1531,7 +1413,7 @@
 			)
 		)
 		(property "Footprint" "APAE1590R2540AKDB1_T:XDCR_APAE1590R2540AKDB1-T"
-			(at 193.04 91.44 0)
+			(at 180.34 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1541,7 +1423,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 193.04 91.44 0)
+			(at 180.34 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1550,7 +1432,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 193.04 91.44 0)
+			(at 180.34 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1559,7 +1441,7 @@
 			)
 		)
 		(property "PARTREV" "-"
-			(at 193.04 91.44 0)
+			(at 180.34 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1569,7 +1451,7 @@
 			)
 		)
 		(property "SNAPEDA_PN" "APAE1590R2540AKDB1-T"
-			(at 193.04 91.44 0)
+			(at 180.34 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1579,7 +1461,7 @@
 			)
 		)
 		(property "STANDARD" "IPC-7351B"
-			(at 193.04 91.44 0)
+			(at 180.34 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1589,7 +1471,7 @@
 			)
 		)
 		(property "MAXIMUM_PACKAGE_HEIGHT" "4.7mm"
-			(at 193.04 91.44 0)
+			(at 180.34 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1599,7 +1481,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Abracon"
-			(at 193.04 91.44 0)
+			(at 180.34 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1609,12 +1491,130 @@
 			)
 		)
 		(pin "1"
-			(uuid "53723719-d2c0-4c36-bb32-b3dfcb70f9d3")
+			(uuid "d9032e1e-a4a5-4afe-9d35-c28a6bfebdd3")
 		)
 		(instances
-			(project ""
-				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c22c9a69-42ec-4021-b411-433679e5e1b2"
+			(project "GPS-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/f4383c06-cfae-4b6b-8591-014188dc9624"
 					(reference "E1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "RF_GPS:MAX-8C")
+		(at 132.08 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e5d2ecde-1a49-423e-8bdc-2e80af3bb05e")
+		(property "Reference" "U1"
+			(at 134.2741 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MAX-8C"
+			(at 134.2741 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "RF_GPS:ublox_MAX"
+			(at 142.24 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.u-blox.com/sites/default/files/MAX-8_DataSheet_%28UBX-16000093%29.pdf"
+			(at 132.08 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "GNSS Module MAX M8, VCC 1.65V to 3.6V"
+			(at 132.08 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "8"
+			(uuid "c018822c-ba17-4d66-b825-91e4ee602a3d")
+		)
+		(pin "7"
+			(uuid "c24e912a-4770-4303-af52-27ed4443c751")
+		)
+		(pin "2"
+			(uuid "f8ddf396-6cd6-4497-b8bf-31c7dfb954d7")
+		)
+		(pin "10"
+			(uuid "fc356379-63f1-43fc-986a-651bbafa2eef")
+		)
+		(pin "15"
+			(uuid "6abff9f2-b1ff-4314-b90d-9e34830cb7e2")
+		)
+		(pin "12"
+			(uuid "546028f6-c23b-42da-8fec-bd635bf54100")
+		)
+		(pin "18"
+			(uuid "a991358f-be61-4c74-9b4a-726db10ee71b")
+		)
+		(pin "5"
+			(uuid "39b1cd96-7e65-406b-b14a-834b43103593")
+		)
+		(pin "3"
+			(uuid "08d60fa0-7c4b-492c-8d8c-0b6f187e476a")
+		)
+		(pin "11"
+			(uuid "c7dcc9c2-9354-45b6-b585-6d6d3cd6d4f3")
+		)
+		(pin "13"
+			(uuid "60fa3c8b-b41d-42e2-ac45-a311647b83c2")
+		)
+		(pin "9"
+			(uuid "f624075b-2bd2-4205-86ce-1ae6895a6a9b")
+		)
+		(pin "1"
+			(uuid "8b026421-700e-4d67-a2d7-c6e00ae01886")
+		)
+		(pin "14"
+			(uuid "520006b1-3722-44b0-9bc6-3d4df54d3d3f")
+		)
+		(pin "17"
+			(uuid "8916f5ff-d24a-458a-a909-12db4b2744af")
+		)
+		(pin "16"
+			(uuid "1129947a-b101-4ba0-8837-47baa44e6cf7")
+		)
+		(pin "4"
+			(uuid "38bf223c-10f9-4e2a-b8bc-724464728292")
+		)
+		(pin "6"
+			(uuid "b961bbe0-c639-49c3-98a1-d0fcac26cc5c")
+		)
+		(instances
+			(project "GPS-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/f4383c06-cfae-4b6b-8591-014188dc9624"
+					(reference "U1")
 					(unit 1)
 				)
 			)

@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "ESDA7P60_1U1M")(type "KiCad")(uri "/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Common/lib/ESDA7P60_1U1M/ESDA7P60_1U1M.pretty")(options "")(descr ""))
+  (lib (name "APAE1590R2540AKDB1_T")(type "KiCad")(uri "/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Common/lib/APAE1590R2540AKDB1_T/APAE1590R2540AKDB1_T.pretty")(options "")(descr ""))
+)

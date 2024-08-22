@@ -1746,6 +1746,12 @@
 		)
 		(instances
 			(project "Main-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/624b9140-2d45-4276-86bc-c5cd0149826a"
+					(reference "CAN_D1")
+					(unit 1)
+				)
+			)
+			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/60cb3ed2-d119-4f53-8d04-570ad94c5f39"
 					(reference "CAN_D1")
 					(unit 1)
@@ -1811,6 +1817,12 @@
 			(uuid "9904c16f-e7c9-4631-b498-d7757fc3c974")
 		)
 		(instances
+			(project "Main-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/624b9140-2d45-4276-86bc-c5cd0149826a"
+					(reference "#PWR054")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/60cb3ed2-d119-4f53-8d04-570ad94c5f39"
 					(reference "#PWR054")
@@ -1882,6 +1894,12 @@
 		)
 		(instances
 			(project "Main-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/624b9140-2d45-4276-86bc-c5cd0149826a"
+					(reference "CAN_R2")
+					(unit 1)
+				)
+			)
+			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/60cb3ed2-d119-4f53-8d04-570ad94c5f39"
 					(reference "CAN_R2")
 					(unit 1)
@@ -1952,6 +1970,12 @@
 		)
 		(instances
 			(project "Main-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/624b9140-2d45-4276-86bc-c5cd0149826a"
+					(reference "CAN_C2")
+					(unit 1)
+				)
+			)
+			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/60cb3ed2-d119-4f53-8d04-570ad94c5f39"
 					(reference "CAN_C2")
 					(unit 1)
@@ -2017,6 +2041,12 @@
 			(uuid "6f05bb3f-79ba-424a-9747-f14b53dd04f7")
 		)
 		(instances
+			(project "Main-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/624b9140-2d45-4276-86bc-c5cd0149826a"
+					(reference "#PWR051")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/60cb3ed2-d119-4f53-8d04-570ad94c5f39"
 					(reference "#PWR051")
@@ -2085,6 +2115,12 @@
 			(uuid "9699bcda-75e5-400e-a157-8a381c9fdff6")
 		)
 		(instances
+			(project "Main-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/624b9140-2d45-4276-86bc-c5cd0149826a"
+					(reference "CAN_C3")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/60cb3ed2-d119-4f53-8d04-570ad94c5f39"
 					(reference "CAN_C3")
@@ -2156,6 +2192,12 @@
 		)
 		(instances
 			(project "Main-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/624b9140-2d45-4276-86bc-c5cd0149826a"
+					(reference "CAN_J1")
+					(unit 1)
+				)
+			)
+			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/60cb3ed2-d119-4f53-8d04-570ad94c5f39"
 					(reference "CAN_J1")
 					(unit 1)
@@ -2221,6 +2263,12 @@
 			(uuid "15202a7d-9c70-4649-b7d0-689e1ed3f825")
 		)
 		(instances
+			(project "Main-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/624b9140-2d45-4276-86bc-c5cd0149826a"
+					(reference "#PWR052")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/60cb3ed2-d119-4f53-8d04-570ad94c5f39"
 					(reference "#PWR052")
@@ -2311,6 +2359,12 @@
 		)
 		(instances
 			(project "Main-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/624b9140-2d45-4276-86bc-c5cd0149826a"
+					(reference "CAN_U1")
+					(unit 1)
+				)
+			)
+			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/60cb3ed2-d119-4f53-8d04-570ad94c5f39"
 					(reference "CAN_U1")
 					(unit 1)
@@ -2381,6 +2435,12 @@
 		)
 		(instances
 			(project "Main-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/624b9140-2d45-4276-86bc-c5cd0149826a"
+					(reference "CAN_C1")
+					(unit 1)
+				)
+			)
+			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/60cb3ed2-d119-4f53-8d04-570ad94c5f39"
 					(reference "CAN_C1")
 					(unit 1)
@@ -2446,6 +2506,12 @@
 			(uuid "a580d6a6-d3b3-4583-9546-56ee2c49477a")
 		)
 		(instances
+			(project "Main-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/624b9140-2d45-4276-86bc-c5cd0149826a"
+					(reference "#PWR053")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/60cb3ed2-d119-4f53-8d04-570ad94c5f39"
 					(reference "#PWR053")
@@ -2516,6 +2582,12 @@
 			(uuid "212d1fd3-49be-4702-b20b-559668aa762a")
 		)
 		(instances
+			(project "Main-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/624b9140-2d45-4276-86bc-c5cd0149826a"
+					(reference "CAN_R1")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/60cb3ed2-d119-4f53-8d04-570ad94c5f39"
 					(reference "CAN_R1")
