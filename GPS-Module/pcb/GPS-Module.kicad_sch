@@ -44,44 +44,6 @@
 		)
 	)
 	(sheet
-		(at 35.56 135.89)
-		(size 30.48 16.51)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "624b9140-2d45-4276-86bc-c5cd0149826a")
-		(property "Sheetname" "CAN Interface"
-			(at 35.56 135.1784 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "../../Common/CAN-Interface.kicad_sch"
-			(at 35.56 152.9846 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "GPS-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9"
-					(page "4")
-				)
-			)
-		)
-	)
-	(sheet
 		(at 35.56 111.76)
 		(size 30.48 17.78)
 		(fields_autoplaced yes)
