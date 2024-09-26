@@ -586,10 +586,6 @@
     [
       "f4383c06-cfae-4b6b-8591-014188dc9624",
       "GPS Interface"
-    ],
-    [
-      "624b9140-2d45-4276-86bc-c5cd0149826a",
-      "CAN Interface"
     ]
   ],
   "text_variables": {}
