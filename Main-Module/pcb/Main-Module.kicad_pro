@@ -637,6 +637,10 @@
     [
       "60cb3ed2-d119-4f53-8d04-570ad94c5f39",
       "CAN Interface"
+    ],
+    [
+      "c88f012b-d541-4c01-befb-218640b6219a",
+      "Microcontroller"
     ]
   ],
   "text_variables": {}

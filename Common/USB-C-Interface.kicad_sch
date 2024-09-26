@@ -2139,12 +2139,6 @@
 		)
 		(instances
 			(project "Main-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
-					(reference "USB_U1")
-					(unit 1)
-				)
-			)
-			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/b23d16a1-3c5b-4321-8b30-5d6992e2f62d"
 					(reference "USB_U1")
 					(unit 1)
@@ -2258,12 +2252,6 @@
 		)
 		(instances
 			(project "Main-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
-					(reference "USB_J1")
-					(unit 1)
-				)
-			)
-			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/b23d16a1-3c5b-4321-8b30-5d6992e2f62d"
 					(reference "USB_J1")
 					(unit 1)
@@ -2329,12 +2317,6 @@
 			(uuid "aee01e21-ccd3-4dfa-9653-eea27d1f7f7f")
 		)
 		(instances
-			(project "Main-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
-					(reference "#PWR037")
-					(unit 1)
-				)
-			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/b23d16a1-3c5b-4321-8b30-5d6992e2f62d"
 					(reference "#PWR037")
@@ -2403,12 +2385,6 @@
 		)
 		(instances
 			(project "Main-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
-					(reference "#PWR039")
-					(unit 1)
-				)
-			)
-			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/b23d16a1-3c5b-4321-8b30-5d6992e2f62d"
 					(reference "#PWR039")
 					(unit 1)
@@ -2474,12 +2450,6 @@
 			(uuid "0e764182-51ae-4c19-b2c5-79aaa6e30c6c")
 		)
 		(instances
-			(project "Main-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
-					(reference "#PWR036")
-					(unit 1)
-				)
-			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/b23d16a1-3c5b-4321-8b30-5d6992e2f62d"
 					(reference "#PWR036")
@@ -2548,12 +2518,6 @@
 		)
 		(instances
 			(project "Main-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
-					(reference "USB_R2")
-					(unit 1)
-				)
-			)
-			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/b23d16a1-3c5b-4321-8b30-5d6992e2f62d"
 					(reference "USB_R2")
 					(unit 1)
@@ -2620,12 +2584,6 @@
 			(uuid "9b8997f2-0e1e-485a-8fa1-01288ffa64c5")
 		)
 		(instances
-			(project "Main-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
-					(reference "USB_R1")
-					(unit 1)
-				)
-			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/b23d16a1-3c5b-4321-8b30-5d6992e2f62d"
 					(reference "USB_R1")
@@ -2697,12 +2655,6 @@
 		)
 		(instances
 			(project "Main-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
-					(reference "USB_CR1")
-					(unit 1)
-				)
-			)
-			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/b23d16a1-3c5b-4321-8b30-5d6992e2f62d"
 					(reference "USB_CR1")
 					(unit 1)
@@ -2770,12 +2722,6 @@
 		)
 		(instances
 			(project "Main-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
-					(reference "#PWR041")
-					(unit 1)
-				)
-			)
-			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/b23d16a1-3c5b-4321-8b30-5d6992e2f62d"
 					(reference "#PWR041")
 					(unit 1)
@@ -2841,12 +2787,6 @@
 			(uuid "731ed221-c77d-45e9-acfa-aeedec13d120")
 		)
 		(instances
-			(project "Main-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
-					(reference "#PWR038")
-					(unit 1)
-				)
-			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/b23d16a1-3c5b-4321-8b30-5d6992e2f62d"
 					(reference "#PWR038")
@@ -2915,12 +2855,6 @@
 		)
 		(instances
 			(project "Main-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
-					(reference "#PWR040")
-					(unit 1)
-				)
-			)
-			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/b23d16a1-3c5b-4321-8b30-5d6992e2f62d"
 					(reference "#PWR040")
 					(unit 1)
@@ -2987,12 +2921,6 @@
 			(uuid "eec9ce6c-46ff-4cd5-8a90-2a13cd51da6c")
 		)
 		(instances
-			(project "Main-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
-					(reference "USB_TP1")
-					(unit 1)
-				)
-			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/b23d16a1-3c5b-4321-8b30-5d6992e2f62d"
 					(reference "USB_TP1")
