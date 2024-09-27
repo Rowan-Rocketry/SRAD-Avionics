@@ -4274,7 +4274,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "Microcontroller.kicad_sch"
+		(property "Sheetfile" "../../Common/Microcontroller.kicad_sch"
 			(at 33.02 180.9246 0)
 			(effects
 				(font
