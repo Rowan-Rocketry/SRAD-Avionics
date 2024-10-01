@@ -1233,7 +1233,7 @@
 			(uuid "2cd181dd-33ff-416d-9666-44a78cfb2cdf")
 		)
 		(instances
-			(project "GPS-Module"
+			(project "Radio-Module"
 				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/f4383c06-cfae-4b6b-8591-014188dc9624"
 					(reference "#PWR02")
 					(unit 1)
@@ -1310,7 +1310,7 @@
 			(uuid "06fbe00c-8c20-4a40-a681-fa7a999096ac")
 		)
 		(instances
-			(project "GPS-Module"
+			(project "Radio-Module"
 				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/f4383c06-cfae-4b6b-8591-014188dc9624"
 					(reference "FL1")
 					(unit 1)
@@ -1376,7 +1376,7 @@
 			(uuid "603de2d0-dce0-4c17-a07b-2f1fca7377c7")
 		)
 		(instances
-			(project "GPS-Module"
+			(project "Radio-Module"
 				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/f4383c06-cfae-4b6b-8591-014188dc9624"
 					(reference "#PWR01")
 					(unit 1)
@@ -1494,7 +1494,7 @@
 			(uuid "d9032e1e-a4a5-4afe-9d35-c28a6bfebdd3")
 		)
 		(instances
-			(project "GPS-Module"
+			(project "Radio-Module"
 				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/f4383c06-cfae-4b6b-8591-014188dc9624"
 					(reference "E1")
 					(unit 1)
@@ -1612,7 +1612,7 @@
 			(uuid "b961bbe0-c639-49c3-98a1-d0fcac26cc5c")
 		)
 		(instances
-			(project "GPS-Module"
+			(project "Radio-Module"
 				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/f4383c06-cfae-4b6b-8591-014188dc9624"
 					(reference "U1")
 					(unit 1)
