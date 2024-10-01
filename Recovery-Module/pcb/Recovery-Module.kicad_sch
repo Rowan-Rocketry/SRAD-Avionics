@@ -3214,6 +3214,82 @@
 		)
 	)
 	(sheet
+		(at 210.82 74.93)
+		(size 36.83 29.21)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "59e69564-f5fa-4eca-884c-14e1030b4b23")
+		(property "Sheetname" "Pyro Controller"
+			(at 210.82 74.2184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Pyro-Controller.kicad_sch"
+			(at 210.82 104.7246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Recovery-Module"
+				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 170.18 111.76)
+		(size 38.1 24.13)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "8fec1675-8c54-4843-9510-656cf0b8b5fe")
+		(property "Sheetname" "Valve Controller"
+			(at 170.18 111.0484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Valve-Controller.kicad_sch"
+			(at 170.18 136.4746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Recovery-Module"
+				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 135.89 74.93)
 		(size 20.32 10.16)
 		(fields_autoplaced yes)

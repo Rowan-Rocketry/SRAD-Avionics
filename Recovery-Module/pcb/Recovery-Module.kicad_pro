@@ -633,6 +633,14 @@
     [
       "3e9e0b47-da2c-4332-b911-05c7ab3ede69",
       "Sensors"
+    ],
+    [
+      "8fec1675-8c54-4843-9510-656cf0b8b5fe",
+      "Valve Controller"
+    ],
+    [
+      "59e69564-f5fa-4eca-884c-14e1030b4b23",
+      "Pyro Controller"
     ]
   ],
   "text_variables": {}
