@@ -9463,7 +9463,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "sensors.kicad_sch"
+		(property "Sheetfile" "Sensors.kicad_sch"
 			(at 31.75 105.9946 0)
 			(effects
 				(font
@@ -9553,7 +9553,7 @@
 			(uuid "08f2cc38-83ef-4f7f-86f5-6aecab2639f7")
 		)
 		(instances
-			(project "Main-Module"
+			(project "Recovery-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4"
 					(page "5")
 				)
@@ -9611,7 +9611,7 @@
 			(uuid "06dbfbd2-9d2c-4d85-ae44-c36fa22356c1")
 		)
 		(instances
-			(project "Main-Module"
+			(project "Recovery-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4"
 					(page "5")
 				)
@@ -9679,7 +9679,7 @@
 			(uuid "4c2c6c3c-2c49-48a7-b2c1-b248e603586c")
 		)
 		(instances
-			(project "Main-Module"
+			(project "Recovery-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4"
 					(page "4")
 				)
@@ -9737,7 +9737,7 @@
 			(uuid "5bfaa9ab-b7f1-4749-86de-4741d4de4e91")
 		)
 		(instances
-			(project "Main-Module"
+			(project "Recovery-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4"
 					(page "3")
 				)
