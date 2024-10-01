@@ -1,4 +1,0 @@
-(fp_lib_table
-  (version 7)
-  (lib (name "ESDA7P60")(type "KiCad")(uri "${KIPRJMOD}/../../Common/lib/ESDA7P60_1U1M/footprints.pretty")(options "")(descr ""))
-)
