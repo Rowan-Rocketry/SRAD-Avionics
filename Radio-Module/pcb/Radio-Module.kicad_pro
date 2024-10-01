@@ -431,7 +431,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "GPS-Module.kicad_pro",
+    "filename": "Radio-Module.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -586,6 +586,18 @@
     [
       "f4383c06-cfae-4b6b-8591-014188dc9624",
       "GPS Interface"
+    ],
+    [
+      "a01408f1-5b63-43f5-b922-b09dc2d98561",
+      "Microcontroller"
+    ],
+    [
+      "e039269b-c792-4448-9404-ba0f836b2ed0",
+      "Flash"
+    ],
+    [
+      "ce0fc2c5-5bfc-4947-801d-446f4cf53289",
+      "Radio"
     ]
   ],
   "text_variables": {}

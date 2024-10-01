@@ -35,10 +35,334 @@
 				(justify left top)
 			)
 		)
+		(pin "USB_D_N" bidirectional
+			(at 35.56 86.36 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "f5664d66-fef1-4ca9-8056-6f63756285ff")
+		)
+		(pin "USB_D_P" bidirectional
+			(at 35.56 90.17 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "b0e95fc9-62ad-499a-92d3-9fccd2672317")
+		)
+		(pin "V_USB" input
+			(at 35.56 93.98 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "af3e0635-3b5e-4151-aaff-8f8ebb43980f")
+		)
 		(instances
 			(project "Radio-Module"
 				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9"
 					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 170.18 115.57)
+		(size 38.1 36.83)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "a01408f1-5b63-43f5-b922-b09dc2d98561")
+		(property "Sheetname" "Microcontroller"
+			(at 170.18 114.8584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../../Common/Microcontroller.kicad_sch"
+			(at 170.18 152.9846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "accel_mosi" output
+			(at 170.18 128.27 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "323f977c-4e45-4c7e-9548-e8ac85b6dd7e")
+		)
+		(pin "flash_clk" bidirectional
+			(at 208.28 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "ef2a7cdb-8adb-4a71-a476-be6a947e6553")
+		)
+		(pin "USB_D_N" bidirectional
+			(at 170.18 119.38 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "8fe7186e-8c06-4c51-ae82-0afa10096ee8")
+		)
+		(pin "USB_D_P" bidirectional
+			(at 170.18 123.19 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "db72b42f-f9b6-4f83-8751-22d1ee2926a5")
+		)
+		(pin "accel_clk" output
+			(at 170.18 143.51 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "cd145073-68a6-415d-9fd0-e39819427778")
+		)
+		(pin "accel_int2" input
+			(at 170.18 139.7 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "73cc2993-69fc-4850-b9a7-6de962d2c7d6")
+		)
+		(pin "accel_int1" input
+			(at 170.18 135.89 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "e507ce20-9555-4928-a1f8-df50269c311e")
+		)
+		(pin "accel_miso" input
+			(at 170.18 132.08 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "b04dc105-45d1-4053-b08d-9f118c7e3008")
+		)
+		(pin "pres_clk" output
+			(at 208.28 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "6d4ffcf8-2cae-4a33-b0b3-079895166653")
+		)
+		(pin "pres_miso" input
+			(at 208.28 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "595b5388-fc19-4e69-9a5c-c7e2f3ba29c6")
+		)
+		(pin "pres_mosi" output
+			(at 208.28 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "1fdcfa60-099d-4c1e-a5e9-564629b02674")
+		)
+		(pin "FDCAN_TX" output
+			(at 208.28 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "79827be3-4f83-48aa-8885-2df6e1a59d39")
+		)
+		(pin "FDCAN_RX" input
+			(at 208.28 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "1db462af-f9a5-4eea-86b5-96b599799101")
+		)
+		(pin "flash_mosi" output
+			(at 208.28 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "c2deee44-1235-492a-90d5-b99d6995e33d")
+		)
+		(pin "flash_miso" input
+			(at 208.28 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "1311e487-cf46-43e2-8327-0beb956caf02")
+		)
+		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 154.94 60.96)
+		(size 49.53 34.29)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ce0fc2c5-5bfc-4947-801d-446f4cf53289")
+		(property "Sheetname" "Radio"
+			(at 154.94 60.2484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Radio.kicad_sch"
+			(at 154.94 95.8346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 102.87 97.79)
+		(size 29.21 17.78)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "e039269b-c792-4448-9404-ba0f836b2ed0")
+		(property "Sheetname" "Flash"
+			(at 102.87 97.0784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Flash.kicad_sch"
+			(at 102.87 116.1546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "flash_clk" input
+			(at 102.87 101.6 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "e6642d4b-9ab1-48f9-8dfd-a0eae567b320")
+		)
+		(pin "flash_mosi" input
+			(at 102.87 105.41 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "75859bb5-b8d6-45d3-86b6-0a2a0c19efff")
+		)
+		(pin "flash_miso" output
+			(at 102.87 109.22 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "1809ea32-f3e7-4969-bc80-c1c5df58e8b9")
+		)
+		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9"
+					(page "5")
 				)
 			)
 		)
@@ -72,6 +396,26 @@
 				)
 				(justify left top)
 			)
+		)
+		(pin "GPS_RX" input
+			(at 35.56 114.3 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "a027f066-22ec-4b19-80ba-a9bb3706f22b")
+		)
+		(pin "GPS_TX" input
+			(at 35.56 118.11 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "a6a2dde3-31ab-4557-b8eb-2ffa86ad9fea")
 		)
 		(instances
 			(project "Radio-Module"

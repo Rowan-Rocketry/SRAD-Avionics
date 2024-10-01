@@ -4064,7 +4064,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0c7d7531-0878-4499-ab6a-3b7ddc3338c7")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR?"
 			(at 140.97 85.09 0)
 			(effects
 				(font
@@ -4112,6 +4112,12 @@
 			(uuid "a668ebab-c0d0-43c5-8745-1a12a7cfb755")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "#PWR020")
@@ -4130,7 +4136,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1d7c519c-5cd3-4c58-ab7c-d71232e4f965")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR?"
 			(at 181.61 152.4 0)
 			(effects
 				(font
@@ -4178,6 +4184,12 @@
 			(uuid "3a660ed7-70f3-4344-a29e-a7d8d6bb2f98")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "#PWR022")
@@ -4196,7 +4208,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "20ee80c3-141f-4f37-b614-28e0a8f8a5bd")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR?"
 			(at 212.09 57.15 0)
 			(effects
 				(font
@@ -4244,6 +4256,12 @@
 			(uuid "ca53d055-c2da-44b0-bae0-f3dcc218183a")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "#PWR025")
@@ -4262,7 +4280,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2dc7411b-346d-4ccf-9580-562a446b7283")
-		(property "Reference" "MIC_C4"
+		(property "Reference" "MIC_C?"
 			(at 139.7 125.7299 0)
 			(effects
 				(font
@@ -4314,6 +4332,12 @@
 			(uuid "2c78fd32-f66c-4691-9a39-a4fcbe2819b2")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "MIC_C?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "MIC_C4")
@@ -4332,7 +4356,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "32f233b8-bd5e-4ac4-b515-b076fb1872ea")
-		(property "Reference" "MIC_C2"
+		(property "Reference" "MIC_C?"
 			(at 127 60.9599 0)
 			(effects
 				(font
@@ -4384,6 +4408,12 @@
 			(uuid "1fe7b6ac-9477-4636-880d-b34bda1265e7")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "MIC_C?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "MIC_C2")
@@ -4402,7 +4432,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3d0d4256-ee43-4351-bc8d-2c973f869aab")
-		(property "Reference" "MIC_C10"
+		(property "Reference" "MIC_C?"
 			(at 215.9 45.7199 0)
 			(effects
 				(font
@@ -4454,6 +4484,12 @@
 			(uuid "102e9b5b-5e39-431b-ac45-cd37f3b4bba6")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "MIC_C?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "MIC_C10")
@@ -4472,7 +4508,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "43e74980-de3a-48a9-b9b7-8c26c57327c1")
-		(property "Reference" "MIC_C7"
+		(property "Reference" "MIC_C?"
 			(at 160.02 45.7199 0)
 			(effects
 				(font
@@ -4524,6 +4560,12 @@
 			(uuid "48e9b944-04eb-4ded-a7a0-fac492251a4e")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "MIC_C?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "MIC_C7")
@@ -4542,7 +4584,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "45e454cf-a57a-4050-a26c-82a1cb82f7f1")
-		(property "Reference" "MIC_C9"
+		(property "Reference" "MIC_C?"
 			(at 203.2 45.7199 0)
 			(effects
 				(font
@@ -4594,6 +4636,12 @@
 			(uuid "e576bbc5-d2c7-4688-a4a2-d59d032631f1")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "MIC_C?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "MIC_C9")
@@ -4611,7 +4659,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "47318fc2-2ca0-40fe-809d-784cbc52f397")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR?"
 			(at 186.69 152.4 0)
 			(effects
 				(font
@@ -4659,6 +4707,12 @@
 			(uuid "b2210784-148b-41e2-8afe-c13688a20898")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "#PWR023")
@@ -4677,7 +4731,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4f06470b-7811-48f7-9abb-b9b9f77bc046")
-		(property "Reference" "MIC_C6"
+		(property "Reference" "MIC_C?"
 			(at 153.67 125.7299 0)
 			(effects
 				(font
@@ -4729,6 +4783,12 @@
 			(uuid "4fa0aca3-cb04-4bee-a9d5-57599ed193ba")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "MIC_C?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "MIC_C6")
@@ -4747,7 +4807,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6018cfbf-c719-4d24-be27-86ef6c4337b6")
-		(property "Reference" "MIC_C3"
+		(property "Reference" "MIC_C?"
 			(at 133.35 45.7199 0)
 			(effects
 				(font
@@ -4799,6 +4859,12 @@
 			(uuid "4d7d2ca4-41d6-45e8-b624-32651457dd2f")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "MIC_C?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "MIC_C3")
@@ -4817,7 +4883,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6e0c5ec2-8235-4c98-be52-a7160aeae9e6")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR?"
 			(at 116.84 59.69 0)
 			(effects
 				(font
@@ -4865,6 +4931,12 @@
 			(uuid "d79a367a-384c-401d-91d5-a2192f4c4610")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "#PWR016")
@@ -4883,7 +4955,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7ce6dbdd-e46e-4ffe-b67d-52f6a8c6acb3")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR?"
 			(at 123.19 80.01 0)
 			(effects
 				(font
@@ -4931,6 +5003,12 @@
 			(uuid "47849236-1529-48f7-977c-5653b9faaeee")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "#PWR017")
@@ -4949,7 +5027,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "87b622fe-3701-462a-b397-028ca6bfe324")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR?"
 			(at 74.93 92.71 0)
 			(effects
 				(font
@@ -4997,6 +5075,12 @@
 			(uuid "5ec6520d-4703-48f0-b5fe-ae5007e7c65a")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "#PWR012")
@@ -5015,7 +5099,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "89a8d55f-5337-4ef1-8af9-e172e0ae722a")
-		(property "Reference" "MIC_C8"
+		(property "Reference" "MIC_C?"
 			(at 171.45 45.7199 0)
 			(effects
 				(font
@@ -5067,6 +5151,12 @@
 			(uuid "1c8353e3-a37c-458b-b4bd-dfaa109d897c")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "MIC_C?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "MIC_C8")
@@ -5084,7 +5174,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "93b28460-0f43-4c4e-a8be-605c1a4eff64")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR?"
 			(at 83.82 110.49 0)
 			(effects
 				(font
@@ -5132,6 +5222,12 @@
 			(uuid "90df65f9-ee24-4cef-9a68-06db5b8d6b58")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "#PWR015")
@@ -5150,7 +5246,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9da4724f-0543-431e-bf58-b3cde5ceec8b")
-		(property "Reference" "MIC_SW1"
+		(property "Reference" "MIC_SW?"
 			(at 83.82 95.2499 90)
 			(effects
 				(font
@@ -5214,6 +5310,12 @@
 			(uuid "d46923d9-fe5d-4abc-b395-3925ae9b7734")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "MIC_SW?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "MIC_SW1")
@@ -5232,7 +5334,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a4d53a9e-ac36-44d1-86be-eed1618d5752")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR?"
 			(at 180.34 44.45 0)
 			(effects
 				(font
@@ -5280,6 +5382,12 @@
 			(uuid "e6e0510b-0935-4037-8e52-dd5c2cd733a2")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "#PWR021")
@@ -5298,7 +5406,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a82b4b88-5477-4152-ba55-228d3c897843")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR?"
 			(at 140.97 62.23 0)
 			(effects
 				(font
@@ -5346,6 +5454,12 @@
 			(uuid "77253411-2bad-439c-ada2-d49fd7fb0aaf")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "#PWR019")
@@ -5364,7 +5478,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "af823657-a9f5-44ca-abbf-92e54c9af08d")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR?"
 			(at 83.82 82.55 0)
 			(effects
 				(font
@@ -5412,6 +5526,12 @@
 			(uuid "45ab12e0-22ea-450f-bcc1-053b117d0aff")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "#PWR014")
@@ -5430,7 +5550,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bcd3f7e7-7d59-4fcf-a76e-a43e867114fb")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR?"
 			(at 190.5 44.45 0)
 			(effects
 				(font
@@ -5478,6 +5598,12 @@
 			(uuid "185e4f0c-f540-45ad-b5fa-282111f21add")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "#PWR024")
@@ -5496,7 +5622,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c067a3a4-0b9b-4fbc-b075-b4c7221d438a")
-		(property "Reference" "MIC_R1"
+		(property "Reference" "MIC_R?"
 			(at 64.77 109.2199 0)
 			(effects
 				(font
@@ -5548,6 +5674,12 @@
 			(uuid "ee0d91d6-f607-4abe-985e-9f7fa9a44644")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "MIC_R?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "MIC_R1")
@@ -5566,7 +5698,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c0f0a473-c3d6-4626-be5f-0b596a95d892")
-		(property "Reference" "MIC_U2"
+		(property "Reference" "MIC_U?"
 			(at 187.6141 140.97 0)
 			(effects
 				(font
@@ -5805,6 +5937,12 @@
 			(uuid "076fbcb0-184f-46b8-9239-1f40de8791a3")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "MIC_U?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "MIC_U2")
@@ -5823,7 +5961,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c4366007-dc8e-4037-81c4-4f8a3cd2ee81")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR?"
 			(at 77.47 100.33 0)
 			(effects
 				(font
@@ -5871,6 +6009,12 @@
 			(uuid "d6a08a5f-0133-4295-89b0-6fd87ec72d12")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "#PWR013")
@@ -5889,7 +6033,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cb14ae6a-e89f-4fd0-80f4-0f03d66f4560")
-		(property "Reference" "MIC_C1"
+		(property "Reference" "MIC_C?"
 			(at 120.65 45.7199 0)
 			(effects
 				(font
@@ -5941,6 +6085,12 @@
 			(uuid "485d85a9-5033-435d-859c-38ba05b853f5")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "MIC_C?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "MIC_C1")
@@ -5958,7 +6108,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ea270e8c-517a-4afc-84bc-86579fffa834")
-		(property "Reference" "MIC_U1"
+		(property "Reference" "MIC_U?"
 			(at 134.62 67.3099 0)
 			(effects
 				(font
@@ -6013,6 +6163,12 @@
 			(uuid "20da80d9-011f-4be7-946b-21220a6f45a6")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "MIC_U?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "MIC_U1")
@@ -6031,7 +6187,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "edaf1882-234c-40f7-bbc8-a034aafd6e87")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR?"
 			(at 62.23 123.19 0)
 			(effects
 				(font
@@ -6079,6 +6235,12 @@
 			(uuid "0834d851-3301-4b74-b553-27397fba5020")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "#PWR011")
@@ -6097,7 +6259,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ee3daee0-a79b-4578-94d6-a0f13450f4e8")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR?"
 			(at 135.89 139.7 0)
 			(effects
 				(font
@@ -6145,6 +6307,12 @@
 			(uuid "1dd844eb-32a3-460b-a668-9afc56dc53c2")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "#PWR018")
@@ -6163,7 +6331,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fbe6d057-9fa2-4a8e-aefc-fa80af8d4b6e")
-		(property "Reference" "MIC_C5"
+		(property "Reference" "MIC_C?"
 			(at 147.32 45.7199 0)
 			(effects
 				(font
@@ -6215,6 +6383,12 @@
 			(uuid "98cd5b3a-77d1-428b-bac1-294377314a41")
 		)
 		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+					(reference "MIC_C?")
+					(unit 1)
+				)
+			)
 			(project "Main-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/c88f012b-d541-4c01-befb-218640b6219a"
 					(reference "MIC_C5")
