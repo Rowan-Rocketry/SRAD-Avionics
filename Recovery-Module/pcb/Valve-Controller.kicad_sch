@@ -5,4 +5,16 @@
 	(uuid "25dbf4e0-d199-490f-b30c-9df6794732f8")
 	(paper "A4")
 	(lib_symbols)
+	(hierarchical_label "Apogee"
+		(shape input)
+		(at 72.39 67.31 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "cac68a84-ef91-4245-8f3d-d98813855894")
+	)
 )
