@@ -444,7 +444,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Recovery-Module.kicad_pro",
+    "filename": "Main-Module.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -623,8 +623,8 @@
       "Root"
     ],
     [
-      "4c43b18e-6722-4e4a-b82a-db7557f268f7",
-      "Microcontroller"
+      "b5b03a48-538a-4431-9fe0-db318c963946",
+      "Battery Management"
     ],
     [
       "b23d16a1-3c5b-4321-8b30-5d6992e2f62d",
@@ -633,6 +633,10 @@
     [
       "3e9e0b47-da2c-4332-b911-05c7ab3ede69",
       "Sensors"
+    ],
+    [
+      "60cb3ed2-d119-4f53-8d04-570ad94c5f39",
+      "CAN Interface"
     ]
   ],
   "text_variables": {}
