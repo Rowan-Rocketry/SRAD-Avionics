@@ -1364,7 +1364,7 @@
 			(uuid "d19fb0f2-3538-4a8b-a9fa-5fc114526898")
 		)
 		(instances
-			(project ""
+			(project "Recovery-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/3e9e0b47-da2c-4332-b911-05c7ab3ede69"
 					(reference "#PWR042")
 					(unit 1)
@@ -1430,7 +1430,7 @@
 			(uuid "1b8d63ea-0135-4196-9577-90e203bcb9c0")
 		)
 		(instances
-			(project ""
+			(project "Recovery-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/3e9e0b47-da2c-4332-b911-05c7ab3ede69"
 					(reference "#PWR047")
 					(unit 1)
@@ -1500,7 +1500,7 @@
 			(uuid "db435575-e034-407e-9ead-97b31de86b3b")
 		)
 		(instances
-			(project "SRAD-Avionics"
+			(project "Recovery-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/3e9e0b47-da2c-4332-b911-05c7ab3ede69"
 					(reference "C18")
 					(unit 1)
@@ -1588,7 +1588,7 @@
 			(uuid "6a1d70b3-55f9-4f00-9660-509d0f1ebeec")
 		)
 		(instances
-			(project ""
+			(project "Recovery-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/3e9e0b47-da2c-4332-b911-05c7ab3ede69"
 					(reference "U6")
 					(unit 1)
@@ -1694,7 +1694,7 @@
 			(uuid "e41f36ee-2b85-498c-8454-5d1f0c610f94")
 		)
 		(instances
-			(project "SRAD-Avionics"
+			(project "Recovery-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/3e9e0b47-da2c-4332-b911-05c7ab3ede69"
 					(reference "U7")
 					(unit 1)
@@ -1761,7 +1761,7 @@
 			(uuid "54292696-19f1-423d-b9e5-8ed57a654573")
 		)
 		(instances
-			(project ""
+			(project "Recovery-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/3e9e0b47-da2c-4332-b911-05c7ab3ede69"
 					(reference "#PWR050")
 					(unit 1)
@@ -1828,7 +1828,7 @@
 			(uuid "f14b76f6-fb3a-4c73-9482-9a0414bb908b")
 		)
 		(instances
-			(project ""
+			(project "Recovery-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/3e9e0b47-da2c-4332-b911-05c7ab3ede69"
 					(reference "#PWR049")
 					(unit 1)
@@ -1894,7 +1894,7 @@
 			(uuid "53bc9ba4-7704-4e07-acea-1817a0f2b613")
 		)
 		(instances
-			(project ""
+			(project "Recovery-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/3e9e0b47-da2c-4332-b911-05c7ab3ede69"
 					(reference "#PWR044")
 					(unit 1)
@@ -1960,7 +1960,7 @@
 			(uuid "0c557bc7-56fa-4f26-ae98-8158b2f4e735")
 		)
 		(instances
-			(project ""
+			(project "Recovery-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/3e9e0b47-da2c-4332-b911-05c7ab3ede69"
 					(reference "#PWR045")
 					(unit 1)
@@ -2027,7 +2027,7 @@
 			(uuid "a3d88afa-c003-4bed-be87-b4d0a96a6be1")
 		)
 		(instances
-			(project ""
+			(project "Recovery-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/3e9e0b47-da2c-4332-b911-05c7ab3ede69"
 					(reference "#PWR043")
 					(unit 1)
@@ -2093,7 +2093,7 @@
 			(uuid "fd9c5059-f7b9-4e46-b8a6-76fae8171ca2")
 		)
 		(instances
-			(project ""
+			(project "Recovery-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/3e9e0b47-da2c-4332-b911-05c7ab3ede69"
 					(reference "#PWR046")
 					(unit 1)
@@ -2159,7 +2159,7 @@
 			(uuid "9f8f4b29-b721-4ca9-a6be-466110a1eec6")
 		)
 		(instances
-			(project ""
+			(project "Recovery-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/3e9e0b47-da2c-4332-b911-05c7ab3ede69"
 					(reference "#PWR048")
 					(unit 1)
@@ -2229,7 +2229,7 @@
 			(uuid "f2ac0f1e-7d7c-4081-ac70-4b9bc9de8523")
 		)
 		(instances
-			(project ""
+			(project "Recovery-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/3e9e0b47-da2c-4332-b911-05c7ab3ede69"
 					(reference "C20")
 					(unit 1)
@@ -2299,7 +2299,7 @@
 			(uuid "5b93ae24-6199-44ba-8fa8-18838122e0ed")
 		)
 		(instances
-			(project ""
+			(project "Recovery-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/3e9e0b47-da2c-4332-b911-05c7ab3ede69"
 					(reference "C19")
 					(unit 1)
