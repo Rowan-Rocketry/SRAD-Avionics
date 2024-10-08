@@ -5,9 +5,219 @@
 	(uuid "acc63f22-7eb8-450a-9af4-da5f4b8157d9")
 	(paper "A4")
 	(lib_symbols)
+	(wire
+		(pts
+			(xy 194.31 123.19) (xy 194.31 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05d3c910-1a0d-4640-9a2e-08ae1463bbc2")
+	)
+	(wire
+		(pts
+			(xy 186.69 93.98) (xy 190.5 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0741c175-00cc-4b22-a169-232da61a8ada")
+	)
+	(wire
+		(pts
+			(xy 186.69 101.6) (xy 190.5 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c2fcf9e-b774-49d1-9461-abede168539a")
+	)
+	(wire
+		(pts
+			(xy 196.85 115.57) (xy 200.66 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23b2f6d9-7f22-4362-a135-0d7502cca6cb")
+	)
+	(wire
+		(pts
+			(xy 196.85 107.95) (xy 186.69 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b023415-ac6f-4549-9331-9f561504e444")
+	)
+	(wire
+		(pts
+			(xy 186.69 97.79) (xy 190.5 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41de04f9-2ca3-451b-942e-2cbcf45dd1f6")
+	)
+	(wire
+		(pts
+			(xy 195.58 119.38) (xy 195.58 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43414e6b-09d2-431f-8f49-2284da939402")
+	)
+	(wire
+		(pts
+			(xy 137.16 81.28) (xy 137.16 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66d4dfc7-c0fc-4492-814c-75b6c7bfb65b")
+	)
+	(wire
+		(pts
+			(xy 134.62 81.28) (xy 137.16 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ba45ccf-314c-4eff-8926-f329a1e6f0fc")
+	)
+	(wire
+		(pts
+			(xy 186.69 86.36) (xy 190.5 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d7a3048-1965-4ac9-bb76-e1c09ecd07ab")
+	)
+	(wire
+		(pts
+			(xy 195.58 111.76) (xy 186.69 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a949abf2-76a1-4ad2-b83d-daa702082e72")
+	)
+	(wire
+		(pts
+			(xy 195.58 119.38) (xy 200.66 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af9bc56b-0308-4287-a2a0-ab02cd577cea")
+	)
+	(wire
+		(pts
+			(xy 137.16 86.36) (xy 148.59 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b379425a-cbd0-4697-a687-99436b4686c2")
+	)
+	(wire
+		(pts
+			(xy 135.89 90.17) (xy 148.59 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc606da2-f380-4619-9853-e9213db9e06e")
+	)
+	(wire
+		(pts
+			(xy 196.85 115.57) (xy 196.85 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc39e82d-d8d5-47be-a37f-d33a8cb58c0f")
+	)
+	(wire
+		(pts
+			(xy 135.89 85.09) (xy 135.89 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e99b5260-bdaa-4869-b3be-cfa9b8d98fe8")
+	)
+	(wire
+		(pts
+			(xy 134.62 85.09) (xy 135.89 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9bbc4d5-db7d-4a63-a602-c73b1fce5b7d")
+	)
+	(wire
+		(pts
+			(xy 186.69 90.17) (xy 190.5 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eddc918f-f50c-4dbf-aefa-767d20f7f126")
+	)
+	(wire
+		(pts
+			(xy 194.31 123.19) (xy 200.66 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f171d589-c9dc-4f2d-a4ee-c294861cd1ed")
+	)
+	(wire
+		(pts
+			(xy 194.31 115.57) (xy 186.69 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f1b93c4d-3137-4e03-a387-863877c82eb2")
+	)
 	(sheet
+<<<<<<< Updated upstream
+		(at 209.55 46.99)
+		(size 30.48 17.78)
+=======
+<<<<<<< Updated upstream
 		(at 35.56 82.55)
 		(size 30.48 22.86)
+=======
+		(at 100.33 74.93)
+		(size 34.29 15.24)
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -18,7 +228,15 @@
 		)
 		(uuid "066db7ca-fd8b-46d1-a06b-412eb11482f3")
 		(property "Sheetname" "USB C Interface"
+<<<<<<< Updated upstream
+			(at 209.55 46.2784 0)
+=======
+<<<<<<< Updated upstream
 			(at 35.56 81.8384 0)
+=======
+			(at 100.33 74.2184 0)
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27,7 +245,15 @@
 			)
 		)
 		(property "Sheetfile" "../../Common/USB-C-Interface.kicad_sch"
+<<<<<<< Updated upstream
+			(at 209.55 65.3546 0)
+=======
+<<<<<<< Updated upstream
 			(at 35.56 105.9946 0)
+=======
+			(at 100.33 90.7546 0)
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35,6 +261,67 @@
 				(justify left top)
 			)
 		)
+<<<<<<< Updated upstream
+		(pin "USB_D_N" bidirectional
+			(at 209.55 50.8 180)
+=======
+<<<<<<< Updated upstream
+=======
+		(pin "USB_D_N" bidirectional
+			(at 134.62 81.28 0)
+>>>>>>> Stashed changes
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+<<<<<<< Updated upstream
+				(justify left)
+=======
+				(justify right)
+>>>>>>> Stashed changes
+			)
+			(uuid "f5664d66-fef1-4ca9-8056-6f63756285ff")
+		)
+		(pin "USB_D_P" bidirectional
+<<<<<<< Updated upstream
+			(at 209.55 54.61 180)
+=======
+			(at 134.62 85.09 0)
+>>>>>>> Stashed changes
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+<<<<<<< Updated upstream
+				(justify left)
+=======
+				(justify right)
+>>>>>>> Stashed changes
+			)
+			(uuid "b0e95fc9-62ad-499a-92d3-9fccd2672317")
+		)
+		(pin "V_USB" input
+<<<<<<< Updated upstream
+			(at 209.55 58.42 180)
+=======
+			(at 134.62 77.47 0)
+>>>>>>> Stashed changes
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+<<<<<<< Updated upstream
+				(justify left)
+			)
+			(uuid "af3e0635-3b5e-4151-aaff-8f8ebb43980f")
+		)
+=======
+				(justify right)
+			)
+			(uuid "af3e0635-3b5e-4151-aaff-8f8ebb43980f")
+		)
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 		(instances
 			(project "Radio-Module"
 				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9"
@@ -44,8 +331,574 @@
 		)
 	)
 	(sheet
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
 		(at 35.56 111.76)
 		(size 30.48 17.78)
+=======
+>>>>>>> Stashed changes
+		(at 148.59 82.55)
+		(size 38.1 36.83)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "a01408f1-5b63-43f5-b922-b09dc2d98561")
+		(property "Sheetname" "Microcontroller"
+			(at 148.59 81.8384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../../Common/Microcontroller.kicad_sch"
+			(at 148.59 119.9646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+<<<<<<< Updated upstream
+		(pin "accel_mosi" output
+			(at 148.59 95.25 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "323f977c-4e45-4c7e-9548-e8ac85b6dd7e")
+		)
+		(pin "flash_clk" bidirectional
+			(at 186.69 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "ef2a7cdb-8adb-4a71-a476-be6a947e6553")
+		)
+=======
+>>>>>>> Stashed changes
+		(pin "USB_D_N" bidirectional
+			(at 148.59 86.36 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "8fe7186e-8c06-4c51-ae82-0afa10096ee8")
+		)
+		(pin "USB_D_P" bidirectional
+			(at 148.59 90.17 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "db72b42f-f9b6-4f83-8751-22d1ee2926a5")
+		)
+<<<<<<< Updated upstream
+		(pin "accel_clk" output
+			(at 148.59 110.49 180)
+=======
+		(pin "FDCAN_TX" output
+			(at 148.59 113.03 180)
+>>>>>>> Stashed changes
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+<<<<<<< Updated upstream
+			(uuid "cd145073-68a6-415d-9fd0-e39819427778")
+		)
+		(pin "accel_int2" input
+			(at 148.59 106.68 180)
+=======
+			(uuid "79827be3-4f83-48aa-8885-2df6e1a59d39")
+		)
+		(pin "FDCAN_RX" input
+			(at 148.59 109.22 180)
+>>>>>>> Stashed changes
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+<<<<<<< Updated upstream
+			(uuid "73cc2993-69fc-4850-b9a7-6de962d2c7d6")
+		)
+		(pin "accel_int1" input
+			(at 148.59 102.87 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "e507ce20-9555-4928-a1f8-df50269c311e")
+		)
+		(pin "accel_miso" input
+			(at 148.59 99.06 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "b04dc105-45d1-4053-b08d-9f118c7e3008")
+		)
+		(pin "pres_clk" output
+			(at 186.69 86.36 0)
+=======
+			(uuid "1db462af-f9a5-4eea-86b5-96b599799101")
+		)
+		(pin "SPI1_clk" bidirectional
+			(at 186.69 107.95 0)
+>>>>>>> Stashed changes
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+<<<<<<< Updated upstream
+			(uuid "6d4ffcf8-2cae-4a33-b0b3-079895166653")
+		)
+		(pin "pres_miso" input
+			(at 186.69 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "595b5388-fc19-4e69-9a5c-c7e2f3ba29c6")
+		)
+		(pin "pres_mosi" output
+=======
+			(uuid "250cef1e-cd42-48b6-b191-c1b51ca97360")
+		)
+		(pin "SPI3_mosi" output
+>>>>>>> Stashed changes
+			(at 186.69 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+<<<<<<< Updated upstream
+			(uuid "1fdcfa60-099d-4c1e-a5e9-564629b02674")
+		)
+		(pin "FDCAN_TX" output
+			(at 186.69 102.87 0)
+=======
+			(uuid "920c0ff2-7269-49e6-88b7-53e94e122fde")
+		)
+		(pin "SPI3_clk" output
+			(at 186.69 86.36 0)
+>>>>>>> Stashed changes
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+<<<<<<< Updated upstream
+			(uuid "79827be3-4f83-48aa-8885-2df6e1a59d39")
+		)
+		(pin "FDCAN_RX" input
+			(at 186.69 99.06 0)
+=======
+			(uuid "92992753-bef7-4c66-ac5f-86fcde8a63be")
+		)
+		(pin "DIN_1" input
+			(at 186.69 101.6 0)
+>>>>>>> Stashed changes
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+<<<<<<< Updated upstream
+			(uuid "1db462af-f9a5-4eea-86b5-96b599799101")
+		)
+		(pin "flash_mosi" output
+			(at 186.69 111.76 0)
+=======
+			(uuid "2f8a972e-3f7a-4a45-a9af-3bcb70d53f4d")
+		)
+		(pin "SPI3_miso" input
+			(at 186.69 90.17 0)
+>>>>>>> Stashed changes
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+<<<<<<< Updated upstream
+			(uuid "c2deee44-1235-492a-90d5-b99d6995e33d")
+		)
+		(pin "flash_miso" input
+=======
+			(uuid "75da96c7-27c1-438c-ad2f-6f8dd083f281")
+		)
+		(pin "DIN_2" input
+			(at 186.69 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "de90e9d6-2a9b-4d27-bce7-06ed123e0448")
+		)
+		(pin "SPI2_mosi" output
+			(at 148.59 99.06 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "87535f17-d9e3-493a-a607-27fcbc364312")
+		)
+		(pin "SPI2_clk" output
+			(at 148.59 95.25 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "92332155-aae8-40db-92af-665107b3376f")
+		)
+		(pin "SPI2_miso" input
+			(at 148.59 102.87 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "dd716b7d-9c90-438b-9d3b-48a7110bc094")
+		)
+		(pin "SPI1_miso" input
+>>>>>>> Stashed changes
+			(at 186.69 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+<<<<<<< Updated upstream
+			(uuid "1311e487-cf46-43e2-8327-0beb956caf02")
+=======
+			(uuid "fe4f63b2-0228-4063-8f12-42fdbfa45cf2")
+		)
+		(pin "SPI1_mosi" output
+			(at 186.69 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "3355f06c-f81d-489b-aedd-77491ad84fb4")
+>>>>>>> Stashed changes
+		)
+		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+<<<<<<< Updated upstream
+		(at 90.17 116.84)
+		(size 38.1 26.67)
+=======
+		(at 190.5 82.55)
+		(size 38.1 21.59)
+>>>>>>> Stashed changes
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ce0fc2c5-5bfc-4947-801d-446f4cf53289")
+		(property "Sheetname" "Radio"
+<<<<<<< Updated upstream
+			(at 90.17 116.1284 0)
+=======
+			(at 190.5 81.8384 0)
+>>>>>>> Stashed changes
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Radio.kicad_sch"
+<<<<<<< Updated upstream
+			(at 90.17 144.0946 0)
+=======
+			(at 190.5 104.7246 0)
+>>>>>>> Stashed changes
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "reset_Radio" input
+<<<<<<< Updated upstream
+			(at 90.17 120.65 180)
+=======
+			(at 228.6 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "506996e1-6216-452c-94a8-811fc465f284")
+		)
+		(pin "miso_Radio" output
+			(at 190.5 90.17 180)
+>>>>>>> Stashed changes
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+<<<<<<< Updated upstream
+			(uuid "506996e1-6216-452c-94a8-811fc465f284")
+		)
+		(pin "miso_Radio" output
+			(at 128.27 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "a8b0a1f6-4cb4-4b1f-bc07-f2088723a390")
+		)
+		(pin "mosi_Radio" input
+			(at 128.27 124.46 0)
+=======
+			(uuid "a8b0a1f6-4cb4-4b1f-bc07-f2088723a390")
+		)
+		(pin "mosi_Radio" input
+			(at 190.5 93.98 180)
+>>>>>>> Stashed changes
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+<<<<<<< Updated upstream
+				(justify right)
+=======
+				(justify left)
+>>>>>>> Stashed changes
+			)
+			(uuid "64958f23-d646-4c00-9542-8ea238e77dc8")
+		)
+		(pin "SCLK_Radio" input
+<<<<<<< Updated upstream
+			(at 90.17 124.46 180)
+=======
+			(at 190.5 86.36 180)
+>>>>>>> Stashed changes
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "16cb01d2-3751-4937-aa3d-94c2b3b9bc00")
+		)
+		(pin "CS_radio" input
+<<<<<<< Updated upstream
+			(at 90.17 128.27 180)
+=======
+			(at 228.6 87.63 0)
+>>>>>>> Stashed changes
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+<<<<<<< Updated upstream
+				(justify left)
+=======
+				(justify right)
+>>>>>>> Stashed changes
+			)
+			(uuid "9ca3623c-bb71-4f55-b48f-0c6518873a64")
+		)
+		(pin "radio_int_GPIO2" input
+<<<<<<< Updated upstream
+			(at 90.17 135.89 180)
+=======
+			(at 190.5 97.79 180)
+>>>>>>> Stashed changes
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "7dbff784-8f22-4fc9-ba54-fbf82d614585")
+		)
+		(pin "radio_marc_int_GPIO3" input
+<<<<<<< Updated upstream
+			(at 90.17 139.7 180)
+=======
+			(at 190.5 101.6 180)
+>>>>>>> Stashed changes
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "5f7d5112-3907-42ea-b1d7-920cb4f1cf42")
+		)
+		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+<<<<<<< Updated upstream
+		(at 105.41 52.07)
+=======
+		(at 200.66 111.76)
+>>>>>>> Stashed changes
+		(size 29.21 20.32)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "e039269b-c792-4448-9404-ba0f836b2ed0")
+		(property "Sheetname" "Flash"
+<<<<<<< Updated upstream
+			(at 105.41 51.3584 0)
+=======
+			(at 200.66 111.0484 0)
+>>>>>>> Stashed changes
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Flash.kicad_sch"
+<<<<<<< Updated upstream
+			(at 105.41 72.9746 0)
+=======
+			(at 200.66 132.6646 0)
+>>>>>>> Stashed changes
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "flash_clk" input
+<<<<<<< Updated upstream
+			(at 105.41 55.88 180)
+=======
+			(at 200.66 115.57 180)
+>>>>>>> Stashed changes
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "e6642d4b-9ab1-48f9-8dfd-a0eae567b320")
+		)
+		(pin "flash_mosi" input
+<<<<<<< Updated upstream
+			(at 105.41 59.69 180)
+=======
+			(at 200.66 119.38 180)
+>>>>>>> Stashed changes
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "75859bb5-b8d6-45d3-86b6-0a2a0c19efff")
+		)
+		(pin "flash_miso" output
+<<<<<<< Updated upstream
+			(at 105.41 63.5 180)
+=======
+			(at 200.66 123.19 180)
+>>>>>>> Stashed changes
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "1809ea32-f3e7-4969-bc80-c1c5df58e8b9")
+		)
+		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 52.07 96.52)
+		(size 30.48 12.7)
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -56,7 +909,7 @@
 		)
 		(uuid "f4383c06-cfae-4b6b-8591-014188dc9624")
 		(property "Sheetname" "GPS Interface"
-			(at 35.56 111.0484 0)
+			(at 52.07 95.8084 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -65,13 +918,33 @@
 			)
 		)
 		(property "Sheetfile" "GPS-Interface.sch.kicad_sch"
-			(at 35.56 130.1246 0)
+			(at 52.07 109.8046 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left top)
 			)
+		)
+		(pin "GPS_RX" input
+			(at 52.07 99.06 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "a027f066-22ec-4b19-80ba-a9bb3706f22b")
+		)
+		(pin "GPS_TX" input
+			(at 52.07 102.87 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "a6a2dde3-31ab-4557-b8eb-2ffa86ad9fea")
 		)
 		(instances
 			(project "Radio-Module"

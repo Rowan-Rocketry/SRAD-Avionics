@@ -1,0 +1,89 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "acc63f22-7eb8-450a-9af4-da5f4b8157d9")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 35.56 82.55)
+		(size 30.48 22.86)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "066db7ca-fd8b-46d1-a06b-412eb11482f3")
+		(property "Sheetname" "USB C Interface"
+			(at 35.56 81.8384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../../Common/USB-C-Interface.kicad_sch"
+			(at 35.56 105.9946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 35.56 111.76)
+		(size 30.48 17.78)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "f4383c06-cfae-4b6b-8591-014188dc9624")
+		(property "Sheetname" "GPS Interface"
+			(at 35.56 111.0484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "GPS-Interface.sch.kicad_sch"
+			(at 35.56 130.1246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Radio-Module"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
