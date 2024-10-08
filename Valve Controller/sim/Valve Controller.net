@@ -1,0 +1,12 @@
+* C:\Users\vanvi\OneDrive\Documents\GitHub\SRAD-Avionics\Valve Controller\sim\Valve Controller.asc
+V1 Vdd 0 PULSE(0 12 200m 1n 1n 1.5)
+M1 N001 N002 0 0 AO6408
+R1 N001 Vdd 7.19
+R2 N002 Vdd 1k
+R3 N002 0 100k
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\vanvi\AppData\Local\LTspice\lib\cmp\standard.mos
+.tran 2s
+.backanno
+.end
