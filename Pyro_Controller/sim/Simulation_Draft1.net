@@ -1,0 +1,14 @@
+* C:\Users\marce\Documents\GitHub\SRAD-Avionics\Pyro_Controller\sim\Simulation_Draft1.asc
+M1 N001 N003 0 0 NMOS
+R1 N003 N002 1000
+R2 0 N002 3300
+R3 Sensor N001 100000
+R4 0 Sensor 27000
+R§Load Fet N001 2
+V1 N002 0 PULSE(-1 5 1m 1.5m 1m 2m 6m 2)
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\marce\AppData\Local\LTspice\lib\cmp\standard.mos
+.tran 20m
+.backanno
+.end
