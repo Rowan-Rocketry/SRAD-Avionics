@@ -5,9 +5,159 @@
 	(uuid "acc63f22-7eb8-450a-9af4-da5f4b8157d9")
 	(paper "A4")
 	(lib_symbols)
+	(wire
+		(pts
+			(xy 140.97 78.74) (xy 134.62 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2561c59c-6549-4f91-8ca3-6420a0fefdac")
+	)
+	(wire
+		(pts
+			(xy 195.58 116.84) (xy 201.93 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4479ed8b-3966-43a9-9d31-9a9c29b2cbed")
+	)
+	(wire
+		(pts
+			(xy 148.59 90.17) (xy 140.97 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49b1154a-7465-4f57-b3a7-3df12b9e7d0a")
+	)
+	(wire
+		(pts
+			(xy 195.58 111.76) (xy 195.58 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e441e08-faf5-45cb-b066-1c56d7cfcc6e")
+	)
+	(wire
+		(pts
+			(xy 198.12 107.95) (xy 198.12 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e904445-4f2d-4b75-a395-9578ee8ef480")
+	)
+	(wire
+		(pts
+			(xy 186.69 115.57) (xy 193.04 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "655e511d-89d3-4c14-b363-dbad616f576b")
+	)
+	(wire
+		(pts
+			(xy 140.97 90.17) (xy 140.97 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75b544f6-a007-4dec-be29-cee901b42c94")
+	)
+	(wire
+		(pts
+			(xy 144.78 86.36) (xy 144.78 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77b6506a-8848-4375-88cc-bb369e3436c6")
+	)
+	(wire
+		(pts
+			(xy 148.59 86.36) (xy 144.78 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f382312-ae0d-4eef-9d95-7c8b30c27fbe")
+	)
+	(wire
+		(pts
+			(xy 193.04 115.57) (xy 193.04 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "821fd066-51d1-4a86-9375-eee2bc0af50a")
+	)
+	(wire
+		(pts
+			(xy 186.69 107.95) (xy 198.12 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8d15b03d-b3d1-4560-8dbe-1d5a7500c8b2")
+	)
+	(wire
+		(pts
+			(xy 198.12 113.03) (xy 201.93 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5dd9720-0f9a-41b7-a184-6805dc040211")
+	)
+	(wire
+		(pts
+			(xy 193.04 120.65) (xy 201.93 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d78c657d-c995-47b3-81c8-ded5f411412d")
+	)
+	(wire
+		(pts
+			(xy 186.69 111.76) (xy 195.58 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e73c4fdd-e34f-4baf-a4d3-bf8046e28340")
+	)
+	(wire
+		(pts
+			(xy 144.78 73.66) (xy 134.62 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7865ce0-0049-4662-9ec9-f6ff44cb987f")
+	)
 	(sheet
-		(at 209.55 46.99)
-		(size 30.48 17.78)
+		(at 88.9 69.85)
+		(size 45.72 13.97)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -18,7 +168,7 @@
 		)
 		(uuid "066db7ca-fd8b-46d1-a06b-412eb11482f3")
 		(property "Sheetname" "USB C Interface"
-			(at 209.55 46.2784 0)
+			(at 88.9 69.1384 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27,7 +177,7 @@
 			)
 		)
 		(property "Sheetfile" "../../Common/USB-C-Interface.kicad_sch"
-			(at 209.55 65.3546 0)
+			(at 88.9 84.4046 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36,27 +186,27 @@
 			)
 		)
 		(pin "USB_D_N" bidirectional
-			(at 209.55 50.8 180)
+			(at 134.62 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 			(uuid "f5664d66-fef1-4ca9-8056-6f63756285ff")
 		)
 		(pin "USB_D_P" bidirectional
-			(at 209.55 54.61 180)
+			(at 134.62 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 			(uuid "b0e95fc9-62ad-499a-92d3-9fccd2672317")
 		)
 		(pin "V_USB" input
-			(at 209.55 58.42 180)
+			(at 88.9 73.66 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -370,7 +520,7 @@
 		)
 	)
 	(sheet
-		(at 105.41 52.07)
+		(at 201.93 109.22)
 		(size 29.21 20.32)
 		(fields_autoplaced yes)
 		(stroke
@@ -382,7 +532,7 @@
 		)
 		(uuid "e039269b-c792-4448-9404-ba0f836b2ed0")
 		(property "Sheetname" "Flash"
-			(at 105.41 51.3584 0)
+			(at 201.93 108.5084 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -391,7 +541,7 @@
 			)
 		)
 		(property "Sheetfile" "Flash.kicad_sch"
-			(at 105.41 72.9746 0)
+			(at 201.93 130.1246 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -400,7 +550,7 @@
 			)
 		)
 		(pin "flash_clk" input
-			(at 105.41 55.88 180)
+			(at 201.93 113.03 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -410,7 +560,7 @@
 			(uuid "e6642d4b-9ab1-48f9-8dfd-a0eae567b320")
 		)
 		(pin "flash_mosi" input
-			(at 105.41 59.69 180)
+			(at 201.93 116.84 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -420,7 +570,7 @@
 			(uuid "75859bb5-b8d6-45d3-86b6-0a2a0c19efff")
 		)
 		(pin "flash_miso" output
-			(at 105.41 63.5 180)
+			(at 201.93 120.65 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -477,7 +627,7 @@
 			)
 			(uuid "a027f066-22ec-4b19-80ba-a9bb3706f22b")
 		)
-		(pin "GPS_TX" input
+		(pin "GPS_TX" output
 			(at 52.07 102.87 180)
 			(effects
 				(font
@@ -485,7 +635,7 @@
 				)
 				(justify left)
 			)
-			(uuid "a6a2dde3-31ab-4557-b8eb-2ffa86ad9fea")
+			(uuid "29c055ed-8460-4e0f-b2eb-1cd75ad3a01d")
 		)
 		(instances
 			(project "Radio-Module"
