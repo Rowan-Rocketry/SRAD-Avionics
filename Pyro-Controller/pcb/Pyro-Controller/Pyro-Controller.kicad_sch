@@ -1536,7 +1536,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "27000"
+		(property "Value" "27K"
 			(at 194.31 80.0099 0)
 			(effects
 				(font
@@ -1545,7 +1545,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 190.754 78.486 90)
 			(effects
 				(font
@@ -1606,7 +1606,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "3300"
+		(property "Value" "3.3K"
 			(at 111.76 90.1699 0)
 			(effects
 				(font
@@ -1615,7 +1615,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 108.204 88.646 90)
 			(effects
 				(font
@@ -1741,7 +1741,7 @@
 				)
 			)
 		)
-		(property "Value" "100000"
+		(property "Value" "100K"
 			(at 185.42 67.31 90)
 			(effects
 				(font
@@ -1749,7 +1749,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 185.674 70.104 90)
 			(effects
 				(font
@@ -1818,7 +1818,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SQJ500AEP-T1_GE3_VIS"
+		(property "Footprint" "footprints:SQJ500AEP-T1_GE3_VIS"
 			(at 127 81.28 0)
 			(effects
 				(font
@@ -1962,7 +1962,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal"
 			(at 154.94 55.88 0)
 			(effects
 				(font
@@ -2088,7 +2088,7 @@
 				)
 			)
 		)
-		(property "Value" "1000"
+		(property "Value" "1K"
 			(at 116.84 77.47 90)
 			(effects
 				(font
@@ -2096,7 +2096,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 117.094 80.264 90)
 			(effects
 				(font
