@@ -1,0 +1,10 @@
+﻿Reference,Value,Datasheet,Footprint,Qty,DNP
+J1,Screw_Terminal_01x02,~,"TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal",1,
+J2,Conn_01x03_Socket,~,Connector_PinSocket_2.00mm:PinSocket_1x03_P2.00mm_Vertical,1,
+Q1,SiS454DN,https://www.vishay.com/docs/66707/sis454dn.pdf,Package_SO:Vishay_PowerPAK_1212-8_Single,1,
+R1,3.3K,~,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,1,
+R2,1K,~,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,1,
+R3,100K,~,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,1,
+R4,27K,~,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,1,
+"TP1,TP2,TP3",TestPoint,~,TestPoint:TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded,3,
+
