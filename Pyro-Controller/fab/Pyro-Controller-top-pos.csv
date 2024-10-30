@@ -1,4 +1,7 @@
 Ref,Val,Package,PosX,PosY,Rot,Side
+"FID1","Fiducial","Fiducial_1mm_Mask2mm",30.607000,-37.973000,0.000000,top
+"FID2","Fiducial","Fiducial_1mm_Mask2mm",29.210000,-27.813000,0.000000,top
+"FID3","Fiducial","Fiducial_1mm_Mask2mm",42.799000,-37.846000,0.000000,top
 "J1","Screw_Terminal_01x02","TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal",45.466000,-33.599000,90.000000,top
 "J2","Conn_01x03_Socket","PinSocket_1x03_P2.00mm_Vertical",25.654000,-29.623000,0.000000,top
 "Q1","SiS454DN","Vishay_PowerPAK_1212-8_Single",36.868000,-30.887000,0.000000,top
@@ -6,9 +9,6 @@ Ref,Val,Package,PosX,PosY,Rot,Side
 "R2","1K","R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",32.766000,-31.877000,0.000000,top
 "R3","100K","R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",36.449000,-26.670000,180.000000,top
 "R4","27K","R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",36.373000,-24.333000,180.000000,top
-"REF**","Fiducial_1.5mm_Mask3mm","Fiducial_1.5mm_Mask3mm",43.434000,-41.402000,0.000000,top
-"REF**","Fiducial_1.5mm_Mask3mm","Fiducial_1.5mm_Mask3mm",36.957000,-20.447000,0.000000,top
-"REF**","Fiducial_1.5mm_Mask3mm","Fiducial_1.5mm_Mask3mm",30.734000,-41.529000,0.000000,top
 "TP1","TestPoint","TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded",31.877000,-25.333000,0.000000,top
-"TP2","TestPoint","TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded",41.373000,-25.333000,0.000000,top
-"TP3","TestPoint","TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded",45.720000,-25.273000,0.000000,top
+"TP2","TestPoint","TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded",41.402000,-25.273000,180.000000,top
+"TP3","TestPoint","TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded",45.466000,-25.273000,180.000000,top

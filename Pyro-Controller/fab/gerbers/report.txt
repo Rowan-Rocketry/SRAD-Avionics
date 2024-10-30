@@ -1,0 +1,11 @@
+Plotted to '/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Pyro-Controller/fab/gerbers/Pyro-Controller-F_Cu.gbr'.
+Plotted to '/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Pyro-Controller/fab/gerbers/Pyro-Controller-B_Cu.gbr'.
+Plotted to '/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Pyro-Controller/fab/gerbers/Pyro-Controller-F_Paste.gbr'.
+Plotted to '/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Pyro-Controller/fab/gerbers/Pyro-Controller-B_Paste.gbr'.
+Plotted to '/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Pyro-Controller/fab/gerbers/Pyro-Controller-F_Silkscreen.gbr'.
+Plotted to '/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Pyro-Controller/fab/gerbers/Pyro-Controller-B_Silkscreen.gbr'.
+Plotted to '/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Pyro-Controller/fab/gerbers/Pyro-Controller-F_Mask.gbr'.
+Plotted to '/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Pyro-Controller/fab/gerbers/Pyro-Controller-B_Mask.gbr'.
+Plotted to '/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Pyro-Controller/fab/gerbers/Pyro-Controller-Edge_Cuts.gbr'.
+Created Gerber job file '/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Pyro-Controller/fab/gerbers/Pyro-Controller-job.gbrjob'.
+Info: Done.
