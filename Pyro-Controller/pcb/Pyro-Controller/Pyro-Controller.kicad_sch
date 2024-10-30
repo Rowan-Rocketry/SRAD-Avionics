@@ -739,7 +739,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://drawings-pdf.s3.amazonaws.com/10483.pdf"
 			(at 99.06 77.47 0)
 			(effects
 				(font
@@ -757,16 +757,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
-			(at 99.06 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Retailer" ""
+		(property "Purchase" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/NPPN031BFCN-RC/804805"
 			(at 99.06 77.47 0)
 			(effects
 				(font
@@ -962,7 +953,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://drawings-pdf.s3.amazonaws.com/10483.pdf"
 			(at 154.94 55.88 0)
 			(effects
 				(font
@@ -980,16 +971,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
-			(at 154.94 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Retailer" ""
+		(property "Purchase" "https://www.digikey.com/en/products/detail/phoenix-contact/1751248/2511016"
 			(at 154.94 55.88 0)
 			(effects
 				(font

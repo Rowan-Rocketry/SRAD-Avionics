@@ -723,10 +723,10 @@
 		(uuid "04b4d04e-e907-49f6-8b68-28ad81562e77")
 	)
 	(junction
-		(at 137.16 77.47)
+		(at 130.81 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "8285fb74-de52-43da-b238-639f1961bfc0")
+		(uuid "87ab5c9d-594f-4f2a-a97c-010712237e2c")
 	)
 	(junction
 		(at 90.17 87.63)
@@ -746,17 +746,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 77.47) (xy 162.56 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1bde7e98-daaa-48a7-8f27-838503d55ea6")
-	)
-	(wire
-		(pts
-			(xy 115.57 77.47) (xy 137.16 77.47)
+			(xy 115.57 77.47) (xy 130.81 77.47)
 		)
 		(stroke
 			(width 0)
@@ -864,6 +854,16 @@
 		)
 		(uuid "f7707018-15e9-434b-9dc6-12d6ddc53b9d")
 	)
+	(wire
+		(pts
+			(xy 130.81 77.47) (xy 162.56 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb07049f-4e02-4074-95d2-07f541fff8cf")
+	)
 	(hierarchical_label "Output"
 		(shape input)
 		(at 115.57 67.31 0)
@@ -925,7 +925,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
 			(at 90.17 95.25 0)
 			(effects
 				(font
@@ -943,16 +943,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
-			(at 90.17 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Retailer" ""
+		(property "Purchase" "https://www.digikey.com/en/products/detail/yageo/RC0603JR-073K3L/726757?_gl=1*oprbzy*_up*MQ..&gclid=Cj0KCQjwj4K5BhDYARIsAD1Ly2qquIi0HITcnSJzEILMOtvyCB9wPLUQOH5qAcVxd7LGVxbBaQts_tIaAkVREALw_wcB"
 			(at 90.17 95.25 0)
 			(effects
 				(font
@@ -1079,7 +1070,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
 			(at 172.72 85.09 0)
 			(effects
 				(font
@@ -1097,16 +1088,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
-			(at 172.72 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Retailer" ""
+		(property "Purchase" "https://www.digikey.com/en/products/detail/yageo/RC0603JR-0727KL/726752"
 			(at 172.72 85.09 0)
 			(effects
 				(font
@@ -1165,7 +1147,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
 			(at 97.79 87.63 0)
 			(effects
 				(font
@@ -1183,16 +1165,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
-			(at 97.79 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Retailer" ""
+		(property "Purchase" "https://www.digikey.com/en/products/detail/yageo/RC0603JR-071KL/726677?_gl=1*1an2o6r*_up*MQ..&gclid=Cj0KCQjwj4K5BhDYARIsAD1Ly2qquIi0HITcnSJzEILMOtvyCB9wPLUQOH5qAcVxd7LGVxbBaQts_tIaAkVREALw_wcB"
 			(at 97.79 87.63 0)
 			(effects
 				(font
@@ -1211,6 +1184,82 @@
 			(project "Pyro-Controller"
 				(path "/3d6591d1-15d3-4f90-b463-ad4ce370627d/d3fae8d6-dc5c-4ad1-8056-ef8170011280"
 					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 130.81 77.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4235921f-3379-4a7d-ad4f-d6d3cdc8b19d")
+		(property "Reference" "TP2"
+			(at 133.35 72.8979 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 133.35 75.4379 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded"
+			(at 135.89 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.keyelco.com/userAssets/file/M65p56.pdf"
+			(at 135.89 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 130.81 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Purchase" "https://www.digikey.com/en/products/detail/keystone-electronics/5000/255326"
+			(at 130.81 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "02124f2d-6992-432d-8cf3-1bebf0164504")
+		)
+		(instances
+			(project "Pyro-Controller"
+				(path "/3d6591d1-15d3-4f90-b463-ad4ce370627d/d3fae8d6-dc5c-4ad1-8056-ef8170011280"
+					(reference "TP2")
 					(unit 1)
 				)
 			)
@@ -1251,7 +1300,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
 			(at 166.37 77.47 0)
 			(effects
 				(font
@@ -1269,16 +1318,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
-			(at 166.37 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Retailer" ""
+		(property "Purchase" "https://www.digikey.com/en/products/detail/yageo/RC0603JR-13100KL/13694230?_gl=1*1eq4xmo*_up*MQ..&gclid=Cj0KCQjwj4K5BhDYARIsAD1Ly2qquIi0HITcnSJzEILMOtvyCB9wPLUQOH5qAcVxd7LGVxbBaQts_tIaAkVREALw_wcB"
 			(at 166.37 77.47 0)
 			(effects
 				(font
@@ -1304,16 +1344,16 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 137.16 77.47 0)
+		(at 100.33 113.03 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "5bc3909a-bae5-4d8f-986a-5cff8f090cd9")
-		(property "Reference" "TP2"
-			(at 139.7 72.8979 0)
+		(uuid "4cb345b1-7bfa-4159-916a-458de40ba00b")
+		(property "Reference" "TP3"
+			(at 102.87 108.4579 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1322,7 +1362,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 139.7 75.4379 0)
+			(at 102.87 110.9979 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1331,7 +1371,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded"
-			(at 142.24 77.47 0)
+			(at 105.41 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1339,8 +1379,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 142.24 77.47 0)
+		(property "Datasheet" "https://www.keyelco.com/userAssets/file/M65p56.pdf"
+			(at 105.41 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1349,7 +1389,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 137.16 77.47 0)
+			(at 100.33 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1357,17 +1397,8 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
-			(at 137.16 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Retailer" ""
-			(at 137.16 77.47 0)
+		(property "Purchase" "https://www.digikey.com/en/products/detail/keystone-electronics/5000/255326"
+			(at 100.33 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1376,12 +1407,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "c5855eab-b51a-4863-a69f-82691bfb94cd")
+			(uuid "e7ad0607-a3bd-4f55-b8a9-cec3aa4e6409")
 		)
 		(instances
 			(project "Pyro-Controller"
 				(path "/3d6591d1-15d3-4f90-b463-ad4ce370627d/d3fae8d6-dc5c-4ad1-8056-ef8170011280"
-					(reference "TP2")
+					(reference "TP3")
 					(unit 1)
 				)
 			)
@@ -1490,7 +1521,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.keyelco.com/userAssets/file/M65p56.pdf"
 			(at 95.25 87.63 0)
 			(effects
 				(font
@@ -1508,16 +1539,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
-			(at 90.17 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Retailer" ""
+		(property "Purchase" "https://www.digikey.com/en/products/detail/keystone-electronics/5000/255326"
 			(at 90.17 87.63 0)
 			(effects
 				(font
@@ -1533,91 +1555,6 @@
 			(project ""
 				(path "/3d6591d1-15d3-4f90-b463-ad4ce370627d/d3fae8d6-dc5c-4ad1-8056-ef8170011280"
 					(reference "TP1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 100.33 113.03 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8f2ec573-35fd-40c5-a799-d5ec952bec5c")
-		(property "Reference" "TP3"
-			(at 102.87 108.4579 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 102.87 110.9979 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded"
-			(at 105.41 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 105.41 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 100.33 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MPN" ""
-			(at 100.33 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Retailer" ""
-			(at 100.33 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e7f4f2ac-08ec-440d-a190-4eaf5e2e3f25")
-		)
-		(instances
-			(project "Pyro-Controller"
-				(path "/3d6591d1-15d3-4f90-b463-ad4ce370627d/d3fae8d6-dc5c-4ad1-8056-ef8170011280"
-					(reference "TP3")
 					(unit 1)
 				)
 			)
@@ -1681,16 +1618,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
-			(at 113.03 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Retailer" ""
+		(property "Purchase" "https://www.digikey.com/en/products/detail/vishay-siliconix/SIS454DN-T1-GE3/2441826?s=N4IgTCBcDaIMoEs4BYCsyAiA5EBdAvkA"
 			(at 113.03 87.63 0)
 			(effects
 				(font
