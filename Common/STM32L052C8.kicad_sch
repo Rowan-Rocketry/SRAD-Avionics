@@ -3062,6 +3062,12 @@
 					(unit 1)
 				)
 			)
+			(project "STM32L052C8"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -3123,6 +3129,12 @@
 		(instances
 			(project "STM32L052C8"
 				(path "/26cbc9ba-83b8-4793-b435-44b8e8ca0019"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+			(project "STM32L052C8"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
 					(reference "#PWR05")
 					(unit 1)
 				)
@@ -3193,8 +3205,8 @@
 					(unit 1)
 				)
 			)
-			(project "Radio-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+			(project "STM32L052C8"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
 					(reference "#PWR?")
 					(unit 1)
 				)
@@ -3271,6 +3283,12 @@
 					(unit 1)
 				)
 			)
+			(project ""
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -3337,6 +3355,12 @@
 		(instances
 			(project "STM32L052C8"
 				(path "/26cbc9ba-83b8-4793-b435-44b8e8ca0019"
+					(reference "MIC_C6")
+					(unit 1)
+				)
+			)
+			(project "STM32L052C8"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
 					(reference "MIC_C6")
 					(unit 1)
 				)
@@ -3411,8 +3435,8 @@
 					(unit 1)
 				)
 			)
-			(project "Radio-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+			(project "STM32L052C8"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
 					(reference "MIC_C?")
 					(unit 1)
 				)
@@ -3493,6 +3517,12 @@
 					(unit 1)
 				)
 			)
+			(project "STM32L052C8"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
+					(reference "MIC_C2")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -3554,6 +3584,12 @@
 		(instances
 			(project "STM32L052C8"
 				(path "/26cbc9ba-83b8-4793-b435-44b8e8ca0019"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+			(project "STM32L052C8"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
 					(reference "#PWR02")
 					(unit 1)
 				)
@@ -3628,6 +3664,12 @@
 					(unit 1)
 				)
 			)
+			(project "STM32L052C8"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
+					(reference "MIC_C5")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -3698,6 +3740,12 @@
 					(unit 1)
 				)
 			)
+			(project "STM32L052C8"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
+					(reference "MIC_C1")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -3764,8 +3812,8 @@
 					(unit 1)
 				)
 			)
-			(project "Radio-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+			(project "STM32L052C8"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
 					(reference "#PWR?")
 					(unit 1)
 				)
@@ -3842,8 +3890,8 @@
 					(unit 1)
 				)
 			)
-			(project "Radio-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+			(project "STM32L052C8"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
 					(reference "#PWR?")
 					(unit 1)
 				)
@@ -3919,8 +3967,8 @@
 					(unit 1)
 				)
 			)
-			(project "Radio-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+			(project "STM32L052C8"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
 					(reference "#PWR?")
 					(unit 1)
 				)
@@ -4013,8 +4061,8 @@
 					(unit 1)
 				)
 			)
-			(project "Radio-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+			(project "STM32L052C8"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
 					(reference "MIC_SW?")
 					(unit 1)
 				)
@@ -4091,8 +4139,8 @@
 					(unit 1)
 				)
 			)
-			(project "Radio-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+			(project "STM32L052C8"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
 					(reference "#PWR?")
 					(unit 1)
 				)
@@ -4169,8 +4217,8 @@
 					(unit 1)
 				)
 			)
-			(project "Radio-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+			(project "STM32L052C8"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
 					(reference "#PWR?")
 					(unit 1)
 				)
@@ -4251,8 +4299,8 @@
 					(unit 1)
 				)
 			)
-			(project "Radio-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+			(project "STM32L052C8"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
 					(reference "MIC_R?")
 					(unit 1)
 				)
@@ -4329,6 +4377,12 @@
 					(unit 1)
 				)
 			)
+			(project "STM32L052C8"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -4395,8 +4449,8 @@
 					(unit 1)
 				)
 			)
-			(project "Radio-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+			(project "STM32L052C8"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
 					(reference "#PWR?")
 					(unit 1)
 				)
@@ -4473,6 +4527,12 @@
 					(unit 1)
 				)
 			)
+			(project "STM32L052C8"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -4539,6 +4599,12 @@
 		(instances
 			(project "STM32L052C8"
 				(path "/26cbc9ba-83b8-4793-b435-44b8e8ca0019"
+					(reference "MIC_C4")
+					(unit 1)
+				)
+			)
+			(project "STM32L052C8"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
 					(reference "MIC_C4")
 					(unit 1)
 				)
@@ -4615,8 +4681,8 @@
 					(unit 1)
 				)
 			)
-			(project "Radio-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+			(project "STM32L052C8"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
 					(reference "MIC_U?")
 					(unit 1)
 				)
@@ -4693,8 +4759,8 @@
 					(unit 1)
 				)
 			)
-			(project "Radio-Module"
-				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/a01408f1-5b63-43f5-b922-b09dc2d98561"
+			(project "STM32L052C8"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
 					(reference "#PWR?")
 					(unit 1)
 				)
@@ -4914,6 +4980,12 @@
 					(unit 1)
 				)
 			)
+			(project ""
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
+					(reference "U1")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -4984,11 +5056,12 @@
 					(unit 1)
 				)
 			)
-		)
-	)
-	(sheet_instances
-		(path "/"
-			(page "1")
+			(project "STM32L052C8"
+				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/63b75747-94db-4f73-af6e-8ecff002d28a"
+					(reference "MIC_C3")
+					(unit 1)
+				)
+			)
 		)
 	)
 )
