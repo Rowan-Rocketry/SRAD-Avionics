@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.0,
-          "height": 1.7,
-          "width": 1.7
+          "drill": 0.762,
+          "height": 1.524,
+          "width": 1.524
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -51,13 +51,7 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [
-        {
-          "gap": 0.0,
-          "via_gap": 0.0,
-          "width": 0.0
-        }
-      ],
+      "diff_pair_dimensions": [],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -119,14 +113,14 @@
         "min_clearance": 0.0,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.5,
-        "min_hole_clearance": 0.127,
+        "min_hole_clearance": 0.25,
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
         "min_resolved_spokes": 2,
         "min_silk_clearance": 0.0,
-        "min_text_height": 0.762,
-        "min_text_thickness": 0.0762,
+        "min_text_height": 0.8,
+        "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
         "min_track_width": 0.0,
         "min_via_annular_width": 0.1,
@@ -177,9 +171,7 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [
-        0.0
-      ],
+      "track_widths": [],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -206,12 +198,7 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [
-        {
-          "diameter": 0.0,
-          "drill": 0.0
-        }
-      ],
+      "via_dimensions": [],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -444,43 +431,26 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Recovery-Module.kicad_pro",
+    "filename": "Pyro-Controller.kicad_pro",
     "version": 1
   },
   "net_settings": {
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.127,
-        "diff_pair_gap": 0.254,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2032,
+        "diff_pair_width": 0.2,
         "line_style": 0,
-        "microvia_diameter": 0.3048,
-        "microvia_drill": 0.1016,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2032,
-        "via_diameter": 0.508,
-        "via_drill": 0.254,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.127,
-        "diff_pair_gap": 0.254,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2032,
-        "line_style": 0,
-        "microvia_diameter": 0.3048,
-        "microvia_drill": 0.1016,
-        "name": "Power_In",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.4064,
-        "via_diameter": 0.6096,
-        "via_drill": 0.3048,
+        "track_width": 0.2,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
         "wire_width": 6
       }
     ],
@@ -489,28 +459,15 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": [
-      {
-        "netclass": "Power_In",
-        "pattern": "GND*"
-      },
-      {
-        "netclass": "Power_In",
-        "pattern": "+3.3V"
-      },
-      {
-        "netclass": "Default",
-        "pattern": ""
-      }
-    ]
+    "netclass_patterns": []
   },
   "pcbnew": {
     "last_paths": {
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
-      "pos_files": "",
+      "plot": "../../fab/gerbers/",
+      "pos_files": "../../fab/",
       "specctra_dsn": "",
       "step": "",
       "svg": "",
@@ -520,7 +477,7 @@
   },
   "schematic": {
     "annotate_start_num": 0,
-    "bom_export_filename": "",
+    "bom_export_filename": "../../bom/Pyro-Controller.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -531,7 +488,72 @@
       "ref_range_delimiter": "",
       "string_delimiter": "\""
     },
-    "bom_presets": [],
+    "bom_presets": [
+      {
+        "exclude_dnp": false,
+        "fields_ordered": [
+          {
+            "group_by": false,
+            "label": "Reference",
+            "name": "Reference",
+            "show": true
+          },
+          {
+            "group_by": true,
+            "label": "Value",
+            "name": "Value",
+            "show": true
+          },
+          {
+            "group_by": false,
+            "label": "Datasheet",
+            "name": "Datasheet",
+            "show": true
+          },
+          {
+            "group_by": false,
+            "label": "Footprint",
+            "name": "Footprint",
+            "show": true
+          },
+          {
+            "group_by": false,
+            "label": "Qty",
+            "name": "${QUANTITY}",
+            "show": true
+          },
+          {
+            "group_by": false,
+            "label": "DNP",
+            "name": "${DNP}",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "#",
+            "name": "${ITEM_NUMBER}",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "Description",
+            "name": "Description",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "Purchase",
+            "name": "Purchase",
+            "show": true
+          }
+        ],
+        "filter_string": "",
+        "group_symbols": true,
+        "name": "Rowan-Rocketry-BOM",
+        "sort_asc": true,
+        "sort_field": "Reference"
+      }
+    ],
     "bom_settings": {
       "exclude_dnp": false,
       "fields_ordered": [
@@ -566,15 +588,33 @@
           "show": true
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "DNP",
           "name": "${DNP}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Purchase",
+          "name": "Purchase",
           "show": true
         }
       ],
       "filter_string": "",
       "group_symbols": true,
-      "name": "Grouped By Value",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -619,28 +659,12 @@
   },
   "sheets": [
     [
-      "c41b490b-5ab6-4438-aea0-388670bb08f4",
+      "3d6591d1-15d3-4f90-b463-ad4ce370627d",
       "Root"
     ],
     [
-      "4c43b18e-6722-4e4a-b82a-db7557f268f7",
-      "Microcontroller"
-    ],
-    [
-      "b23d16a1-3c5b-4321-8b30-5d6992e2f62d",
-      "USB C Interface"
-    ],
-    [
-      "3e9e0b47-da2c-4332-b911-05c7ab3ede69",
-      "Sensors"
-    ],
-    [
-      "8fec1675-8c54-4843-9510-656cf0b8b5fe",
-      "Valve Controller"
-    ],
-    [
-      "59e69564-f5fa-4eca-884c-14e1030b4b23",
-      "Pyro Controller"
+      "d3fae8d6-dc5c-4ad1-8056-ef8170011280",
+      "PyroController"
     ]
   ],
   "text_variables": {}
