@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Si7232DN_T1_G3")(type "KiCad")(uri "/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Common/lib/SI7232DN_T1_GE3/Si7232DN_T1_G3.kicad_sym")(options "")(descr ""))
+)

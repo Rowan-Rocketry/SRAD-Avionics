@@ -1,0 +1,6 @@
+Info: Front (top side) placement file: '/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Pyro-Controller/pcb/Pyro-Controller/Pyro-Controller-top-pos.csv'.
+Info: Component count: 10.
+Info: Back (bottom side) placement file: '/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Pyro-Controller/pcb/Pyro-Controller/Pyro-Controller-bottom-pos.csv'.
+Info: Component count: 0.
+Info: Full component count: 10.
+Info: File generation successful.
