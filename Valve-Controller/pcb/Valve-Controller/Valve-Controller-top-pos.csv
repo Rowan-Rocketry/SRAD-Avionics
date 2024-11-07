@@ -1,0 +1,11 @@
+Ref,Val,Package,PosX,PosY,Rot,Side
+"J1","Screw_Terminal_01x02","TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal",45.500000,-37.000000,90.000000,top
+"J2","Conn_01x03_Socket","PinSocket_1x03_P2.00mm_Vertical",25.781000,-30.512000,0.000000,top
+"Q1","SiS454DN","Vishay_PowerPAK_1212-8_Single",36.995000,-33.554000,0.000000,top
+"R1","3.3K","R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",31.623000,-32.512000,180.000000,top
+"R2","1K","R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",31.623000,-34.544000,0.000000,top
+"R3","100K","R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",36.576000,-29.337000,180.000000,top
+"R4","27K","R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",36.500000,-27.000000,180.000000,top
+"TP1","TestPoint","TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded",30.734000,-28.000000,0.000000,top
+"TP2","TestPoint","TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded",41.500000,-28.000000,0.000000,top
+"TP3","TestPoint","TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded",35.687000,-40.513000,0.000000,top
