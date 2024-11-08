@@ -81,11 +81,11 @@
 		)
 	)
 	(net 0 "")
-	(net 1 "+3.3V")
+	(net 1 "+12V")
 	(net 2 "Net-(Q1-G)")
 	(net 3 "GNDD")
-	(net 4 "/PyroController/Output")
-	(net 5 "/PyroController/Input")
+	(net 4 "/ValveController/Output")
+	(net 5 "/ValveController/Input")
 	(net 6 "Net-(R3-Pad2)")
 	(footprint "TestPoint:TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded"
 		(layer "F.Cu")
@@ -169,8 +169,8 @@
 		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/d3fae8d6-dc5c-4ad1-8056-ef8170011280/4cb345b1-7bfa-4159-916a-458de40ba00b")
-		(sheetname "PyroController")
-		(sheetfile "PyroController.kicad_sch")
+		(sheetname "ValveController")
+		(sheetfile "ValveController.kicad_sch")
 		(attr through_hole)
 		(fp_circle
 			(center 0 0)
@@ -351,7 +351,7 @@
 		(property ki_fp_filters "Fiducial*")
 		(path "/c4b58347-e614-4f54-b3fa-4b121a022d77")
 		(sheetname "Root")
-		(sheetfile "Pyro-Controller.kicad_sch")
+		(sheetfile "Valve-Controller.kicad_sch")
 		(attr smd exclude_from_bom)
 		(fp_circle
 			(center 0 0)
@@ -477,8 +477,8 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/d3fae8d6-dc5c-4ad1-8056-ef8170011280/49992da6-0130-4a32-a60f-0809b7e37b77")
-		(sheetname "PyroController")
-		(sheetfile "PyroController.kicad_sch")
+		(sheetname "ValveController")
+		(sheetfile "ValveController.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.254724 0.5225)
@@ -596,7 +596,7 @@
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 4 "/PyroController/Output")
+			(net 4 "/ValveController/Output")
 			(pintype "passive")
 			(uuid "8b5f7074-9942-4e6e-9e15-7ae4c021440a")
 		)
@@ -693,7 +693,7 @@
 		(property ki_fp_filters "Fiducial*")
 		(path "/9dbed4cc-5cb6-474c-9ee8-5f41eaa1f08e")
 		(sheetname "Root")
-		(sheetfile "Pyro-Controller.kicad_sch")
+		(sheetfile "Valve-Controller.kicad_sch")
 		(attr smd exclude_from_bom)
 		(fp_circle
 			(center 0 0)
@@ -737,6 +737,327 @@
 			(uuid "aec5f968-6aa6-48b8-bc03-09f41c8a0d7a")
 		)
 	)
+	(footprint "Diode_SMD:D_SOD-123"
+		(layer "F.Cu")
+		(uuid "8c1ca312-c6ca-4cc8-8b3a-78f8e5692c9f")
+		(at 40.767 32.13 90)
+		(descr "SOD-123")
+		(tags "SOD-123")
+		(property "Reference" "D1"
+			(at -3.176 0 180)
+			(layer "F.SilkS")
+			(uuid "b5b66b66-8f20-4dbc-9313-9151d0080496")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "D"
+			(at 0 2.1 90)
+			(layer "F.Fab")
+			(uuid "239e6c42-83a0-4271-afea-c1ab64d0bc85")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8f108706-4bca-4430-8f04-f5e95e1c2ce2")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "304a8f4f-7b90-4695-a17a-87a668cfbd02")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "Diode"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b93d8089-26d8-42b4-b771-59e96dadd7f7")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b6513125-12b9-4cd3-84df-938fb462668f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9cfe8854-d6dc-4fd3-af58-f96e849b467d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
+		(path "/d3fae8d6-dc5c-4ad1-8056-ef8170011280/50f1762c-f2ae-421c-9697-fb37b8650751")
+		(sheetname "ValveController")
+		(sheetfile "ValveController.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start -2.36 -1)
+			(end 1.65 -1)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "3cac9010-cecd-45ce-9758-6fcf76ba0d7a")
+		)
+		(fp_line
+			(start -2.36 -1)
+			(end -2.36 1)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "9c4b0835-5364-4851-a9a4-e3bd17f7f811")
+		)
+		(fp_line
+			(start -2.36 1)
+			(end 1.65 1)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "4fb2cef9-f2c0-406f-9861-892fd71a3307")
+		)
+		(fp_line
+			(start 2.35 -1.15)
+			(end 2.35 1.15)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "b4e989e9-193a-4f39-a555-3698329593d3")
+		)
+		(fp_line
+			(start -2.35 -1.15)
+			(end 2.35 -1.15)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "be990441-7315-4762-be1e-5be41d341d6d")
+		)
+		(fp_line
+			(start -2.35 -1.15)
+			(end -2.35 1.15)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "625d3d67-fc4b-4725-b3b5-17df69fdbdd0")
+		)
+		(fp_line
+			(start 2.35 1.15)
+			(end -2.35 1.15)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "f7720721-2ad1-4bd1-ac76-510a4de74f8f")
+		)
+		(fp_line
+			(start 1.4 -0.9)
+			(end 1.4 0.9)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "bf456af9-7822-4222-82b2-6be0295f5d28")
+		)
+		(fp_line
+			(start -1.4 -0.9)
+			(end 1.4 -0.9)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "db7d98ac-6149-435c-bb4b-552f68cb4901")
+		)
+		(fp_line
+			(start 0.25 -0.4)
+			(end 0.25 0.4)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "fba13b50-d157-4e01-89cf-9953f36ad891")
+		)
+		(fp_line
+			(start 0.25 0)
+			(end 0.75 0)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "44567868-209d-4641-a01d-2fbdc2b943c1")
+		)
+		(fp_line
+			(start -0.35 0)
+			(end -0.35 -0.55)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "2ad7cd2c-3bd7-4198-a2f1-2452d69c7534")
+		)
+		(fp_line
+			(start -0.35 0)
+			(end 0.25 -0.4)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "28aede49-ca5d-4afb-b888-a074970619e5")
+		)
+		(fp_line
+			(start -0.35 0)
+			(end -0.35 0.55)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "72a39118-73a0-45bd-bfc8-b660ab1b553a")
+		)
+		(fp_line
+			(start -0.75 0)
+			(end -0.35 0)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "6cee65b4-e731-419c-940b-b59f5fc6cf3c")
+		)
+		(fp_line
+			(start 0.25 0.4)
+			(end -0.35 0)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "67448b0e-ffb9-48b6-b02b-a1333d1b1820")
+		)
+		(fp_line
+			(start 1.4 0.9)
+			(end -1.4 0.9)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "5f388bfe-9724-41bd-80a5-0f10ff3102ba")
+		)
+		(fp_line
+			(start -1.4 0.9)
+			(end -1.4 -0.9)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "7518dba5-3a51-4821-a99f-180733b6d662")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 -2 90)
+			(layer "F.Fab")
+			(uuid "3409f1f4-d6cf-46e6-80ee-75a1e71626d5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -1.65 0 90)
+			(size 0.9 1.2)
+			(layers "F.Cu" "F.Paste" "F.Mask")
+			(roundrect_rratio 0.25)
+			(net 1 "+12V")
+			(pinfunction "K")
+			(pintype "passive")
+			(uuid "ba7da711-a9e5-4ec6-9424-4281f33d6b04")
+		)
+		(pad "2" smd roundrect
+			(at 1.65 0 90)
+			(size 0.9 1.2)
+			(layers "F.Cu" "F.Paste" "F.Mask")
+			(roundrect_rratio 0.25)
+			(net 4 "/ValveController/Output")
+			(pinfunction "A")
+			(pintype "passive")
+			(uuid "d0198e61-4cc0-416b-b5e7-e773320703fc")
+		)
+		(model "${KICAD8_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
 	(footprint "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal"
 		(layer "F.Cu")
 		(uuid "8ebb2928-f108-43e1-989f-3602d06f3bfc")
@@ -744,7 +1065,7 @@
 		(descr "Terminal Block Phoenix PT-1,5-2-3.5-H, 2 pins, pitch 3.5mm, size 7x7.6mm^2, drill diamater 1.2mm, pad diameter 2.4mm, see , script-generated using https://github.com/pointhi/kicad-footprint-generator/scripts/TerminalBlock_Phoenix")
 		(tags "THT Terminal Block Phoenix PT-1,5-2-3.5-H pitch 3.5mm size 7x7.6mm^2 drill 1.2mm pad 2.4mm")
 		(property "Reference" "J1"
-			(at 1.75 -4.16 90)
+			(at 4.77 -4.318 90)
 			(layer "F.SilkS")
 			(uuid "4066532c-766e-4e79-a9cc-583cd4c193af")
 			(effects
@@ -820,7 +1141,7 @@
 		(property ki_fp_filters "TerminalBlock*:*")
 		(path "/921a52d5-83fe-4b23-9c45-256fb168b981")
 		(sheetname "Root")
-		(sheetfile "Pyro-Controller.kicad_sch")
+		(sheetfile "Valve-Controller.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start 5.31 -3.16)
@@ -1181,7 +1502,7 @@
 			(uuid "52bd8385-3d09-477c-b322-0f038bb2d466")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 1.75 2.4 90)
+			(at 4.77 -4.318 90)
 			(layer "F.Fab")
 			(uuid "08af37ee-f8b7-42ac-8896-d27cc5961701")
 			(effects
@@ -1197,7 +1518,7 @@
 			(drill 1.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 1 "+3.3V")
+			(net 1 "+12V")
 			(pinfunction "Pin_1")
 			(pintype "passive")
 			(uuid "e321c713-e29d-4f25-9605-bec9ddb1af6a")
@@ -1208,7 +1529,7 @@
 			(drill 1.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 4 "/PyroController/Output")
+			(net 4 "/ValveController/Output")
 			(pinfunction "Pin_2")
 			(pintype "passive")
 			(uuid "ff67e8cb-2482-464c-9419-f86a8d8e1ca3")
@@ -1307,8 +1628,8 @@
 		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/d3fae8d6-dc5c-4ad1-8056-ef8170011280/4235921f-3379-4a7d-ad4f-d6d3cdc8b19d")
-		(sheetname "PyroController")
-		(sheetfile "PyroController.kicad_sch")
+		(sheetname "ValveController")
+		(sheetfile "ValveController.kicad_sch")
 		(attr through_hole)
 		(fp_circle
 			(center 0 0)
@@ -1400,7 +1721,7 @@
 			(drill 1.5)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 4 "/PyroController/Output")
+			(net 4 "/ValveController/Output")
 			(pinfunction "1")
 			(pintype "passive")
 			(uuid "21673be1-66a2-45b8-9feb-1a419d953d8f")
@@ -1499,8 +1820,8 @@
 		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/d3fae8d6-dc5c-4ad1-8056-ef8170011280/8bf8b9f7-5f4f-43fe-a5e0-3e4a28750636")
-		(sheetname "PyroController")
-		(sheetfile "PyroController.kicad_sch")
+		(sheetname "ValveController")
+		(sheetfile "ValveController.kicad_sch")
 		(attr through_hole)
 		(fp_circle
 			(center 0 0)
@@ -1592,7 +1913,7 @@
 			(drill 1.5)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 5 "/PyroController/Input")
+			(net 5 "/ValveController/Input")
 			(pinfunction "1")
 			(pintype "passive")
 			(uuid "61b672c6-9449-4a69-96c4-1d632ea6a371")
@@ -1692,7 +2013,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/4b99701c-d9c8-4cc9-865e-67a1e6ee7a17")
 		(sheetname "Root")
-		(sheetfile "Pyro-Controller.kicad_sch")
+		(sheetfile "Valve-Controller.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.06 1)
@@ -1872,7 +2193,7 @@
 			(drill 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 5 "/PyroController/Input")
+			(net 5 "/ValveController/Input")
 			(pinfunction "Pin_2")
 			(pintype "passive")
 			(uuid "39aed98f-07c0-4c12-a771-7879c42804c9")
@@ -1883,7 +2204,7 @@
 			(drill 0.8)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 1 "+3.3V")
+			(net 1 "+12V")
 			(pinfunction "Pin_3")
 			(pintype "passive")
 			(uuid "91064a80-536d-4441-9971-bbedf0bf8cba")
@@ -1982,8 +2303,8 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/d3fae8d6-dc5c-4ad1-8056-ef8170011280/0899b739-8f41-431d-b8c2-ff48e67ef038")
-		(sheetname "PyroController")
-		(sheetfile "PyroController.kicad_sch")
+		(sheetname "ValveController")
+		(sheetfile "ValveController.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.254724 0.5225)
@@ -2208,8 +2529,8 @@
 		)
 		(property ki_fp_filters "Vishay*PowerPAK*1212*Single*")
 		(path "/d3fae8d6-dc5c-4ad1-8056-ef8170011280/b2306eab-f3b6-434c-befc-3e6cc744649e")
-		(sheetname "PyroController")
-		(sheetfile "PyroController.kicad_sch")
+		(sheetname "ValveController")
+		(sheetfile "ValveController.kicad_sch")
 		(zone_connect 2)
 		(attr smd)
 		(fp_line
@@ -2425,7 +2746,7 @@
 			(at 0.5575 0)
 			(size 1.725 2.235)
 			(layers "F.Cu" "F.Paste" "F.Mask")
-			(net 4 "/PyroController/Output")
+			(net 4 "/ValveController/Output")
 			(pinfunction "D")
 			(pintype "passive")
 			(zone_connect 2)
@@ -2531,7 +2852,7 @@
 		(property ki_fp_filters "Fiducial*")
 		(path "/c16c242d-cc8b-4460-8157-507d30990c7a")
 		(sheetname "Root")
-		(sheetfile "Pyro-Controller.kicad_sch")
+		(sheetfile "Valve-Controller.kicad_sch")
 		(attr smd exclude_from_bom)
 		(fp_circle
 			(center 0 0)
@@ -2657,8 +2978,8 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/d3fae8d6-dc5c-4ad1-8056-ef8170011280/021428e7-62a5-4d8b-8d95-e8bc3bbc14ef")
-		(sheetname "PyroController")
-		(sheetfile "PyroController.kicad_sch")
+		(sheetname "ValveController")
+		(sheetfile "ValveController.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.254724 0.5225)
@@ -2785,7 +3106,7 @@
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 5 "/PyroController/Input")
+			(net 5 "/ValveController/Input")
 			(pintype "passive")
 			(uuid "af1c99d0-d23b-466b-b3c3-0bbd15abfc54")
 		)
@@ -2883,8 +3204,8 @@
 		)
 		(property ki_fp_filters "R_*")
 		(path "/d3fae8d6-dc5c-4ad1-8056-ef8170011280/0d94f21b-bf1e-4426-9959-9b978d388d56")
-		(sheetname "PyroController")
-		(sheetfile "PyroController.kicad_sch")
+		(sheetname "ValveController")
+		(sheetfile "ValveController.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.254724 -0.5225)
@@ -3002,7 +3323,7 @@
 			(size 0.975 0.95)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net 5 "/PyroController/Input")
+			(net 5 "/ValveController/Input")
 			(pintype "passive")
 			(uuid "4eb1f0d1-fcd2-4bf0-8629-63fc57a340ca")
 		)
@@ -3950,7 +4271,7 @@
 		(layer "Edge.Cuts")
 		(uuid "f07975bb-6227-45f1-af6f-27ab7219d525")
 	)
-	(gr_text "Pyro Controller\nRev. 1"
+	(gr_text "Valve Controller\nRev. 1"
 		(at 37.043404 42.672 0)
 		(layer "B.SilkS")
 		(uuid "b86b7da8-c35b-40ad-9c76-7b18fd379699")
@@ -3963,8 +4284,8 @@
 			(justify bottom mirror)
 		)
 	)
-	(gr_text "Pyro Controller\nRev. 1"
-		(at 37.043404 42.672 -0)
+	(gr_text "Valve Controller\nRev. 1"
+		(at 37.043404 42.672 0)
 		(layer "F.SilkS")
 		(uuid "efc91f40-0544-4194-af4b-17930e97c78c")
 		(effects
