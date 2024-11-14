@@ -1,0 +1,93 @@
+# (1) Recieve data
+# (2) Assemble data into a hexadecimal packet
+
+#-------------------------------------------------------------------------------
+# (3) Convert hexadecimal packet into bitstuffed binary packet :)
+
+Hex_Packet = "22c10868690a02fb07de890100e809fffffdff0000a50c6f0324033500000000005e86b8" # This is an example packet for now
+
+Binary_Packet = bin(int(Hex_Packet, 16))[2:].zfill(len(Hex_Packet) * 4) # turn Hexadecimal packet into plain binary
+
+print("Binary Packet:", Binary_Packet) # view the non-stuffed binary packet
+print("Length of Binary Packet:", len(Binary_Packet)) # view the length of the non-stuffed binary packet
+
+Stuffed_Binary_Packet = "" # opens an empty string to collect bits
+consecutive_ones = 0 # counts how many 1s in a row
+
+for bit in Binary_Packet:
+	Stuffed_Binary_Packet += bit	# Add the current bit to the stuffed packet
+	
+	# print(f"Processing bit: {bit}") # debugging
+	# print(f"Stuffed Binary Packet so far: {Stuffed_Binary_Packet}") # debugging
+
+
+	if bit == "1":
+		consecutive_ones += 1
+		if consecutive_ones == 5:
+			Stuffed_Binary_Packet += "0"	# Stuff a 0 after five consecutive 1's
+			consecutive_ones = 0	# Reset the counter after stuffing
+
+			# print("Stuffed a 0 after 5 consecutive 1s")
+			
+	else:
+		consecutive_ones = 0
+
+print("Final Stuffed Binary Packet:", Stuffed_Binary_Packet)
+
+# -----------------------------------------------------------------------------
+# (4) Convert stuffed binary packet into a wav file :)
+
+
+import numpy as np 	# imports the numpy python library for vectors
+from scipy.signal import chirp
+import wave
+
+# RF Generator Parameters
+baud_rate = 1200            # Baud rate in symbols per second (1200 is SDR Angel's only option)
+mark_freq = 1200            # Mark frequency (Hz)
+space_freq = 2200           # Space frequency (Hz)
+sample_rate = 48000         # Samples per second
+duration = 1.0              # Duration of the packet (seconds)
+
+data_bits = (Stuffed_Binary_Packet)
+
+# NRZI Encoding
+def nrzi_encode(bits):
+    nrzi = []
+    last_bit = 1
+    for bit in bits:
+        if bit == "0":
+            nrzi.append(last_bit)  # Maintain previous state
+        else:
+            last_bit = 1 - last_bit  # Flip state
+            nrzi.append(last_bit)
+    return nrzi
+
+def generate_afsk_waveform(encoded_bits):
+    t = np.arange(0, duration, 1 / sample_rate)  # Time array
+    signal = np.array([])
+    for bit in encoded_bits:
+        freq = mark_freq if bit else space_freq
+        t_bit = np.linspace(0, 1 / baud_rate, int(sample_rate / baud_rate), endpoint=False)
+        wave_bit = np.sin(2 * np.pi * freq * t_bit)
+        signal = np.concatenate((signal, wave_bit))
+    return signal
+
+# Generate NRZI and AFSK signal
+nrzi_bits = nrzi_encode(data_bits)
+afsk_signal = generate_afsk_waveform(nrzi_bits)
+
+# Normalize the signal
+afsk_signal = afsk_signal / np.max(np.abs(afsk_signal))
+
+# Save as WAV file
+with wave.open("ax25_afsk.wav", "w") as wav_file:
+    wav_file.setnchannels(1)            # Mono
+    wav_file.setsampwidth(2)           # 16-bit
+    wav_file.setframerate(sample_rate)
+    wav_file.writeframes((afsk_signal * 32767).astype(np.int16).tobytes())
+
+print("AX.25 AFSK waveform saved as 'ax25_afsk.wav'.") # saved as a .wav file
+
+#-------------------------------------------------------------------------------
+# (5)
