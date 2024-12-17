@@ -104,7 +104,6 @@
 		)
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
-		(grid_origin 110.617 133.985)
 		(pcbplotparams
 			(layerselection 0x00010fc_ffffffff)
 			(plot_on_all_layers_selection 0x0000000_00000000)
@@ -5366,7 +5365,7 @@
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C1"
-			(at 0 -1.6 0)
+			(at 0 -1.6 360)
 			(layer "F.SilkS")
 			(uuid "b7ac1ca1-dce0-421f-a737-839e544fba72")
 			(effects
@@ -5377,7 +5376,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 0 1.43 0)
+			(at 0 1.43 360)
 			(layer "F.Fab")
 			(uuid "f841cc20-75b3-42f7-9eb6-46a3ddc74608")
 			(effects
@@ -5532,7 +5531,7 @@
 			(uuid "4b229ec3-3434-4268-9d0a-5c2bb706c91b")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 0)
+			(at 0 0 360)
 			(layer "F.Fab")
 			(uuid "320a5f38-0625-4703-9399-09d9191a614d")
 			(effects
@@ -12793,7 +12792,7 @@
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C2"
-			(at 0 1.595 0)
+			(at 0 1.595 360)
 			(layer "F.SilkS")
 			(uuid "a9925368-f2e8-441a-95de-f3d6952d4a1d")
 			(effects
@@ -12804,7 +12803,7 @@
 			)
 		)
 		(property "Value" "4.7uF"
-			(at 0 1.43 0)
+			(at 0 1.43 360)
 			(layer "F.Fab")
 			(uuid "385e9334-cdd0-48ba-aa40-bf0336a533d9")
 			(effects
@@ -12959,7 +12958,7 @@
 			(uuid "7c850308-074d-4f24-b4d0-3c7028e05c69")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 0)
+			(at 0 0 360)
 			(layer "F.Fab")
 			(uuid "4e6cee3b-d138-43dc-96d9-688e7141384d")
 			(effects
