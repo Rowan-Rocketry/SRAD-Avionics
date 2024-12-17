@@ -2071,7 +2071,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "044a1b49-c044-48b2-8258-49479765b38c")
-		(property "Reference" "USB_U1"
+		(property "Reference" "USB_U?"
 			(at 82.042 72.136 0)
 			(effects
 				(font
@@ -2138,12 +2138,6 @@
 			(uuid "a996a4db-5834-4128-91c7-249aadfc5046")
 		)
 		(instances
-			(project "USB-C-Interface"
-				(path "/7c253a73-a3ad-4431-8c8c-7421e0c0a047"
-					(reference "USB_U1")
-					(unit 1)
-				)
-			)
 			(project "Radio-Module"
 				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
 					(reference "USB_U?")
@@ -2168,7 +2162,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "06f3d666-0362-4be7-b132-32a5e77ada71")
-		(property "Reference" "USB_J1"
+		(property "Reference" "USB_J?"
 			(at 46.99 54.61 0)
 			(effects
 				(font
@@ -2263,12 +2257,6 @@
 			(uuid "e4b4db47-e328-4ed2-8870-ca7d622b38c7")
 		)
 		(instances
-			(project "USB-C-Interface"
-				(path "/7c253a73-a3ad-4431-8c8c-7421e0c0a047"
-					(reference "USB_J1")
-					(unit 1)
-				)
-			)
 			(project "Radio-Module"
 				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
 					(reference "USB_J?")
@@ -2293,7 +2281,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0b91601d-73be-4fcd-975f-5ca680deb564")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR?"
 			(at 46.99 106.68 0)
 			(effects
 				(font
@@ -2341,12 +2329,6 @@
 			(uuid "aee01e21-ccd3-4dfa-9653-eea27d1f7f7f")
 		)
 		(instances
-			(project "USB-C-Interface"
-				(path "/7c253a73-a3ad-4431-8c8c-7421e0c0a047"
-					(reference "#PWR02")
-					(unit 1)
-				)
-			)
 			(project "Radio-Module"
 				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
 					(reference "#PWR?")
@@ -2371,7 +2353,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0e6852ec-7290-4da6-9861-56385bf5963c")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR?"
 			(at 120.65 55.88 0)
 			(effects
 				(font
@@ -2420,12 +2402,6 @@
 			(uuid "cb9779e4-2bac-4bbc-bfd8-edd042242f98")
 		)
 		(instances
-			(project "USB-C-Interface"
-				(path "/7c253a73-a3ad-4431-8c8c-7421e0c0a047"
-					(reference "#PWR04")
-					(unit 1)
-				)
-			)
 			(project "Radio-Module"
 				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
 					(reference "#PWR?")
@@ -2450,7 +2426,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4d71b836-3329-4167-93cb-48ce74081099")
-		(property "Reference" "#PWR01"
+		(property "Reference" "#PWR?"
 			(at 39.37 106.68 0)
 			(effects
 				(font
@@ -2498,12 +2474,6 @@
 			(uuid "0e764182-51ae-4c19-b2c5-79aaa6e30c6c")
 		)
 		(instances
-			(project "USB-C-Interface"
-				(path "/7c253a73-a3ad-4431-8c8c-7421e0c0a047"
-					(reference "#PWR01")
-					(unit 1)
-				)
-			)
 			(project "Radio-Module"
 				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
 					(reference "#PWR?")
@@ -2527,7 +2497,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8ccc1be7-9792-4646-8c56-fa6268d7945e")
-		(property "Reference" "USB_R2"
+		(property "Reference" "USB_R?"
 			(at 107.95 70.358 90)
 			(effects
 				(font
@@ -2577,12 +2547,6 @@
 			(uuid "c2f9b356-9279-44cf-a257-b4894c74576a")
 		)
 		(instances
-			(project "USB-C-Interface"
-				(path "/7c253a73-a3ad-4431-8c8c-7421e0c0a047"
-					(reference "USB_R2")
-					(unit 1)
-				)
-			)
 			(project "Radio-Module"
 				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
 					(reference "USB_R?")
@@ -2606,7 +2570,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a7ea37e4-0f41-4c42-9d61-36eb85980a12")
-		(property "Reference" "USB_R1"
+		(property "Reference" "USB_R?"
 			(at 107.95 62.484 90)
 			(effects
 				(font
@@ -2656,12 +2620,6 @@
 			(uuid "9b8997f2-0e1e-485a-8fa1-01288ffa64c5")
 		)
 		(instances
-			(project "USB-C-Interface"
-				(path "/7c253a73-a3ad-4431-8c8c-7421e0c0a047"
-					(reference "USB_R1")
-					(unit 1)
-				)
-			)
 			(project "Radio-Module"
 				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
 					(reference "USB_R?")
@@ -2686,7 +2644,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bccd5a5c-e19f-401c-8176-ec56ff0f513d")
-		(property "Reference" "USB_CR1"
+		(property "Reference" "USB_CR?"
 			(at 91.44 45.72 0)
 			(effects
 				(font
@@ -2738,12 +2696,6 @@
 			(uuid "3341a866-1237-4183-bba8-3b50df3cd95a")
 		)
 		(instances
-			(project "USB-C-Interface"
-				(path "/7c253a73-a3ad-4431-8c8c-7421e0c0a047"
-					(reference "USB_CR1")
-					(unit 1)
-				)
-			)
 			(project "Radio-Module"
 				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
 					(reference "USB_CR?")
@@ -2768,7 +2720,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e70b3c40-7196-4e2c-8a74-156c108fde9e")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR?"
 			(at 120.65 74.93 0)
 			(effects
 				(font
@@ -2817,12 +2769,6 @@
 			(uuid "1f71e7e1-bda4-4158-b2f0-d612da80f003")
 		)
 		(instances
-			(project "USB-C-Interface"
-				(path "/7c253a73-a3ad-4431-8c8c-7421e0c0a047"
-					(reference "#PWR06")
-					(unit 1)
-				)
-			)
 			(project "Radio-Module"
 				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
 					(reference "#PWR?")
@@ -2847,7 +2793,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ea07e959-6d95-40ca-a81c-9e0f975a66d9")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR?"
 			(at 78.74 91.44 0)
 			(effects
 				(font
@@ -2895,12 +2841,6 @@
 			(uuid "731ed221-c77d-45e9-acfa-aeedec13d120")
 		)
 		(instances
-			(project "USB-C-Interface"
-				(path "/7c253a73-a3ad-4431-8c8c-7421e0c0a047"
-					(reference "#PWR03")
-					(unit 1)
-				)
-			)
 			(project "Radio-Module"
 				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
 					(reference "#PWR?")
@@ -2925,7 +2865,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f1dacffe-8c0c-4765-b34f-78d9659bb82e")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR?"
 			(at 120.65 67.31 0)
 			(effects
 				(font
@@ -2974,12 +2914,6 @@
 			(uuid "b76525bf-ecf5-4b2d-a9c4-a61267353c4d")
 		)
 		(instances
-			(project "USB-C-Interface"
-				(path "/7c253a73-a3ad-4431-8c8c-7421e0c0a047"
-					(reference "#PWR05")
-					(unit 1)
-				)
-			)
 			(project "Radio-Module"
 				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
 					(reference "#PWR?")
@@ -3004,7 +2938,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fd12b3a9-9675-4922-9ffc-0aad97713999")
-		(property "Reference" "USB_TP1"
+		(property "Reference" "USB_TP?"
 			(at 72.39 32.2579 0)
 			(effects
 				(font
@@ -3053,12 +2987,6 @@
 			(uuid "eec9ce6c-46ff-4cd5-8a90-2a13cd51da6c")
 		)
 		(instances
-			(project "USB-C-Interface"
-				(path "/7c253a73-a3ad-4431-8c8c-7421e0c0a047"
-					(reference "USB_TP1")
-					(unit 1)
-				)
-			)
 			(project "Radio-Module"
 				(path "/acc63f22-7eb8-450a-9af4-da5f4b8157d9/066db7ca-fd8b-46d1-a06b-412eb11482f3"
 					(reference "USB_TP?")
@@ -3071,11 +2999,6 @@
 					(unit 1)
 				)
 			)
-		)
-	)
-	(sheet_instances
-		(path "/"
-			(page "1")
 		)
 	)
 )
