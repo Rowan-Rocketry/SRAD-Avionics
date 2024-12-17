@@ -809,7 +809,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_2.00mm:PinSocket_1x03_P2.00mm_Vertical"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical"
 			(at 99.06 77.47 0)
 			(effects
 				(font
@@ -1395,4 +1395,5 @@
 			(page "1")
 		)
 	)
+>>>>>>> Stashed changes
 )
