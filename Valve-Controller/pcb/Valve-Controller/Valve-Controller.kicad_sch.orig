@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+(kicad_sch (version 20231120) (generator "eeschema") (generator_version "8.0")
+  (paper "A4")
+  (lib_symbols)
+  (symbol_instances)
+=======
+>>>>>>> 404c392b771be84661a253412841db10f6c9638a
 (kicad_sch
 	(version 20231120)
 	(generator "eeschema")
@@ -809,7 +818,11 @@
 				)
 			)
 		)
+<<<<<<< HEAD
+		(property "Footprint" "Connector_PinSocket_2.00mm:PinSocket_1x03_P2.00mm_Vertical"
+=======
 		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical"
+>>>>>>> 404c392b771be84661a253412841db10f6c9638a
 			(at 99.06 77.47 0)
 			(effects
 				(font
@@ -1395,5 +1408,8 @@
 			(page "1")
 		)
 	)
+<<<<<<< HEAD
+=======
 >>>>>>> Stashed changes
+>>>>>>> 404c392b771be84661a253412841db10f6c9638a
 )
