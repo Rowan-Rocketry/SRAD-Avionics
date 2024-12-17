@@ -1,5 +1,7 @@
+<<<<<<< Updated upstream
 (kicad_pcb (version 20240108) (generator "pcbnew") (generator_version "8.0")
 )
+=======
 (kicad_pcb
 	(version 20240108)
 	(generator "pcbnew")
@@ -4893,3 +4895,4 @@
 		)
 	)
 )
+>>>>>>> Stashed changes
