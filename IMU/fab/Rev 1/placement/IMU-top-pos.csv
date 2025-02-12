@@ -1,0 +1,11 @@
+Ref,Val,Package,PosX,PosY,Rot,Side
+"C1","100nF","C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",134.646500,-96.012000,0.000000,top
+"C2","10uF","CP_EIA-3216-18_Kemet-A_Pad1.58x1.35mm_HandSolder",129.312500,-101.092000,-90.000000,top
+"C3","100nF","C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",133.894500,-98.679000,0.000000,top
+"FID1","Fiducial","Fiducial_1mm_Mask2mm",138.694000,-102.976000,0.000000,top
+"FID2","Fiducial","Fiducial_1mm_Mask2mm",136.027000,-91.673000,0.000000,top
+"FID3","Fiducial","Fiducial_1mm_Mask2mm",127.137000,-98.658000,0.000000,top
+"J1","Conn_01x06_Pin","PinHeader_1x06_P2.54mm_Vertical",141.752000,-91.038000,0.000000,top
+"J2","Conn_01x06_Pin","PinHeader_1x06_P2.54mm_Vertical",123.962000,-91.038000,0.000000,top
+"U1","MS5607-02BA","LGA-8_3x5mm_P1.25mm",130.582500,-94.223000,180.000000,top
+"U2","LSM6DSL","LGA-14_3x2.5mm_P0.5mm_LayoutBorder3x4y",132.614500,-101.464000,180.000000,top
