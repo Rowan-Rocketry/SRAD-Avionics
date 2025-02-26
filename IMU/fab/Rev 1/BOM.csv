@@ -1,0 +1,6 @@
+"Reference","Value","Datasheet","Footprint","Qty","DNP","Purchase"
+"C1,C3","100nF","https://content.kemet.com/datasheets/KEM_C1002_X7R_SMD.pdf","Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder","2","","https://www.digikey.com/en/products/detail/kemet/C0603C104M5RACTU/2199782"
+"C2","10uF","https://content.kemet.com/datasheets/KEM_T2005_T491.pdf","Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A_Pad1.58x1.35mm_HandSolder","1","","https://www.digikey.com/en/products/detail/kemet/T491A106K010AT/818545"
+"J1,J2","Conn_01x06_Pin","https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/6129/tx-1xx-x-x-mkt1.pdf","Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical","2","","https://www.digikey.com/en/products/detail/samtec-inc/TS-132-G-A/1105430"
+"U1","MS5607-02BA","https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FMS5607-02BA03%7FB2%7Fpdf%7FEnglish%7FENG_DS_MS5607-02BA03_B2.pdf%7FCAT-BLPS0035","Package_LGA:LGA-8_3x5mm_P1.25mm","1","","https://www.digikey.com/en/products/detail/te-connectivity-measurement-specialties/MS560702BA03-50/4700931"
+"U2","LSM6DSL","https://www.st.com/resource/en/datasheet/lsm6dsl.pdf","Package_LGA:LGA-14_3x2.5mm_P0.5mm_LayoutBorder3x4y","1","","https://www.digikey.com/en/products/detail/stmicroelectronics/LSM6DSLTR/6192804"
