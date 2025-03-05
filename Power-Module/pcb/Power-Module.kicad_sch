@@ -894,7 +894,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "096d0be0-7918-4c59-9faf-67299a3b57a5")
-		(property "Reference" "#PWR033"
+		(property "Reference" "#PWR?"
 			(at 167.64 153.67 0)
 			(effects
 				(font
@@ -942,6 +942,12 @@
 			(uuid "5ab13620-a75a-4642-b5c4-57f6c68a4b6d")
 		)
 		(instances
+			(project "Power-Module"
+				(path "/4a892dab-819f-4c9e-a23d-db3a8f679293"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project ""
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/b5b03a48-538a-4431-9fe0-db318c963946"
 					(reference "#PWR033")
@@ -1030,7 +1036,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "19939f2f-d7d8-4e8d-99dd-1fcc9f5e2482")
-		(property "Reference" "#PWR028"
+		(property "Reference" "#PWR?"
 			(at 139.7 153.67 0)
 			(effects
 				(font
@@ -1078,6 +1084,12 @@
 			(uuid "4265847a-c501-41a9-ae1d-6acaa46705a3")
 		)
 		(instances
+			(project "Power-Module"
+				(path "/4a892dab-819f-4c9e-a23d-db3a8f679293"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project ""
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/b5b03a48-538a-4431-9fe0-db318c963946"
 					(reference "#PWR028")
@@ -1096,7 +1108,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3756ba0c-a01c-421c-b741-77910791ecdf")
-		(property "Reference" "#PWR032"
+		(property "Reference" "#PWR?"
 			(at 167.64 134.62 0)
 			(effects
 				(font
@@ -1144,6 +1156,12 @@
 			(uuid "8a732de1-d98c-4098-bcd2-aa82c735e77e")
 		)
 		(instances
+			(project "Power-Module"
+				(path "/4a892dab-819f-4c9e-a23d-db3a8f679293"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project ""
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/b5b03a48-538a-4431-9fe0-db318c963946"
 					(reference "#PWR032")
@@ -1162,7 +1180,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "59df9f95-ccb5-4a46-a40a-348eb09e051d")
-		(property "Reference" "C13"
+		(property "Reference" "C?"
 			(at 125.73 140.9699 0)
 			(effects
 				(font
@@ -1214,6 +1232,12 @@
 			(uuid "78fd2a44-1502-48c2-8f1f-97edcf3cd24b")
 		)
 		(instances
+			(project "Power-Module"
+				(path "/4a892dab-819f-4c9e-a23d-db3a8f679293"
+					(reference "C?")
+					(unit 1)
+				)
+			)
 			(project ""
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/b5b03a48-538a-4431-9fe0-db318c963946"
 					(reference "C13")
@@ -1232,7 +1256,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "65dd8262-e4e8-4b00-8e38-7121c0e6b1e4")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR?"
 			(at 121.92 153.67 0)
 			(effects
 				(font
@@ -1280,6 +1304,12 @@
 			(uuid "dc9013d5-31d5-4e6a-9999-51ef8ec8d980")
 		)
 		(instances
+			(project "Power-Module"
+				(path "/4a892dab-819f-4c9e-a23d-db3a8f679293"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project ""
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/b5b03a48-538a-4431-9fe0-db318c963946"
 					(reference "#PWR027")
@@ -1298,7 +1328,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6b8a66d9-3ce5-4a0e-a2b8-c949b3d28e9c")
-		(property "Reference" "C15"
+		(property "Reference" "C?"
 			(at 157.48 140.9699 0)
 			(effects
 				(font
@@ -1350,6 +1380,12 @@
 			(uuid "be49dce4-bb3a-4651-9a33-f7fcff876b9a")
 		)
 		(instances
+			(project "Power-Module"
+				(path "/4a892dab-819f-4c9e-a23d-db3a8f679293"
+					(reference "C?")
+					(unit 1)
+				)
+			)
 			(project ""
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/b5b03a48-538a-4431-9fe0-db318c963946"
 					(reference "C15")
@@ -1368,7 +1404,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7750410a-4c46-4bd3-8a0c-252b8f08b349")
-		(property "Reference" "C17"
+		(property "Reference" "C?"
 			(at 171.45 140.9699 0)
 			(effects
 				(font
@@ -1420,6 +1456,12 @@
 			(uuid "da2cb73e-60d8-4b72-992d-29c986d1a713")
 		)
 		(instances
+			(project "Power-Module"
+				(path "/4a892dab-819f-4c9e-a23d-db3a8f679293"
+					(reference "C?")
+					(unit 1)
+				)
+			)
 			(project "SRAD-Avionics"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/b5b03a48-538a-4431-9fe0-db318c963946"
 					(reference "C17")
@@ -1438,7 +1480,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "814f0a8a-8877-475b-a30e-1eed33416c62")
-		(property "Reference" "#PWR030"
+		(property "Reference" "#PWR?"
 			(at 153.67 153.67 0)
 			(effects
 				(font
@@ -1486,6 +1528,12 @@
 			(uuid "d9a67dbd-f74f-4caa-8795-dadeef1f1db4")
 		)
 		(instances
+			(project "Power-Module"
+				(path "/4a892dab-819f-4c9e-a23d-db3a8f679293"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 			(project ""
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/b5b03a48-538a-4431-9fe0-db318c963946"
 					(reference "#PWR030")
@@ -1504,7 +1552,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "93871343-0b24-4ab8-9608-cef23b3b8ff1")
-		(property "Reference" "U4"
+		(property "Reference" "U?"
 			(at 139.7 128.27 0)
 			(effects
 				(font
@@ -1563,6 +1611,12 @@
 			(uuid "8b349c7c-34f1-47ef-97f5-33a61af0ab39")
 		)
 		(instances
+			(project "Power-Module"
+				(path "/4a892dab-819f-4c9e-a23d-db3a8f679293"
+					(reference "U?")
+					(unit 1)
+				)
+			)
 			(project ""
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/b5b03a48-538a-4431-9fe0-db318c963946"
 					(reference "U4")
@@ -1633,6 +1687,44 @@
 				(path "/4a892dab-819f-4c9e-a23d-db3a8f679293"
 					(reference "#PWR01")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 176.53 87.63)
+		(size 30.48 16.51)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "80732c12-d95a-40b3-ae22-f13554201103")
+		(property "Sheetname" "USB-C PD"
+			(at 176.53 86.9184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "../../Common/sch/USB-C-PD.kicad_sch"
+			(at 176.53 104.7246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Power-Module"
+				(path "/4a892dab-819f-4c9e-a23d-db3a8f679293"
+					(page "2")
 				)
 			)
 		)
