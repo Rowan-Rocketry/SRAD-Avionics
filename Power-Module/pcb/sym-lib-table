@@ -2,4 +2,5 @@
   (version 7)
   (lib (name "2024-07-18_00-52-40")(type "KiCad")(uri "/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Main-Module/pcb/2024-07-18_00-52-40.kicad_sym")(options "")(descr ""))
   (lib (name "BH-18650-PC")(type "KiCad")(uri "/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Common/lib/BAT_BH_18650_PC/BH-18650-PC.kicad_sym")(options "")(descr ""))
+  (lib (name "Rowan_Rocketry")(type "KiCad")(uri "/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Common/Rowan_Rocketry.kicad_sym")(options "")(descr ""))
 )
