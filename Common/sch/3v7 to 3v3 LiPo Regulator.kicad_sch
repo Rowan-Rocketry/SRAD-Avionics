@@ -736,26 +736,26 @@
 		)
 	)
 	(junction
-		(at 167.64 134.62)
+		(at 184.15 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "36052f2e-4777-49ad-902c-7ca0873d9cd2")
 	)
 	(junction
-		(at 129.54 134.62)
+		(at 146.05 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8e85399a-7165-4432-b81b-945c95fe830c")
 	)
 	(junction
-		(at 121.92 134.62)
+		(at 138.43 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ef2d2a25-4a6c-441f-98b1-43e503c7c2fe")
 	)
 	(wire
 		(pts
-			(xy 167.64 146.05) (xy 167.64 147.32)
+			(xy 184.15 102.87) (xy 184.15 104.14)
 		)
 		(stroke
 			(width 0)
@@ -765,7 +765,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 147.32) (xy 101.6 144.78)
+			(xy 118.11 104.14) (xy 118.11 101.6)
 		)
 		(stroke
 			(width 0)
@@ -775,7 +775,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 134.62) (xy 129.54 137.16)
+			(xy 146.05 91.44) (xy 146.05 93.98)
 		)
 		(stroke
 			(width 0)
@@ -785,7 +785,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 146.05) (xy 121.92 147.32)
+			(xy 138.43 102.87) (xy 138.43 104.14)
 		)
 		(stroke
 			(width 0)
@@ -795,7 +795,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 138.43) (xy 121.92 134.62)
+			(xy 138.43 95.25) (xy 138.43 91.44)
 		)
 		(stroke
 			(width 0)
@@ -805,7 +805,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 134.62) (xy 129.54 134.62)
+			(xy 138.43 91.44) (xy 146.05 91.44)
 		)
 		(stroke
 			(width 0)
@@ -815,7 +815,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 134.62) (xy 167.64 138.43)
+			(xy 184.15 91.44) (xy 184.15 95.25)
 		)
 		(stroke
 			(width 0)
@@ -825,7 +825,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 137.16) (xy 153.67 137.16)
+			(xy 166.37 93.98) (xy 170.18 93.98)
 		)
 		(stroke
 			(width 0)
@@ -835,7 +835,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 130.81) (xy 167.64 134.62)
+			(xy 184.15 87.63) (xy 184.15 91.44)
 		)
 		(stroke
 			(width 0)
@@ -845,7 +845,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 134.62) (xy 101.6 137.16)
+			(xy 118.11 91.44) (xy 118.11 93.98)
 		)
 		(stroke
 			(width 0)
@@ -855,7 +855,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 134.62) (xy 167.64 134.62)
+			(xy 166.37 91.44) (xy 184.15 91.44)
 		)
 		(stroke
 			(width 0)
@@ -865,7 +865,7 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 147.32) (xy 139.7 144.78)
+			(xy 156.21 104.14) (xy 156.21 101.6)
 		)
 		(stroke
 			(width 0)
@@ -875,7 +875,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 134.62) (xy 121.92 134.62)
+			(xy 118.11 91.44) (xy 138.43 91.44)
 		)
 		(stroke
 			(width 0)
@@ -885,7 +885,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 137.16) (xy 153.67 138.43)
+			(xy 170.18 93.98) (xy 170.18 95.25)
 		)
 		(stroke
 			(width 0)
@@ -895,7 +895,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 147.32) (xy 153.67 146.05)
+			(xy 170.18 104.14) (xy 170.18 102.87)
 		)
 		(stroke
 			(width 0)
@@ -905,7 +905,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDD")
-		(at 167.64 147.32 0)
+		(at 184.15 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -914,7 +914,7 @@
 		(fields_autoplaced yes)
 		(uuid "096d0be0-7918-4c59-9faf-67299a3b57a5")
 		(property "Reference" "#PWR?"
-			(at 167.64 153.67 0)
+			(at 184.15 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -923,7 +923,7 @@
 			)
 		)
 		(property "Value" "GNDD"
-			(at 167.64 151.13 0)
+			(at 184.15 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -931,7 +931,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 167.64 147.32 0)
+			(at 184.15 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -940,7 +940,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 147.32 0)
+			(at 184.15 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -949,7 +949,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
-			(at 167.64 147.32 0)
+			(at 184.15 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -977,7 +977,7 @@
 	)
 	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 101.6 142.24 0)
+		(at 118.11 99.06 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -986,7 +986,7 @@
 		(fields_autoplaced yes)
 		(uuid "118d6cba-49f9-444f-9775-a69a699f6698")
 		(property "Reference" "BT1"
-			(at 105.41 139.1284 0)
+			(at 121.92 95.9484 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -995,7 +995,7 @@
 			)
 		)
 		(property "Value" "Battery_Cell"
-			(at 105.41 141.6684 0)
+			(at 121.92 98.4884 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1004,7 +1004,7 @@
 			)
 		)
 		(property "Footprint" "Battery:BatteryHolder_MPD_BH-18650-PC2"
-			(at 101.6 140.716 90)
+			(at 118.11 97.536 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1013,7 +1013,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 101.6 140.716 90)
+			(at 118.11 97.536 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1022,7 +1022,7 @@
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 101.6 142.24 0)
+			(at 118.11 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1047,7 +1047,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDD")
-		(at 139.7 147.32 0)
+		(at 156.21 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1056,7 +1056,7 @@
 		(fields_autoplaced yes)
 		(uuid "19939f2f-d7d8-4e8d-99dd-1fcc9f5e2482")
 		(property "Reference" "#PWR?"
-			(at 139.7 153.67 0)
+			(at 156.21 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1065,7 +1065,7 @@
 			)
 		)
 		(property "Value" "GNDD"
-			(at 139.7 151.13 0)
+			(at 156.21 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1073,7 +1073,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 139.7 147.32 0)
+			(at 156.21 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1082,7 +1082,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 139.7 147.32 0)
+			(at 156.21 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1091,7 +1091,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
-			(at 139.7 147.32 0)
+			(at 156.21 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1119,7 +1119,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 167.64 130.81 0)
+		(at 184.15 87.63 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1128,7 +1128,7 @@
 		(fields_autoplaced yes)
 		(uuid "3756ba0c-a01c-421c-b741-77910791ecdf")
 		(property "Reference" "#PWR?"
-			(at 167.64 134.62 0)
+			(at 184.15 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1137,7 +1137,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 167.64 125.73 0)
+			(at 184.15 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1145,7 +1145,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 167.64 130.81 0)
+			(at 184.15 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1154,7 +1154,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 130.81 0)
+			(at 184.15 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1163,7 +1163,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 167.64 130.81 0)
+			(at 184.15 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1191,7 +1191,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 121.92 142.24 0)
+		(at 138.43 99.06 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1200,7 +1200,7 @@
 		(fields_autoplaced yes)
 		(uuid "59df9f95-ccb5-4a46-a40a-348eb09e051d")
 		(property "Reference" "C?"
-			(at 125.73 140.9699 0)
+			(at 142.24 97.7899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1209,7 +1209,7 @@
 			)
 		)
 		(property "Value" "1uF"
-			(at 125.73 143.5099 0)
+			(at 142.24 100.3299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1218,7 +1218,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 122.8852 146.05 0)
+			(at 139.3952 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1227,7 +1227,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 121.92 142.24 0)
+			(at 138.43 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1236,7 +1236,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 121.92 142.24 0)
+			(at 138.43 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1267,7 +1267,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDD")
-		(at 121.92 147.32 0)
+		(at 138.43 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1276,7 +1276,7 @@
 		(fields_autoplaced yes)
 		(uuid "65dd8262-e4e8-4b00-8e38-7121c0e6b1e4")
 		(property "Reference" "#PWR?"
-			(at 121.92 153.67 0)
+			(at 138.43 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1285,7 +1285,7 @@
 			)
 		)
 		(property "Value" "GNDD"
-			(at 121.92 151.13 0)
+			(at 138.43 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1293,7 +1293,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 121.92 147.32 0)
+			(at 138.43 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1302,7 +1302,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 121.92 147.32 0)
+			(at 138.43 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1311,7 +1311,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
-			(at 121.92 147.32 0)
+			(at 138.43 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1339,7 +1339,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 153.67 142.24 0)
+		(at 170.18 99.06 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1348,7 +1348,7 @@
 		(fields_autoplaced yes)
 		(uuid "6b8a66d9-3ce5-4a0e-a2b8-c949b3d28e9c")
 		(property "Reference" "C?"
-			(at 157.48 140.9699 0)
+			(at 173.99 97.7899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1357,7 +1357,7 @@
 			)
 		)
 		(property "Value" "0.01uF"
-			(at 157.48 143.5099 0)
+			(at 173.99 100.3299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1366,7 +1366,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 154.6352 146.05 0)
+			(at 171.1452 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1375,7 +1375,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 153.67 142.24 0)
+			(at 170.18 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1384,7 +1384,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 153.67 142.24 0)
+			(at 170.18 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1415,7 +1415,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 167.64 142.24 0)
+		(at 184.15 99.06 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1424,7 +1424,7 @@
 		(fields_autoplaced yes)
 		(uuid "7750410a-4c46-4bd3-8a0c-252b8f08b349")
 		(property "Reference" "C?"
-			(at 171.45 140.9699 0)
+			(at 187.96 97.7899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1433,7 +1433,7 @@
 			)
 		)
 		(property "Value" "1uF"
-			(at 171.45 143.5099 0)
+			(at 187.96 100.3299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1442,7 +1442,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 168.6052 146.05 0)
+			(at 185.1152 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1451,7 +1451,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 167.64 142.24 0)
+			(at 184.15 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1460,7 +1460,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 167.64 142.24 0)
+			(at 184.15 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1491,7 +1491,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDD")
-		(at 153.67 147.32 0)
+		(at 170.18 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1500,7 +1500,7 @@
 		(fields_autoplaced yes)
 		(uuid "814f0a8a-8877-475b-a30e-1eed33416c62")
 		(property "Reference" "#PWR?"
-			(at 153.67 153.67 0)
+			(at 170.18 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1509,7 +1509,7 @@
 			)
 		)
 		(property "Value" "GNDD"
-			(at 153.67 151.13 0)
+			(at 170.18 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1517,7 +1517,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 153.67 147.32 0)
+			(at 170.18 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1526,7 +1526,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 153.67 147.32 0)
+			(at 170.18 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1535,7 +1535,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
-			(at 153.67 147.32 0)
+			(at 170.18 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1563,7 +1563,7 @@
 	)
 	(symbol
 		(lib_id "Regulator_Linear:TC2185-3.3VxCTTR")
-		(at 139.7 137.16 0)
+		(at 156.21 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1572,7 +1572,7 @@
 		(fields_autoplaced yes)
 		(uuid "93871343-0b24-4ab8-9608-cef23b3b8ff1")
 		(property "Reference" "U?"
-			(at 139.7 128.27 0)
+			(at 156.21 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1580,7 +1580,7 @@
 			)
 		)
 		(property "Value" "TC2185-3.3VxCTTR"
-			(at 139.7 130.81 0)
+			(at 156.21 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1588,7 +1588,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
-			(at 139.7 128.905 0)
+			(at 156.21 85.725 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1597,7 +1597,7 @@
 			)
 		)
 		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21662F.pdf"
-			(at 139.7 137.16 0)
+			(at 156.21 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1606,7 +1606,7 @@
 			)
 		)
 		(property "Description" "3.3V 150mA CMOS LDO with Shutdown and Vref Bypass, SOT-23-5"
-			(at 139.7 137.16 0)
+			(at 156.21 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1646,7 +1646,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDD")
-		(at 101.6 147.32 0)
+		(at 118.11 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1655,7 +1655,7 @@
 		(fields_autoplaced yes)
 		(uuid "d3941e81-fdc7-47b9-8a34-0a19aba06cdb")
 		(property "Reference" "#PWR01"
-			(at 101.6 153.67 0)
+			(at 118.11 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1664,7 +1664,7 @@
 			)
 		)
 		(property "Value" "GNDD"
-			(at 101.6 151.13 0)
+			(at 118.11 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1672,7 +1672,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 101.6 147.32 0)
+			(at 118.11 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1681,7 +1681,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 101.6 147.32 0)
+			(at 118.11 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1690,7 +1690,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
-			(at 101.6 147.32 0)
+			(at 118.11 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)

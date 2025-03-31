@@ -494,7 +494,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:+3V0"
+		(symbol "power:+3.3V"
 			(power)
 			(pin_numbers
 				(hide yes)
@@ -515,7 +515,7 @@
 					(hide yes)
 				)
 			)
-			(property "Value" "+3V0"
+			(property "Value" "+3.3V"
 				(at 0 3.556 0)
 				(effects
 					(font
@@ -541,7 +541,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name \"+3V0\""
+			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
 				(at 0 0 0)
 				(effects
 					(font
@@ -559,7 +559,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "+3V0_0_1"
+			(symbol "+3.3V_0_1"
 				(polyline
 					(pts
 						(xy -0.762 1.27) (xy 0 2.54)
@@ -597,7 +597,7 @@
 					)
 				)
 			)
-			(symbol "+3V0_1_1"
+			(symbol "+3.3V_1_1"
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
@@ -736,7 +736,7 @@
 		(at 101.6 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "0221b99c-a0dd-45cc-a82e-b646caa56d1d")
+		(uuid "0e3d26bf-9970-4185-97c9-0ced638d4c90")
 	)
 	(wire
 		(pts
@@ -844,7 +844,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0a2c4b72-a39d-42fc-aabd-aa048305e125")
-		(property "Reference" "#PWR033"
+		(property "Reference" "#PWR0101"
 			(at 113.03 101.6 0)
 			(effects
 				(font
@@ -899,8 +899,80 @@
 				)
 			)
 			(project ""
-				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/b45c8800-2d43-45f4-a459-8e5ce292fc5a"
-					(reference "#PWR033")
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/02a5c5f6-b4e2-435d-aca7-a6d22478aa51"
+					(reference "#PWR0101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 101.6 87.63 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "33633a7f-31e3-4b36-82e3-83c4ee9d3b2f")
+		(property "Reference" "#PWR0104"
+			(at 101.6 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 101.6 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 101.6 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 101.6 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "48073aa2-7d7c-42b9-b0fe-e2630c55ccb3")
+		)
+		(instances
+			(project ""
+				(path "/7761db1c-f9c0-4350-aff2-01ef05a45511"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+			(project ""
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/02a5c5f6-b4e2-435d-aca7-a6d22478aa51"
+					(reference "#PWR0104")
 					(unit 1)
 				)
 			)
@@ -916,7 +988,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "61828364-b851-4178-b12f-4192bd38337e")
-		(property "Reference" "#PWR032"
+		(property "Reference" "#PWR0103"
 			(at 101.6 101.6 0)
 			(effects
 				(font
@@ -971,80 +1043,8 @@
 				)
 			)
 			(project ""
-				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/b45c8800-2d43-45f4-a459-8e5ce292fc5a"
-					(reference "#PWR032")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V0")
-		(at 101.6 87.63 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6a883ec2-07a9-4977-93dd-441031af2443")
-		(property "Reference" "#PWR031"
-			(at 101.6 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V0"
-			(at 101.6 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 101.6 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 101.6 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V0\""
-			(at 101.6 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "bbcb0004-9a23-409b-95d8-ae1d3cccbbc2")
-		)
-		(instances
-			(project ""
-				(path "/7761db1c-f9c0-4350-aff2-01ef05a45511"
-					(reference "#PWR02")
-					(unit 1)
-				)
-			)
-			(project ""
-				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/b45c8800-2d43-45f4-a459-8e5ce292fc5a"
-					(reference "#PWR031")
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/02a5c5f6-b4e2-435d-aca7-a6d22478aa51"
+					(reference "#PWR0103")
 					(unit 1)
 				)
 			)
@@ -1060,7 +1060,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "884b7cfc-dd98-4d14-81df-449183d20d28")
-		(property "Reference" "#PWR034"
+		(property "Reference" "#PWR0102"
 			(at 168.91 109.22 0)
 			(effects
 				(font
@@ -1115,8 +1115,8 @@
 				)
 			)
 			(project ""
-				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/b45c8800-2d43-45f4-a459-8e5ce292fc5a"
-					(reference "#PWR034")
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/02a5c5f6-b4e2-435d-aca7-a6d22478aa51"
+					(reference "#PWR0102")
 					(unit 1)
 				)
 			)
@@ -1132,7 +1132,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a8b53298-6923-4c71-8268-28bf6eedeb57")
-		(property "Reference" "C17"
+		(property "Reference" "C1"
 			(at 105.41 90.1699 0)
 			(effects
 				(font
@@ -1191,8 +1191,8 @@
 				)
 			)
 			(project ""
-				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/b45c8800-2d43-45f4-a459-8e5ce292fc5a"
-					(reference "C17")
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/02a5c5f6-b4e2-435d-aca7-a6d22478aa51"
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -1208,7 +1208,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d93d12a2-afef-494a-8870-29ff57d49b8b")
-		(property "Reference" "J2"
+		(property "Reference" "J1"
 			(at 149.225 68.58 0)
 			(effects
 				(font
@@ -1286,8 +1286,8 @@
 				)
 			)
 			(project ""
-				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/b45c8800-2d43-45f4-a459-8e5ce292fc5a"
-					(reference "J2")
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/02a5c5f6-b4e2-435d-aca7-a6d22478aa51"
+					(reference "J1")
 					(unit 1)
 				)
 			)

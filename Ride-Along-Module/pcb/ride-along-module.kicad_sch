@@ -5,183 +5,6 @@
 	(uuid "ba7b4294-8d75-4b9e-892f-fb52727887ec")
 	(paper "USLetter")
 	(lib_symbols
-		(symbol "Device:Battery_Cell"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "BT"
-				(at 2.54 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "Battery_Cell"
-				(at 2.54 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 1.524 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 1.524 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Single-cell battery"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "battery cell"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Battery_Cell_0_1"
-				(rectangle
-					(start -2.286 1.778)
-					(end 2.286 1.524)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -1.524 1.016)
-					(end 1.524 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 1.778) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0.762) (xy 0 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 3.048) (xy 1.778 3.048)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 3.556) (xy 1.27 2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Battery_Cell_1_1"
-				(pin passive line
-					(at 0 5.08 270)
-					(length 2.54)
-					(name "+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 90)
-					(length 2.54)
-					(name "-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:LED"
 			(pin_numbers
 				(hide yes)
@@ -766,6 +589,16 @@
 	)
 	(wire
 		(pts
+			(xy 156.21 95.25) (xy 167.64 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b54efa5-e2b9-4401-9b84-d6cd160fbdf0")
+	)
+	(wire
+		(pts
 			(xy 130.81 71.12) (xy 130.81 68.58)
 		)
 		(stroke
@@ -813,16 +646,6 @@
 			(type default)
 		)
 		(uuid "63a62fe7-53b0-4d88-9e6f-e4e96e374a04")
-	)
-	(wire
-		(pts
-			(xy 156.21 95.25) (xy 167.64 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "71db1cfb-b47e-499c-b8c4-dc619ad046a7")
 	)
 	(wire
 		(pts
@@ -1179,76 +1002,6 @@
 			(project ""
 				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec"
 					(reference "H1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Battery_Cell")
-		(at 72.39 163.83 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2bd5c349-b934-44b0-9128-bd2293b39c11")
-		(property "Reference" "BT1"
-			(at 76.2 160.7184 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Battery_Cell"
-			(at 76.2 163.2584 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical"
-			(at 72.39 162.306 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 72.39 162.306 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Single-cell battery"
-			(at 72.39 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "6e05b56b-e3a8-45ea-acf9-ef13b16ccfc8")
-		)
-		(pin "1"
-			(uuid "cf2b839f-abee-466d-8d16-4f8a67dc116b")
-		)
-		(instances
-			(project ""
-				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec"
-					(reference "BT1")
 					(unit 1)
 				)
 			)
@@ -1798,6 +1551,108 @@
 		)
 	)
 	(sheet
+		(at 83.82 100.33)
+		(size 22.86 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "02a5c5f6-b4e2-435d-aca7-a6d22478aa51")
+		(property "Sheetname" "MicroSD Card"
+			(at 83.82 99.6184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "MicroSD Card.kicad_sch"
+			(at 83.82 119.9646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "SD_DAT3" bidirectional
+			(at 106.68 109.22 0)
+			(uuid "4e050cdd-b44a-4e29-ab2b-87675668d37a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SD_DAT1" bidirectional
+			(at 106.68 114.3 0)
+			(uuid "ac09df02-8fae-47d6-99ad-6a6928023070")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SD_DAT2" bidirectional
+			(at 106.68 111.76 0)
+			(uuid "0f8a19a4-fcab-43a0-a320-8c68e152999f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SD_CMD" input
+			(at 106.68 104.14 0)
+			(uuid "ef791951-f5c8-4681-a2ac-bcf17d6d2d0c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SD_CLK" input
+			(at 106.68 106.68 0)
+			(uuid "449a35e9-a897-4a11-9477-6cef3678d1e7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SD_DAT0" bidirectional
+			(at 106.68 116.84 0)
+			(uuid "a4762af3-d6f8-45a1-88a1-fc4c7faeebf5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "ride-along-module"
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 119.38 82.55)
 		(size 36.83 36.83)
 		(exclude_from_sim no)
@@ -2010,6 +1865,48 @@
 		)
 	)
 	(sheet
+		(at 121.92 137.16)
+		(size 16.51 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "920a0ba8-ef82-4edf-9534-6f4e802dc640")
+		(property "Sheetname" "3v7 LiPo to 3v3 Supply"
+			(at 121.92 136.4484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "3v7 LiPo to 3v3 Supply.kicad_sch"
+			(at 121.92 150.4446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "ride-along-module"
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 83.82 82.55)
 		(size 22.86 10.16)
 		(exclude_from_sim no)
@@ -2082,110 +1979,8 @@
 		)
 	)
 	(sheet
-		(at 83.82 101.6)
-		(size 22.86 17.78)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "b45c8800-2d43-45f4-a459-8e5ce292fc5a")
-		(property "Sheetname" "SD"
-			(at 83.82 100.8884 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "MicroSD Card.kicad_sch"
-			(at 83.82 119.9646 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "SD_DAT3" bidirectional
-			(at 106.68 109.22 0)
-			(uuid "be55750a-40c3-478f-b9d6-491b3a0fa611")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "SD_CLK" input
-			(at 106.68 106.68 0)
-			(uuid "18a5311d-7bf7-4af0-9c05-2548a3db722d")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "SD_DAT2" bidirectional
-			(at 106.68 111.76 0)
-			(uuid "17e34475-df5c-415c-bd1b-4af65b1cfcb7")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "SD_DAT0" bidirectional
-			(at 106.68 116.84 0)
-			(uuid "507806dc-cbf9-4e5e-9aba-4a166199511e")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "SD_DAT1" bidirectional
-			(at 106.68 114.3 0)
-			(uuid "335a93ee-fc36-4a23-b654-60d4d6a71c3a")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "SD_CMD" input
-			(at 106.68 104.14 0)
-			(uuid "e38f6194-1108-4891-a73a-1db2f97e7ec0")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(instances
-			(project "ride-along-module"
-				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec"
-					(page "5")
-				)
-			)
-		)
-	)
-	(sheet
 		(at 167.64 82.55)
-		(size 26.67 26.67)
+		(size 22.86 26.67)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -2198,8 +1993,8 @@
 		(fill
 			(color 0 0 0 0.0000)
 		)
-		(uuid "ffb7e00e-75c4-4410-97cc-7d6f2fac0025")
-		(property "Sheetname" "IMU"
+		(uuid "e9bd0a92-8631-43e5-a6c8-e6db03a0cf38")
+		(property "Sheetname" "IMU Sensors"
 			(at 167.64 81.8384 0)
 			(effects
 				(font
@@ -2208,7 +2003,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "../../IMU/pcb/Sensors.kicad_sch"
+		(property "Sheetfile" "IMU Sensors.kicad_sch"
 			(at 167.64 109.8046 0)
 			(effects
 				(font
@@ -2217,39 +2012,9 @@
 				(justify left top)
 			)
 		)
-		(pin "pres_miso" output
-			(at 167.64 87.63 180)
-			(uuid "99604121-2955-450d-b58c-7d0c9017c8ca")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "pres_sclk" bidirectional
-			(at 167.64 85.09 180)
-			(uuid "fec0ef73-a979-4cb4-82a2-3124f205aa08")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "imu_mosi" input
 			(at 167.64 100.33 180)
-			(uuid "5312c89d-1763-4317-a5cf-a6f9f9bb0d9b")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "imu_miso" output
-			(at 167.64 97.79 180)
-			(uuid "78d83a10-afb1-425c-a288-3e1b639e698f")
+			(uuid "0065a50b-ad37-44a8-8539-0fdd962a4dab")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2259,7 +2024,7 @@
 		)
 		(pin "imu_sclk" bidirectional
 			(at 167.64 95.25 180)
-			(uuid "e7677468-2c86-4f02-b38f-e8542069ea58")
+			(uuid "214a8eed-d794-4281-9a3b-ae300d480c29")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2267,19 +2032,9 @@
 				(justify left)
 			)
 		)
-		(pin "imu_int1" output
-			(at 167.64 104.14 180)
-			(uuid "a5411831-d9ef-4872-a614-6fa37aef7801")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "pres_mosi" input
-			(at 167.64 90.17 180)
-			(uuid "e7c278c7-c874-43c8-b994-903531dd6681")
+		(pin "imu_miso" output
+			(at 167.64 97.79 180)
+			(uuid "fe0594cd-38bb-46c8-a5a5-0207b759c00d")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2289,7 +2044,47 @@
 		)
 		(pin "imu_int2" output
 			(at 167.64 106.68 180)
-			(uuid "e902b218-8202-44b6-adc0-8655e20d3085")
+			(uuid "0f5f6a11-6073-40d4-b9b2-7aa6a342d930")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "imu_int1" output
+			(at 167.64 104.14 180)
+			(uuid "fbc10623-99fd-4dd0-8cd7-31c2ac0dad64")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "pres_sclk" bidirectional
+			(at 167.64 85.09 180)
+			(uuid "46bc8fb6-f6cf-4dc7-bf19-bda0584cb42f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "pres_miso" output
+			(at 167.64 87.63 180)
+			(uuid "924f0ed9-8408-4684-88ec-8316624ee0c9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "pres_mosi" input
+			(at 167.64 90.17 180)
+			(uuid "3826f070-96dc-4ff3-9f47-7c8b3a775fea")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2300,7 +2095,7 @@
 		(instances
 			(project "ride-along-module"
 				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec"
-					(page "4")
+					(page "6")
 				)
 			)
 		)
