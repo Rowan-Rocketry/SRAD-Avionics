@@ -1,0 +1,5 @@
+ms5607.c:9:6:configureMS5607	1
+ms5607.c:19:10:measurePressure	1
+ms5607.c:34:10:readMS5607ADC	1
+ms5607.c:46:6:enableMS5607	1
+ms5607.c:51:6:disableMS5607	1

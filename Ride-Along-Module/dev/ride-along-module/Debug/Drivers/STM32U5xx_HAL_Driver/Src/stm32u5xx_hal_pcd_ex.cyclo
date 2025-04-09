@@ -1,0 +1,8 @@
+stm32u5xx_hal_pcd_ex.c:322:20:HAL_PCDEx_PMAConfig	3
+stm32u5xx_hal_pcd_ex.c:364:19:HAL_PCDEx_ActivateBCD	1
+stm32u5xx_hal_pcd_ex.c:385:19:HAL_PCDEx_DeActivateBCD	1
+stm32u5xx_hal_pcd_ex.c:401:6:HAL_PCDEx_BCD_VBUSDetect	5
+stm32u5xx_hal_pcd_ex.c:493:19:HAL_PCDEx_ActivateLPM	1
+stm32u5xx_hal_pcd_ex.c:511:19:HAL_PCDEx_DeActivateLPM	1
+stm32u5xx_hal_pcd_ex.c:531:13:HAL_PCDEx_LPM_Callback	1
+stm32u5xx_hal_pcd_ex.c:548:13:HAL_PCDEx_BCD_Callback	1
