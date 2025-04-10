@@ -1,0 +1,42 @@
+### Footprint positions - created on 2025-03-07T14:05:47-0500 ###
+### Printed by KiCad version 9.0.0
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val                          Package                                                       PosX       PosY       Rot  Side
+C201      1u                           C_0603_1608Metric_Pad1.08x0.95mm_HandSolder               133.2080  -110.3149  -90.0000  top
+C202      1u                           C_0603_1608Metric_Pad1.08x0.95mm_HandSolder               119.8880  -113.4345    0.0000  top
+C203      1u                           C_0603_1608Metric_Pad1.08x0.95mm_HandSolder               119.8615  -122.6315    0.0000  top
+C204      3.3u                         C_0603_1608Metric_Pad1.08x0.95mm_HandSolder               150.2410  -114.5775    0.0000  top
+C205      1u                           C_0603_1608Metric_Pad1.08x0.95mm_HandSolder               138.1610  -110.3414  -90.0000  top
+C206      0.1u                         C_0603_1608Metric_Pad1.08x0.95mm_HandSolder               136.5100  -110.3414  -90.0000  top
+C207      0.1u                         C_0603_1608Metric_Pad1.08x0.95mm_HandSolder               134.8590  -110.3414  -90.0000  top
+D201      NZH10C,115                   D_SOD-123F                                                119.4450  -111.2755    0.0000  top
+D202      150060AS75000                LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder             143.6370  -121.7004   90.0000  top
+FID1      Fiducial                     Fiducial_1mm_Mask2mm                                      123.5710  -110.1325    0.0000  top
+FID2      Fiducial                     Fiducial_1mm_Mask2mm                                      115.1890  -121.8165    0.0000  top
+FID3      Fiducial                     Fiducial_1mm_Mask2mm                                      154.5590  -121.8165    0.0000  top
+J201      USB_C_Receptacle_USB2.0_16P  USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal   146.0500  -107.9735  180.0000  top
+Q201      IRF9358                      SOIC-8_3.9x4.9mm_P1.27mm                                  119.8880  -116.8635  180.0000  top
+Q202      2N7002                       SOT-23                                                    139.1135  -120.7314    0.0000  top
+Q203      BSL308PE                     TSOT-23-6                                                 151.5250  -118.1100  180.0000  top
+R201      5.1k                         R_0603_1608Metric_Pad0.98x0.95mm_HandSolder               130.0330  -114.5979    0.0000  top
+R202      5.1k                         R_0603_1608Metric_Pad0.98x0.95mm_HandSolder               130.0330  -116.2489  180.0000  top
+R203      5.1k                         R_0603_1608Metric_Pad0.98x0.95mm_HandSolder               130.0330  -112.9469    0.0000  top
+R204      5.1k                         R_0603_1608Metric_Pad0.98x0.95mm_HandSolder               130.0330  -111.2959  180.0000  top
+R205      5.1k                         R_0603_1608Metric_Pad0.98x0.95mm_HandSolder               132.8420  -120.6939   90.0000  top
+R206      5.1k                         R_0603_1608Metric_Pad0.98x0.95mm_HandSolder               134.4930  -120.6939  -90.0000  top
+R207      4.7k                         R_0603_1608Metric_Pad0.98x0.95mm_HandSolder               138.6840  -123.3609    0.0000  top
+R208      1k                           R_0603_1608Metric_Pad0.98x0.95mm_HandSolder               130.0245  -117.8649  180.0000  top
+R209      1k                           R_0603_1608Metric_Pad0.98x0.95mm_HandSolder               131.1910  -120.6939   90.0000  top
+R210      10k                          R_0603_1608Metric_Pad0.98x0.95mm_HandSolder               119.8645  -121.1075    0.0000  top
+R211      100k                         R_0603_1608Metric_Pad0.98x0.95mm_HandSolder               136.1440  -120.6704  -90.0000  top
+R212      49.9k                        R_0603_1608Metric_Pad0.98x0.95mm_HandSolder               118.9990  -109.2435    0.0000  top
+R213      49.9k                        R_0603_1608Metric_Pad0.98x0.95mm_HandSolder               151.5110  -121.2850    0.0000  top
+R214      1k                           R_0603_1608Metric_Pad0.98x0.95mm_HandSolder               141.9860  -121.6864   90.0000  top
+TP201     TestPoint                    TestPoint_Loop_D2.60mm_Drill1.6mm_Beaded                  126.6170  -123.4675    0.0000  top
+TP202     TestPoint                    TestPoint_Loop_D2.60mm_Drill1.6mm_Beaded                  126.6190  -108.6085    0.0000  top
+TP203     TestPoint                    TestPoint_Loop_D2.60mm_Drill1.6mm_Beaded                  112.0140  -123.4675    0.0000  top
+TP204     TestPoint                    TestPoint_Loop_D2.60mm_Drill1.6mm_Beaded                  157.0990  -124.1025    0.0000  top
+U201      USBLC6-2SC6                  SOT-23-6                                                  146.0500  -115.9745  -90.0000  top
+U202      CYPD3177-24LQ                QFN-24-1EP_4x4mm_P0.5mm_EP2.75x2.75mm                     135.5640  -115.7959    0.0000  top
+## End

@@ -1,12 +1,14 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "04726338-8258-4417-8ea7-791ae2c338e8")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Device:C"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.254)
 			)
@@ -79,7 +81,7 @@
 			(symbol "C_0_1"
 				(polyline
 					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
+						(xy -2.032 0.762) (xy 2.032 0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -91,7 +93,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -140,6 +142,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Sensor_Motion:LSM6DSL"
 			(exclude_from_sim no)
@@ -241,96 +244,6 @@
 						)
 					)
 				)
-				(pin no_connect line
-					(at 12.7 -5.08 180)
-					(length 3.81) hide
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 12.7 -2.54 180)
-					(length 3.81) hide
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -15.24 -7.62 0)
-					(length 2.54)
-					(name "CS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -15.24 -5.08 0)
-					(length 2.54)
-					(name "SCL"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -15.24 -2.54 0)
-					(length 2.54)
-					(name "SDA"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin bidirectional line
 					(at -15.24 5.08 0)
 					(length 2.54)
@@ -367,17 +280,53 @@
 						)
 					)
 				)
-				(pin output line
-					(at 15.24 7.62 180)
+				(pin bidirectional line
+					(at -15.24 -2.54 0)
 					(length 2.54)
-					(name "INT1"
+					(name "SDA"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "4"
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -15.24 -5.08 0)
+					(length 2.54)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -15.24 -7.62 0)
+					(length 2.54)
+					(name "CS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -423,7 +372,8 @@
 				)
 				(pin passive line
 					(at 0 -15.24 90)
-					(length 2.54) hide
+					(length 2.54)
+					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -457,6 +407,62 @@
 						)
 					)
 				)
+				(pin no_connect line
+					(at 12.7 -2.54 180)
+					(length 3.81)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 12.7 -5.08 180)
+					(length 3.81)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 15.24 7.62 180)
+					(length 2.54)
+					(name "INT1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin output line
 					(at 15.24 5.08 180)
 					(length 2.54)
@@ -476,6 +482,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Sensor_Pressure:MS5607-02BA"
 			(exclude_from_sim no)
@@ -556,24 +563,6 @@
 				)
 			)
 			(symbol "MS5607-02BA_1_1"
-				(pin power_in line
-					(at 0 10.16 270)
-					(length 2.54)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin input line
 					(at -10.16 5.08 0)
 					(length 2.54)
@@ -585,60 +574,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -10.16 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 -5.08 0)
-					(length 2.54)
-					(name "CSB"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 -5.08 0)
-					(length 2.54) hide
-					(name "CSB"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -700,13 +635,91 @@
 						)
 					)
 				)
+				(pin input line
+					(at -10.16 -5.08 0)
+					(length 2.54)
+					(name "CSB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -5.08 0)
+					(length 2.54)
+					(hide yes)
+					(name "CSB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 10.16 270)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+3.3V"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -778,7 +791,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -790,7 +803,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -821,12 +834,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GNDD"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -928,13 +946,18 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 	)
-	(junction
-		(at 167.64 115.57)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4237ca3d-39a4-4cb9-8562-5500fce9f543")
+	(text "IMU sensors"
+		(exclude_from_sim no)
+		(at 194.564 173.736 0)
+		(effects
+			(font
+				(size 2.032 2.032)
+			)
+		)
+		(uuid "64dddbc1-68bc-4a78-a917-def571935e26")
 	)
 	(junction
 		(at 185.42 82.55)
@@ -968,7 +991,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 115.57) (xy 167.64 115.57)
+			(xy 160.02 115.57) (xy 182.88 115.57)
 		)
 		(stroke
 			(width 0)
@@ -1005,16 +1028,6 @@
 			(type default)
 		)
 		(uuid "3a42d14b-6c2e-4fe3-9762-ca2758aa7cc2")
-	)
-	(wire
-		(pts
-			(xy 60.96 105.41) (xy 68.58 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3b2a4799-27d4-4210-8e7f-142283a136c9")
 	)
 	(wire
 		(pts
@@ -1058,16 +1071,6 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 105.41) (xy 167.64 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5d2b5580-7026-4408-b542-132d98b7fa87")
-	)
-	(wire
-		(pts
 			(xy 223.52 91.44) (xy 223.52 93.98)
 		)
 		(stroke
@@ -1108,16 +1111,6 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 115.57) (xy 182.88 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "81b2cb18-8b27-4f8c-b3ef-aa3bb5a9d0d9")
-	)
-	(wire
-		(pts
 			(xy 198.12 90.17) (xy 203.2 90.17)
 		)
 		(stroke
@@ -1135,6 +1128,16 @@
 			(type default)
 		)
 		(uuid "8c88c402-8738-47db-a9ea-f28e112ca2fc")
+	)
+	(wire
+		(pts
+			(xy 60.96 105.41) (xy 68.58 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96812c2e-a0f0-4ecb-997d-188f87832320")
 	)
 	(wire
 		(pts
@@ -1185,6 +1188,16 @@
 			(type default)
 		)
 		(uuid "cdfe5488-3c89-4fcb-b45d-6039c91c379f")
+	)
+	(wire
+		(pts
+			(xy 162.56 105.41) (xy 167.64 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6e52116-956d-49d7-a486-25b63cbfd603")
 	)
 	(wire
 		(pts
@@ -1256,16 +1269,6 @@
 		)
 		(uuid "fb7ef7f3-a368-4c72-964e-245f6d57ece4")
 	)
-	(text "IMU sensors"
-		(exclude_from_sim no)
-		(at 194.564 173.736 0)
-		(effects
-			(font
-				(size 2.032 2.032)
-			)
-		)
-		(uuid "64dddbc1-68bc-4a78-a917-def571935e26")
-	)
 	(hierarchical_label "pres_sclk"
 		(shape bidirectional)
 		(at 60.96 102.87 180)
@@ -1287,6 +1290,17 @@
 			(justify left)
 		)
 		(uuid "2c821d0a-f4a9-4f5d-a54d-50e8742a3ee2")
+	)
+	(hierarchical_label "pres_cs"
+		(shape input)
+		(at 60.96 105.41 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "410a3f95-a129-4130-9a52-f5b2e4852b97")
 	)
 	(hierarchical_label "imu_mosi"
 		(shape input)
@@ -1331,6 +1345,17 @@
 			(justify left)
 		)
 		(uuid "a24031ee-ee4c-4426-8fa0-c1d6c62321ff")
+	)
+	(hierarchical_label "imu_cs"
+		(shape input)
+		(at 162.56 105.41 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "afbe28d1-ad9c-46c6-962d-8b9174e39a45")
 	)
 	(hierarchical_label "pres_miso"
 		(shape output)
@@ -1419,6 +1444,12 @@
 					(unit 1)
 				)
 			)
+			(project "ride-along-module"
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/ffb7e00e-75c4-4410-97cc-7d6f2fac0025"
+					(reference "#PWR021")
+					(unit 1)
+				)
+			)
 			(project "Recovery-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/3e9e0b47-da2c-4332-b911-05c7ab3ede69"
 					(reference "#PWR042")
@@ -1491,6 +1522,12 @@
 					(unit 1)
 				)
 			)
+			(project "ride-along-module"
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/ffb7e00e-75c4-4410-97cc-7d6f2fac0025"
+					(reference "#PWR030")
+					(unit 1)
+				)
+			)
 			(project "Recovery-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/3e9e0b47-da2c-4332-b911-05c7ab3ede69"
 					(reference "#PWR047")
@@ -1560,6 +1597,12 @@
 			(project "IMU"
 				(path "/92f0fe4f-546b-4686-ae0e-a4b165f18304/c3114460-f6cc-4ee1-8b3c-73f44fd0a812"
 					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+			(project "ride-along-module"
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/ffb7e00e-75c4-4410-97cc-7d6f2fac0025"
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -1639,6 +1682,12 @@
 			(project "IMU"
 				(path "/92f0fe4f-546b-4686-ae0e-a4b165f18304/c3114460-f6cc-4ee1-8b3c-73f44fd0a812"
 					(reference "C1")
+					(unit 1)
+				)
+			)
+			(project "ride-along-module"
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/ffb7e00e-75c4-4410-97cc-7d6f2fac0025"
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -1745,6 +1794,12 @@
 					(unit 1)
 				)
 			)
+			(project "ride-along-module"
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/ffb7e00e-75c4-4410-97cc-7d6f2fac0025"
+					(reference "U3")
+					(unit 1)
+				)
+			)
 			(project "Recovery-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/3e9e0b47-da2c-4332-b911-05c7ab3ede69"
 					(reference "U6")
@@ -1814,6 +1869,12 @@
 			(project "IMU"
 				(path "/92f0fe4f-546b-4686-ae0e-a4b165f18304/c3114460-f6cc-4ee1-8b3c-73f44fd0a812"
 					(reference "#PWR0102")
+					(unit 1)
+				)
+			)
+			(project "ride-along-module"
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/ffb7e00e-75c4-4410-97cc-7d6f2fac0025"
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -1889,6 +1950,12 @@
 					(unit 1)
 				)
 			)
+			(project "ride-along-module"
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/ffb7e00e-75c4-4410-97cc-7d6f2fac0025"
+					(reference "#PWR027")
+					(unit 1)
+				)
+			)
 			(project "Recovery-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/3e9e0b47-da2c-4332-b911-05c7ab3ede69"
 					(reference "#PWR049")
@@ -1958,6 +2025,12 @@
 			(project "IMU"
 				(path "/92f0fe4f-546b-4686-ae0e-a4b165f18304/c3114460-f6cc-4ee1-8b3c-73f44fd0a812"
 					(reference "#PWR0105")
+					(unit 1)
+				)
+			)
+			(project "ride-along-module"
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/ffb7e00e-75c4-4410-97cc-7d6f2fac0025"
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -2033,82 +2106,15 @@
 					(unit 1)
 				)
 			)
+			(project "ride-along-module"
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/ffb7e00e-75c4-4410-97cc-7d6f2fac0025"
+					(reference "#PWR024")
+					(unit 1)
+				)
+			)
 			(project "Recovery-Module"
 				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/3e9e0b47-da2c-4332-b911-05c7ab3ede69"
 					(reference "#PWR045")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GNDD")
-		(at 60.96 105.41 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7b42620a-8074-49e3-808c-5adb9228a7fe")
-		(property "Reference" "#PWR0107"
-			(at 54.61 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GNDD"
-			(at 57.15 105.4099 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 60.96 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 60.96 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
-			(at 60.96 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a3d88afa-c003-4bed-be87-b4d0a96a6be1")
-		)
-		(instances
-			(project "IMU"
-				(path "/92f0fe4f-546b-4686-ae0e-a4b165f18304/c3114460-f6cc-4ee1-8b3c-73f44fd0a812"
-					(reference "#PWR0107")
-					(unit 1)
-				)
-			)
-			(project "Recovery-Module"
-				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/3e9e0b47-da2c-4332-b911-05c7ab3ede69"
-					(reference "#PWR043")
 					(unit 1)
 				)
 			)
@@ -2175,6 +2181,12 @@
 			(project "IMU"
 				(path "/92f0fe4f-546b-4686-ae0e-a4b165f18304/c3114460-f6cc-4ee1-8b3c-73f44fd0a812"
 					(reference "#PWR0108")
+					(unit 1)
+				)
+			)
+			(project "ride-along-module"
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/ffb7e00e-75c4-4410-97cc-7d6f2fac0025"
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
@@ -2263,6 +2275,12 @@
 					(unit 1)
 				)
 			)
+			(project "ride-along-module"
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/ffb7e00e-75c4-4410-97cc-7d6f2fac0025"
+					(reference "C16")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -2326,6 +2344,12 @@
 			(project "IMU"
 				(path "/92f0fe4f-546b-4686-ae0e-a4b165f18304/c3114460-f6cc-4ee1-8b3c-73f44fd0a812"
 					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+			(project "ride-along-module"
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/ffb7e00e-75c4-4410-97cc-7d6f2fac0025"
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)
@@ -2445,6 +2469,12 @@
 					(unit 1)
 				)
 			)
+			(project "ride-along-module"
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/ffb7e00e-75c4-4410-97cc-7d6f2fac0025"
+					(reference "U4")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -2521,6 +2551,12 @@
 			(project "IMU"
 				(path "/92f0fe4f-546b-4686-ae0e-a4b165f18304/c3114460-f6cc-4ee1-8b3c-73f44fd0a812"
 					(reference "C2")
+					(unit 1)
+				)
+			)
+			(project "ride-along-module"
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/ffb7e00e-75c4-4410-97cc-7d6f2fac0025"
+					(reference "C15")
 					(unit 1)
 				)
 			)
