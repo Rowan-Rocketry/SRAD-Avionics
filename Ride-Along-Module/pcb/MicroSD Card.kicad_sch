@@ -4,6 +4,12 @@
 	(generator_version "9.0")
 	(uuid "7761db1c-f9c0-4350-aff2-01ef05a45511")
 	(paper "A4")
+	(title_block
+		(title "Ride-Along Module")
+		(date "2025-04-10")
+		(rev "1")
+		(company "Rowan Rocketry")
+	)
 	(lib_symbols
 		(symbol "Connector:Micro_SD_Card"
 			(pin_names
@@ -844,7 +850,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0a2c4b72-a39d-42fc-aabd-aa048305e125")
-		(property "Reference" "#PWR0101"
+		(property "Reference" "#PWR032"
 			(at 113.03 101.6 0)
 			(effects
 				(font
@@ -900,7 +906,7 @@
 			)
 			(project ""
 				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/02a5c5f6-b4e2-435d-aca7-a6d22478aa51"
-					(reference "#PWR0101")
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
@@ -916,7 +922,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "33633a7f-31e3-4b36-82e3-83c4ee9d3b2f")
-		(property "Reference" "#PWR0104"
+		(property "Reference" "#PWR030"
 			(at 101.6 91.44 0)
 			(effects
 				(font
@@ -972,7 +978,7 @@
 			)
 			(project ""
 				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/02a5c5f6-b4e2-435d-aca7-a6d22478aa51"
-					(reference "#PWR0104")
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -988,7 +994,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "61828364-b851-4178-b12f-4192bd38337e")
-		(property "Reference" "#PWR0103"
+		(property "Reference" "#PWR031"
 			(at 101.6 101.6 0)
 			(effects
 				(font
@@ -1044,7 +1050,7 @@
 			)
 			(project ""
 				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/02a5c5f6-b4e2-435d-aca7-a6d22478aa51"
-					(reference "#PWR0103")
+					(reference "#PWR031")
 					(unit 1)
 				)
 			)
@@ -1060,7 +1066,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "884b7cfc-dd98-4d14-81df-449183d20d28")
-		(property "Reference" "#PWR0102"
+		(property "Reference" "#PWR033"
 			(at 168.91 109.22 0)
 			(effects
 				(font
@@ -1116,7 +1122,7 @@
 			)
 			(project ""
 				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/02a5c5f6-b4e2-435d-aca7-a6d22478aa51"
-					(reference "#PWR0102")
+					(reference "#PWR033")
 					(unit 1)
 				)
 			)
@@ -1132,7 +1138,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a8b53298-6923-4c71-8268-28bf6eedeb57")
-		(property "Reference" "C1"
+		(property "Reference" "C15"
 			(at 105.41 90.1699 0)
 			(effects
 				(font
@@ -1150,7 +1156,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 102.5652 95.25 0)
 			(effects
 				(font
@@ -1192,7 +1198,7 @@
 			)
 			(project ""
 				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/02a5c5f6-b4e2-435d-aca7-a6d22478aa51"
-					(reference "C1")
+					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -1208,7 +1214,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d93d12a2-afef-494a-8870-29ff57d49b8b")
-		(property "Reference" "J1"
+		(property "Reference" "J2"
 			(at 149.225 68.58 0)
 			(effects
 				(font
@@ -1243,6 +1249,15 @@
 			)
 		)
 		(property "Description" "Micro SD Card Socket"
+			(at 148.59 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Purchase" "https://www.digikey.com/en/products/detail/molex/0472192001/3044807?s=N4IgTCBcDaICwHYwEYCcBaMAGLyQF0BfIA"
 			(at 148.59 87.63 0)
 			(effects
 				(font
@@ -1287,7 +1302,7 @@
 			)
 			(project ""
 				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/02a5c5f6-b4e2-435d-aca7-a6d22478aa51"
-					(reference "J1")
+					(reference "J2")
 					(unit 1)
 				)
 			)

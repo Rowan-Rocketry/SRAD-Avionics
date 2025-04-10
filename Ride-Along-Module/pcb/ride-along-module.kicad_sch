@@ -4,6 +4,12 @@
 	(generator_version "9.0")
 	(uuid "ba7b4294-8d75-4b9e-892f-fb52727887ec")
 	(paper "USLetter")
+	(title_block
+		(title "Ride-Along Module")
+		(date "2025-04-10")
+		(rev "1")
+		(company "Rowan Rocketry")
+	)
 	(lib_symbols
 		(symbol "Device:LED"
 			(pin_numbers
@@ -361,6 +367,86 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Mechanical:Fiducial"
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "FID"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Fiducial"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Fiducial Marker"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "fiducial marker"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Fiducial*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Fiducial_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Mechanical:MountingHole_Pad"
 			(pin_numbers
 				(hide yes)
@@ -589,7 +675,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 95.25) (xy 167.64 95.25)
+			(xy 156.21 97.79) (xy 167.64 97.79)
 		)
 		(stroke
 			(width 0)
@@ -619,7 +705,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 100.33) (xy 167.64 100.33)
+			(xy 156.21 102.87) (xy 167.64 102.87)
 		)
 		(stroke
 			(width 0)
@@ -679,13 +765,23 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 106.68) (xy 167.64 106.68)
+			(xy 156.21 113.03) (xy 167.64 113.03)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "9cca745f-a056-4abc-80a4-a51774c8900b")
+	)
+	(wire
+		(pts
+			(xy 156.21 93.98) (xy 167.64 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ecbf85a-fbee-4c2b-8226-b884538e3629")
 	)
 	(wire
 		(pts
@@ -759,6 +855,16 @@
 	)
 	(wire
 		(pts
+			(xy 156.21 106.68) (xy 167.64 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d78bef3c-d9eb-45f1-8822-5d88300f9c64")
+	)
+	(wire
+		(pts
 			(xy 106.68 109.22) (xy 119.38 109.22)
 		)
 		(stroke
@@ -769,7 +875,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 104.14) (xy 167.64 104.14)
+			(xy 156.21 110.49) (xy 167.64 110.49)
 		)
 		(stroke
 			(width 0)
@@ -789,7 +895,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 97.79) (xy 167.64 97.79)
+			(xy 156.21 100.33) (xy 167.64 100.33)
 		)
 		(stroke
 			(width 0)
@@ -884,7 +990,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "16af34db-3018-4203-a550-d094a4b7035b")
-		(property "Reference" "#PWR042"
+		(property "Reference" "#PWR04"
 			(at 21.59 72.39 0)
 			(effects
 				(font
@@ -934,7 +1040,7 @@
 		(instances
 			(project "ride-along-module"
 				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec"
-					(reference "#PWR042")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -1017,7 +1123,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2f3fa57e-2562-48db-939c-a698d6795525")
-		(property "Reference" "#PWR039"
+		(property "Reference" "#PWR01"
 			(at 21.59 31.75 0)
 			(effects
 				(font
@@ -1067,7 +1173,71 @@
 		(instances
 			(project ""
 				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec"
-					(reference "#PWR039")
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:Fiducial")
+		(at 53.34 21.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "442587c6-7bab-4f2e-9edf-6fb885a311d6")
+		(property "Reference" "FID1"
+			(at 55.88 20.3199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Fiducial"
+			(at 55.88 22.8599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Fiducial:Fiducial_1mm_Mask3mm"
+			(at 53.34 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 53.34 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fiducial Marker"
+			(at 53.34 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec"
+					(reference "FID1")
 					(unit 1)
 				)
 			)
@@ -1150,7 +1320,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5ecb6ca7-148f-4277-b2ef-1b9425d53e18")
-		(property "Reference" "D2"
+		(property "Reference" "D1"
 			(at 124.7775 60.96 0)
 			(effects
 				(font
@@ -1166,7 +1336,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 123.19 68.58 0)
 			(effects
 				(font
@@ -1211,7 +1381,7 @@
 		(instances
 			(project ""
 				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec"
-					(reference "D2")
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -1227,7 +1397,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6146f725-1389-4e77-8d6c-74efd7d96cea")
-		(property "Reference" "#PWR041"
+		(property "Reference" "#PWR03"
 			(at 21.59 58.42 0)
 			(effects
 				(font
@@ -1277,7 +1447,71 @@
 		(instances
 			(project "ride-along-module"
 				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec"
-					(reference "#PWR041")
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:Fiducial")
+		(at 53.34 27.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "63dbbbba-3f08-4d77-9a10-182dc6c19302")
+		(property "Reference" "FID2"
+			(at 55.88 26.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Fiducial"
+			(at 55.88 29.2099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Fiducial:Fiducial_1mm_Mask3mm"
+			(at 53.34 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 53.34 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fiducial Marker"
+			(at 53.34 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "ride-along-module"
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec"
+					(reference "FID2")
 					(unit 1)
 				)
 			)
@@ -1360,7 +1594,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9da4de33-4db5-4edc-8ca6-1193b3c52e2b")
-		(property "Reference" "#PWR043"
+		(property "Reference" "#PWR05"
 			(at 130.81 77.47 0)
 			(effects
 				(font
@@ -1410,7 +1644,7 @@
 		(instances
 			(project ""
 				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec"
-					(reference "#PWR043")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -1426,7 +1660,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "aab9296f-fc2f-42ac-8ab5-409205a6f73a")
-		(property "Reference" "R5"
+		(property "Reference" "R1"
 			(at 115.57 62.23 90)
 			(effects
 				(font
@@ -1442,7 +1676,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 115.824 67.564 90)
 			(effects
 				(font
@@ -1478,7 +1712,71 @@
 		(instances
 			(project ""
 				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec"
-					(reference "R5")
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:Fiducial")
+		(at 53.34 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "df624fee-e89d-482e-9616-98ee2293ce48")
+		(property "Reference" "FID3"
+			(at 55.88 33.0199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Fiducial"
+			(at 55.88 35.5599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Fiducial:Fiducial_1mm_Mask3mm"
+			(at 53.34 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 53.34 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fiducial Marker"
+			(at 53.34 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "ride-along-module"
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec"
+					(reference "FID3")
 					(unit 1)
 				)
 			)
@@ -1494,7 +1792,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fa290aac-6eb6-4c26-9dcc-38071215e3a0")
-		(property "Reference" "#PWR040"
+		(property "Reference" "#PWR02"
 			(at 21.59 44.45 0)
 			(effects
 				(font
@@ -1544,7 +1842,7 @@
 		(instances
 			(project "ride-along-module"
 				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec"
-					(reference "#PWR040")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -1717,7 +2015,7 @@
 			)
 		)
 		(pin "SPI2_SCK" output
-			(at 156.21 95.25 0)
+			(at 156.21 97.79 0)
 			(uuid "a4d0bf41-3c46-45c6-90e2-325a631f0614")
 			(effects
 				(font
@@ -1747,7 +2045,7 @@
 			)
 		)
 		(pin "SPI2_MISO" input
-			(at 156.21 97.79 0)
+			(at 156.21 100.33 0)
 			(uuid "c51d77de-4857-4d6e-b36e-19c7fa0b8425")
 			(effects
 				(font
@@ -1757,7 +2055,7 @@
 			)
 		)
 		(pin "SPI2_MOSI" output
-			(at 156.21 100.33 0)
+			(at 156.21 102.87 0)
 			(uuid "dcd203bd-7243-45a9-ad66-62c3fd4e2036")
 			(effects
 				(font
@@ -1777,7 +2075,7 @@
 			)
 		)
 		(pin "IMU_INT2" input
-			(at 156.21 106.68 0)
+			(at 156.21 113.03 0)
 			(uuid "a2812802-9090-4b1e-86a4-56aeb61624a5")
 			(effects
 				(font
@@ -1787,7 +2085,7 @@
 			)
 		)
 		(pin "IMU_INT1" input
-			(at 156.21 104.14 0)
+			(at 156.21 110.49 0)
 			(uuid "10e2e992-3b36-4cf9-838b-874f384bbc02")
 			(effects
 				(font
@@ -1856,10 +2154,172 @@
 				(justify left)
 			)
 		)
+		(pin "imu_cs" output
+			(at 156.21 106.68 0)
+			(uuid "46401372-3bdb-43f5-9d20-25bb977e9128")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "pres_cs" output
+			(at 156.21 93.98 0)
+			(uuid "e54784b1-7cea-43bb-8e3d-0b670d8f583d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(instances
 			(project "ride-along-module"
 				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec"
 					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 167.64 82.55)
+		(size 24.13 36.83)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "7b15f5f2-9385-4263-9cd0-b3960b130352")
+		(property "Sheetname" "IMU Sensors"
+			(at 167.64 81.8384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "IMU Sensors.kicad_sch"
+			(at 167.64 119.9646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "pres_cs" input
+			(at 167.64 93.98 180)
+			(uuid "b71ad91b-462e-4167-9575-01aa3ef9c907")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "imu_int2" output
+			(at 167.64 113.03 180)
+			(uuid "7aa9c0cd-e703-48c6-9ed1-139989d0493a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "imu_mosi" input
+			(at 167.64 102.87 180)
+			(uuid "05097d52-63d3-4a27-8cc4-cf3d576c343a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "pres_sclk" bidirectional
+			(at 167.64 85.09 180)
+			(uuid "02a905aa-76d6-4242-86a1-ba6800035c41")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "imu_int1" output
+			(at 167.64 110.49 180)
+			(uuid "cdf66294-5ab9-413c-aac4-287c5d6301b0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "imu_cs" input
+			(at 167.64 106.68 180)
+			(uuid "2a6ffb2a-2183-4a4c-bd1f-a0ccbf6fa313")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "imu_miso" output
+			(at 167.64 100.33 180)
+			(uuid "c8cf036c-39be-43a3-a6ca-4f10a7b915d3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "pres_mosi" input
+			(at 167.64 90.17 180)
+			(uuid "8c200701-adf9-4192-8c9b-443939e7b1ef")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "imu_sclk" bidirectional
+			(at 167.64 97.79 180)
+			(uuid "1aa1d35c-ce4d-4fd3-b279-775ac2ec25e5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "pres_miso" output
+			(at 167.64 87.63 180)
+			(uuid "c41951cb-e6ad-4818-ab3e-0edee45a81e9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "ride-along-module"
+				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec"
+					(page "6")
 				)
 			)
 		)
@@ -1974,128 +2434,6 @@
 			(project "ride-along-module"
 				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec"
 					(page "2")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 167.64 82.55)
-		(size 22.86 26.67)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "e9bd0a92-8631-43e5-a6c8-e6db03a0cf38")
-		(property "Sheetname" "IMU Sensors"
-			(at 167.64 81.8384 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "IMU Sensors.kicad_sch"
-			(at 167.64 109.8046 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "imu_mosi" input
-			(at 167.64 100.33 180)
-			(uuid "0065a50b-ad37-44a8-8539-0fdd962a4dab")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "imu_sclk" bidirectional
-			(at 167.64 95.25 180)
-			(uuid "214a8eed-d794-4281-9a3b-ae300d480c29")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "imu_miso" output
-			(at 167.64 97.79 180)
-			(uuid "fe0594cd-38bb-46c8-a5a5-0207b759c00d")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "imu_int2" output
-			(at 167.64 106.68 180)
-			(uuid "0f5f6a11-6073-40d4-b9b2-7aa6a342d930")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "imu_int1" output
-			(at 167.64 104.14 180)
-			(uuid "fbc10623-99fd-4dd0-8cd7-31c2ac0dad64")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "pres_sclk" bidirectional
-			(at 167.64 85.09 180)
-			(uuid "46bc8fb6-f6cf-4dc7-bf19-bda0584cb42f")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "pres_miso" output
-			(at 167.64 87.63 180)
-			(uuid "924f0ed9-8408-4684-88ec-8316624ee0c9")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "pres_mosi" input
-			(at 167.64 90.17 180)
-			(uuid "3826f070-96dc-4ff3-9f47-7c8b3a775fea")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(instances
-			(project "ride-along-module"
-				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec"
-					(page "6")
 				)
 			)
 		)
