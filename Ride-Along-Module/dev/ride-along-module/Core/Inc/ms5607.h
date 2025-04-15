@@ -2,9 +2,12 @@
 #ifndef MS5607_H
 #define MS5607_H
 
+#include "stm32u5xx_hal.h"
+
 /* MS5607 Barometric Pressure and Temperature Sensor Commands */
 #define MS5607_RESET			0x1E
 #define MS5607_READ_ADC			0x00
+#define MS5607_READ_PROM		0xA0
 
 #define MS5607_CONV_PRES		0x40
 #define MS5607_CONV_TEMP		0x50
@@ -15,21 +18,43 @@
 #define MS5607_OSR_2048			0x06
 #define MS5607_OSR_4096			0x08
 
-#include "stm32u5xx_hal.h"
+typedef uint8_t MS5607_osr_t;
+
+typedef struct {
+	SPI_HandleTypeDef* spi;
+	GPIO_TypeDef* csPort;
+	uint16_t csPin;
+	MS5607_osr_t osr;
+} MS5607_HandleTypeDef;
+
+typedef struct {
+	uint16_t presSens;
+	uint16_t presOffset;
+	uint16_t tcs;
+	uint16_t tco;
+	uint16_t tRef;
+	uint16_t tempSens;
+} MS5607_PromData
 
 // Use chip select pin to enable MS5607
-void enableMS5607();
+void MS5607_enable();
 
 // Use chip select pin to disable MS5607
-void disableMS5607();
+void MS5607_disable();
 
 // Pulse chip select, set up SPI port, and reset MS5607
-void configureMS5607(SPI_HandleTypeDef*);
+void MS5607_init(MS5607_HandleTypeDef* MS5607_initStruct);
 
 // Measure, read, and return the uncompensated pressure from the MS5607
-uint32_t measurePressure();
+uint32_t MS5607_readUncompPres();
+
+// Measure, read, and return the uncompensated temperature form the MS5607
+uint32_t MS5607_readUncompTemp();
 
 // Read the value in the ADC of the MS5607
-uint32_t readMS5607ADC();
+uint32_t MS5607_readADC();
+
+// Get the compensated pressure and temperature readings
+void MS5607_getMeasurements(int32_t* pressurePa, int32_t* temperatureC)
 
 #endif

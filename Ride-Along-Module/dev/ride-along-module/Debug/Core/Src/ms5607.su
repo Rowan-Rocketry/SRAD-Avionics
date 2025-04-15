@@ -1,5 +1,6 @@
-../Core/Src/ms5607.c:9:6:configureMS5607	16	static
-../Core/Src/ms5607.c:19:10:measurePressure	8	static
-../Core/Src/ms5607.c:34:10:readMS5607ADC	16	static
-../Core/Src/ms5607.c:46:6:enableMS5607	8	static
-../Core/Src/ms5607.c:51:6:disableMS5607	8	static
+../Core/Src/ms5607.c:12:6:MS5607_init	16	static
+../Core/Src/ms5607.c:46:10:MS5607_readPressure	8	static
+../Core/Src/ms5607.c:60:10:MS5607_readTemperature	8	static
+../Core/Src/ms5607.c:74:10:MS5607_readADC	16	static
+../Core/Src/ms5607.c:88:6:MS5607_enable	8	static
+../Core/Src/ms5607.c:94:6:MS5607_disable	8	static
