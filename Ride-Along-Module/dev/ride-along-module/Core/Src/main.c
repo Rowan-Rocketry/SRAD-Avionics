@@ -106,6 +106,15 @@ int main(void)
 
   /* USER CODE BEGIN Init */
 
+  // Configure MS5607
+  MS5607_HandleTypeDef ms5607Config = {0};
+  ms5607Config.spi = &hspi1;
+  ms5607Config.timer = &htim16;
+  ms5607Config.csPort = GPIOA;
+  ms5607Config.csPin = GPIO_PIN_3;
+  ms5607Config.osr = MS5607_OSR_1024;
+  MS5607_init(&ms5607Config);
+
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -130,15 +139,8 @@ int main(void)
   uart_buffer_length = sprintf(uart_buffer, "UART VCP Test!\n");
   HAL_UART_Transmit(&huart1, (uint8_t *)uart_buffer, uart_buffer_length, 100);
 
-  // Configure MS5607
-  MS5607_HandleTypeDef ms5607Config = {0};
-  ms5607Config.spi = &hspi1;
-  ms5607Config.csPort = GPIOA;
-  ms5607Config.csPin = GPIO_PIN_3;
-  ms5607Config.osr = MS5607_OSR_4096;
 
-  MS5607_init(&ms5607Config);
-
+	MS5607_readUncompPres();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -146,8 +148,18 @@ int main(void)
   while (1)
   {
 	
-	pressure = MS5607_readPressure();
-	writePressure();
+	//writePressure();
+	if (MS5607_getState() == MS5607_IDLE)
+	{
+		// Get result of digital read
+		MS5607_RawVal rawVals = MS5607_getRawValues();
+
+		// Compensate digital reading
+		MS5607_CompVal compVals = MS5607_getCompValues(&rawVals);
+
+	 // Measure again
+		MS5607_readUncompPres();
+	}
 	
     /* USER CODE END WHILE */
 
@@ -416,16 +428,16 @@ static void MX_TIM16_Init(void)
 {
 
   /* USER CODE BEGIN TIM16_Init 0 */
-
+	uint16_t ms5607MeasurementDelay = MS5607_getMeasurementDelay();
   /* USER CODE END TIM16_Init 0 */
 
   /* USER CODE BEGIN TIM16_Init 1 */
 
   /* USER CODE END TIM16_Init 1 */
   htim16.Instance = TIM16;
-  htim16.Init.Prescaler = 4-1;
+  htim16.Init.Prescaler = 40-1;
   htim16.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim16.Init.Period = 8219;
+  htim16.Init.Period = ms5607MeasurementDelay;
   htim16.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim16.Init.RepetitionCounter = 0;
   htim16.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -575,6 +587,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	if (htim == &htim16)
 	{
+		MS5607_TimerCallback();
 		//pressure = readMS5607ADC();
 		//writePressure();
 	}

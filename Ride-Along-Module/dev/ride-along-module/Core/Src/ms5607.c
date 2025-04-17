@@ -6,7 +6,11 @@ static const uint8_t CMD_MS5607_RESET = MS5607_RESET;
 static MS5607_HandleTypeDef* config;
 static MS5607_PromData promData;
 
-static uint8_t measurementDelay;
+static MS5607_RawVal rawValues;
+
+static MS5607_MeasureState state;
+
+static uint16_t measurementDelay;
 static uint8_t cmdMeasurePres;
 static uint8_t cmdMeasureTemp;
 
@@ -24,24 +28,26 @@ void MS5607_init(MS5607_HandleTypeDef* MS5607_initStruct)
 	switch (config->osr) 
 	{
 		case MS5607_OSR_256:
-			measurementDelay = 1;
+			measurementDelay = 50;
 			break;
 		case MS5607_OSR_512:
-			measurementDelay = 2;
+			measurementDelay = 110;
 			break;
 		case MS5607_OSR_1024:
-			measurementDelay = 3;
+			measurementDelay = 210;
 			break;
 		case MS5607_OSR_2048:
-			measurementDelay = 5;
+			measurementDelay = 410;
 			break;
 		case MS5607_OSR_4096:
-			measurementDelay = 9;
+			measurementDelay = 822;
 	}
 
 	MS5607_enable();
 	HAL_SPI_Transmit(config->spi, &CMD_MS5607_RESET, 1, 100);
 	MS5607_disable();
+
+	state = MS5607_STARTUP;
 }
 
 void MS5607_readProm()
@@ -66,11 +72,12 @@ void MS5607_readProm()
 	}
 }
 
-void MS5607_getMeasurements(int32_t* pressurePa, int32_t* temperatureC)
+MS5607_CompVal MS5607_getCompValues(MS5607_RawVal* rawVals)
 {
-	// Get digital pressure and temperature values from ADC
-	uint32_t digPres = MS5607_readUncompPres();
-	uint32_t digTemp = MS5607_readUncompTemp();
+	MS5607_CompVal compVals;
+
+	uint32_t digTemp = rawVals->temp;
+	uint32_t digPres = rawVals->pres;
 
 	// dT = D2 - TREF
 	int32_t deltaTemp = digTemp - ((int32_t)promData.tRef << 8);
@@ -94,9 +101,9 @@ void MS5607_getMeasurements(int32_t* pressurePa, int32_t* temperatureC)
 		int64_t offset2 = 61*((int64_t)temp2000 * (int64_t)temp2000) >> 4;
 		int64_t sense2 = ((int64_t)temp2000 * (int64_t)temp2000) << 1;
 
-		if (temp < -1500)
+		if (temp1 < -1500)
 		{
-			int32_t temp1500 = temp + 1500;
+			int32_t temp1500 = temp1 + 1500;
 			offset2 += 15 * ((int64_t)temp1500 * (int64_t)temp1500);
 			sense2 += ((int64_t)temp1500 * (int64_t)temp1500) << 3;
 		}
@@ -106,36 +113,37 @@ void MS5607_getMeasurements(int32_t* pressurePa, int32_t* temperatureC)
 		sensitivity -= sense2;
 	}
 
-	*pressurePa = (((int64_t)(digPres*sensitivity) >> 21) - offset) >> 15;
-	*temperatureC = temp1;
+	// Populate and return the compensated values
+	compVals.pres = (((int64_t)(digPres*sensitivity) >> 21) - offset) >> 15;
+	compVals.temp = temp1;
+
+	return compVals;
 }
 
-uint32_t MS5607_readUncompPres()
+void MS5607_readUncompPres()
 {
+	state = MS5607_PRES_READ;
+
 	// Send convert command over SPI1
 	MS5607_enable();
 	HAL_SPI_Transmit(config->spi, &cmdMeasurePres, 1, 100);
 	MS5607_disable();
 
 	// Wait for conversion (based on OSR)
-	HAL_Delay(measurementDelay);
-
-	// Read ADC result
-	return MS5607_readADC();
+	HAL_TIM_Base_Start_IT(config->timer);
 }
 
-uint32_t MS5607_readUncompTemp()
+void MS5607_readUncompTemp()
 {
+	state = MS5607_TEMP_READ;
+
 	// Send convert command over SPI1
 	MS5607_enable();
 	HAL_SPI_Transmit(config->spi, &cmdMeasureTemp, 1, 100);
 	MS5607_disable();
-
+	
 	// Wait for conversion (based on OSR)
-	HAL_Delay(measurementDelay);
-
-	// Read ADC result
-	return MS5607_readADC();
+	HAL_TIM_Base_Start_IT(config->timer);
 }
 
 uint32_t MS5607_readADC()
@@ -162,4 +170,35 @@ void MS5607_disable()
 {
 	// Set the CSB pin of the MS5607 high to disable
 	HAL_GPIO_WritePin(config->csPort, config->csPin, GPIO_PIN_SET);
+}
+
+void MS5607_TimerCallback()
+{
+	uint32_t adcReading = MS5607_readADC();
+	
+	if (state == MS5607_PRES_READ)
+	{
+		rawValues.pres = adcReading;
+		MS5607_readUncompTemp();
+	}
+	else if (state == MS5607_TEMP_READ)
+	{
+		rawValues.temp = adcReading;
+		state = MS5607_IDLE;
+	}
+}
+
+MS5607_RawVal MS5607_getRawValues()
+{
+	return rawValues;
+}
+
+uint16_t MS5607_getMeasurementDelay()
+{
+	return measurementDelay;
+}
+
+MS5607_MeasureState MS5607_getState()
+{
+	return state;
 }

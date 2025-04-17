@@ -22,6 +22,7 @@ typedef uint8_t MS5607_osr_t;
 
 typedef struct {
 	SPI_HandleTypeDef* spi;
+	TIM_HandleTypeDef* timer;
 	GPIO_TypeDef* csPort;
 	uint16_t csPin;
 	MS5607_osr_t osr;
@@ -34,7 +35,24 @@ typedef struct {
 	uint16_t tco;
 	uint16_t tRef;
 	uint16_t tempSens;
-} MS5607_PromData
+} MS5607_PromData;
+
+typedef struct {
+	uint32_t temp;
+	uint32_t pres;
+} MS5607_RawVal;
+
+typedef struct {
+	int32_t temp;
+	int32_t pres;
+} MS5607_CompVal;
+
+typedef enum {
+	MS5607_STARTUP,
+	MS5607_PRES_READ,
+	MS5607_TEMP_READ,
+	MS5607_IDLE
+} MS5607_MeasureState;
 
 // Use chip select pin to enable MS5607
 void MS5607_enable();
@@ -45,16 +63,23 @@ void MS5607_disable();
 // Pulse chip select, set up SPI port, and reset MS5607
 void MS5607_init(MS5607_HandleTypeDef* MS5607_initStruct);
 
-// Measure, read, and return the uncompensated pressure from the MS5607
-uint32_t MS5607_readUncompPres();
+// Measure the uncompensated pressure from the MS5607
+void MS5607_readUncompPres();
 
-// Measure, read, and return the uncompensated temperature form the MS5607
-uint32_t MS5607_readUncompTemp();
+// Measure the uncompensated temperature form the MS5607
+void MS5607_readUncompTemp();
 
 // Read the value in the ADC of the MS5607
 uint32_t MS5607_readADC();
 
+// Triggered by measurement timer based on OSR
+void MS5607_TimerCallback();
+
 // Get the compensated pressure and temperature readings
-void MS5607_getMeasurements(int32_t* pressurePa, int32_t* temperatureC)
+MS5607_CompVal MS5607_getCompValues(MS5607_RawVal*);
+
+MS5607_RawVal MS5607_getRawValues();
+
+MS5607_MeasureState MS5607_getState();
 
 #endif

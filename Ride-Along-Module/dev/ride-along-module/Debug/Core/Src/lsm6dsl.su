@@ -1,0 +1,6 @@
+../Core/Src/lsm6dsl.c:5:6:LSM6DSL_init	16	static
+../Core/Src/lsm6dsl.c:43:6:LSM6DSL_readAccel	32	static
+../Core/Src/lsm6dsl.c:54:6:LSM6DSL_readGyro	32	static
+../Core/Src/lsm6dsl.c:65:9:LSM6DSL_readMeasurement	24	static
+../Core/Src/lsm6dsl.c:82:6:LSM6DSL_enable	8	static
+../Core/Src/lsm6dsl.c:88:6:LSM6DSL_disable	8	static
