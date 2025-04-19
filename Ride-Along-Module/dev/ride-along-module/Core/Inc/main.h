@@ -31,6 +31,8 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "ff_gen_drv.h"
+#include "sd_diskio.h"
 
 /* USER CODE END Includes */
 
