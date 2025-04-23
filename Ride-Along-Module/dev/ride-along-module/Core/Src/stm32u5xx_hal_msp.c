@@ -91,9 +91,8 @@ void HAL_SD_MspInit(SD_HandleTypeDef* hsd)
 
   /** Initializes the peripherals clock
   */
-    PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_SDMMC|RCC_PERIPHCLK_CLK48;
-    PeriphClkInit.IclkClockSelection = RCC_CLK48CLKSOURCE_HSI48;
-    PeriphClkInit.SdmmcClockSelection = RCC_SDMMCCLKSOURCE_CLK48;
+    PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_SDMMC;
+    PeriphClkInit.SdmmcClockSelection = RCC_SDMMCCLKSOURCE_PLL1;
     if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
     {
       Error_Handler();
@@ -458,7 +457,7 @@ void HAL_PCD_MspInit(PCD_HandleTypeDef* hpcd)
   /** Initializes the peripherals clock
   */
     PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_CLK48;
-    PeriphClkInit.IclkClockSelection = RCC_CLK48CLKSOURCE_HSI48;
+    PeriphClkInit.IclkClockSelection = RCC_CLK48CLKSOURCE_PLL1;
     if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
     {
       Error_Handler();
