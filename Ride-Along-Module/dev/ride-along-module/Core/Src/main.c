@@ -146,6 +146,36 @@ int main(void)
 
 	int16_t accel[3];
 	int16_t gyro[3];
+	
+	// Test MicroSD card write
+	FATFS fs;
+	FIL file;
+	FRESULT res;
+	UINT bytesWritten;
+	
+	res = f_mount(&fs, "", 1);
+	if (res != FR_OK)
+	{
+		Error_Handler();
+	}
+
+	res = f_open(&file, "hello.txt", FA_WRITE | FA_CREATE_ALWAYS);
+	if (res != FR_OK)
+	{
+		Error_Handler();
+	}
+
+	const char* fileContents = "Hello world!\n";
+	res = f_write(&file, fileContents, strlen(fileContents), &bytesWritten);
+	if (res != FR_OK || bytesWritten != strlen(fileContents))
+	{
+		Error_Handler();
+	}
+
+	f_close(&file);
+	f_mount(NULL, "", 1);
+
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -261,7 +291,7 @@ static void MX_SDMMC1_SD_Init(void)
   hsd1.Init.ClockPowerSave = SDMMC_CLOCK_POWER_SAVE_DISABLE;
   hsd1.Init.BusWide = SDMMC_BUS_WIDE_4B;
   hsd1.Init.HardwareFlowControl = SDMMC_HARDWARE_FLOW_CONTROL_DISABLE;
-  hsd1.Init.ClockDiv = 0;
+  hsd1.Init.ClockDiv = 15;
   if (HAL_SD_Init(&hsd1) != HAL_OK)
   {
     Error_Handler();

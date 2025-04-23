@@ -1142,9 +1142,9 @@ static void MX_SDMMC1_SD_Init(void)
  8000abe:	4b08      	ldr	r3, [pc, #32]	; (8000ae0 <MX_SDMMC1_SD_Init+0x40>)
  8000ac0:	2200      	movs	r2, #0
  8000ac2:	611a      	str	r2, [r3, #16]
-  hsd1.Init.ClockDiv = 0;
+  hsd1.Init.ClockDiv = 15;
  8000ac4:	4b06      	ldr	r3, [pc, #24]	; (8000ae0 <MX_SDMMC1_SD_Init+0x40>)
- 8000ac6:	2200      	movs	r2, #0
+ 8000ac6:	220f      	movs	r2, #15
  8000ac8:	615a      	str	r2, [r3, #20]
   if (HAL_SD_Init(&hsd1) != HAL_OK)
  8000aca:	4805      	ldr	r0, [pc, #20]	; (8000ae0 <MX_SDMMC1_SD_Init+0x40>)

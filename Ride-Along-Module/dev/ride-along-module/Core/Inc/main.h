@@ -33,6 +33,8 @@ extern "C" {
 /* USER CODE BEGIN Includes */
 #include "ff_gen_drv.h"
 #include "sd_diskio.h"
+#include "ff.h"
+#include <string.h>
 
 /* USER CODE END Includes */
 

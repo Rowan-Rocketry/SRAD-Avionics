@@ -41,7 +41,7 @@ Core/Src/stm32u5xx_it.o: ../Core/Src/stm32u5xx_it.c ../Core/Inc/main.h \
  ../Libraries/Third_Party/FatFs/src/integer.h \
  ../Libraries/Third_Party/FatFs/src/ff.h ../FATFS/Target/ffconf.h \
  ../FATFS/Target/bsp_driver_sd.h ../FATFS/Target/sd_diskio.h \
- ../Core/Inc/stm32u5xx_it.h
+ ../Libraries/Third_Party/FatFs/src/ff.h ../Core/Inc/stm32u5xx_it.h
 ../Core/Inc/main.h:
 ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal.h:
 ../Core/Inc/stm32u5xx_hal_conf.h:
@@ -87,4 +87,5 @@ Core/Src/stm32u5xx_it.o: ../Core/Src/stm32u5xx_it.c ../Core/Inc/main.h \
 ../FATFS/Target/ffconf.h:
 ../FATFS/Target/bsp_driver_sd.h:
 ../FATFS/Target/sd_diskio.h:
+../Libraries/Third_Party/FatFs/src/ff.h:
 ../Core/Inc/stm32u5xx_it.h:
