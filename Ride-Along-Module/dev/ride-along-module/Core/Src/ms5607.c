@@ -14,9 +14,8 @@ static uint16_t measurementDelay;
 static uint8_t cmdMeasurePres;
 static uint8_t cmdMeasureTemp;
 
-void MS5607_init(MS5607_HandleTypeDef* MS5607_initStruct)
+void MS5607_config(MS5607_HandleTypeDef* MS5607_initStruct)
 {
-	MS5607_disable();
 
 	config = MS5607_initStruct;
 	
@@ -42,6 +41,12 @@ void MS5607_init(MS5607_HandleTypeDef* MS5607_initStruct)
 		case MS5607_OSR_4096:
 			measurementDelay = 822;
 	}
+
+}
+
+void MS5607_init()
+{
+	MS5607_disable();
 
 	MS5607_enable();
 	HAL_SPI_Transmit(config->spi, &CMD_MS5607_RESET, 1, 100);

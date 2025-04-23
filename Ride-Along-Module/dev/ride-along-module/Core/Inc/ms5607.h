@@ -60,8 +60,11 @@ void MS5607_enable();
 // Use chip select pin to disable MS5607
 void MS5607_disable();
 
-// Pulse chip select, set up SPI port, and reset MS5607
-void MS5607_init(MS5607_HandleTypeDef* MS5607_initStruct);
+// Set up internal configuration
+void MS5607_config(MS5607_HandleTypeDef* MS5607_initStruct);
+
+// Pulse chip select and reset
+void MS5607_init();
 
 // Measure the uncompensated pressure from the MS5607
 void MS5607_readUncompPres();
