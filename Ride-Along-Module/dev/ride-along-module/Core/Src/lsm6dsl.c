@@ -5,6 +5,9 @@ static LSM6DSL_HandleTypeDef* config;
 static int16_t accel[3];
 static int16_t gyro[3];
 
+static float accelSensitivity;
+static float gyroSensitivity;
+
 void LSM6DSL_config(LSM6DSL_HandleTypeDef* LSM6DSL_initStruct)
 {
 	config = LSM6DSL_initStruct;
@@ -12,34 +15,34 @@ void LSM6DSL_config(LSM6DSL_HandleTypeDef* LSM6DSL_initStruct)
 	switch (config->accelFullScale)
 	{
 		case LSM6DSL_ACCEL_FS_PM_2:
-			config->accelSensitivity = 0.061f;
+			accelSensitivity = 0.061f;
 			break;
 		case LSM6DSL_ACCEL_FS_PM_4:
-			config->accelSensitivity = 0.122f;
+			accelSensitivity = 0.122f;
 			break;
 		case LSM6DSL_ACCEL_FS_PM_8:
-			config->accelSensitivity = 0.244f;
+			accelSensitivity = 0.244f;
 			break;
 		case LSM6DSL_ACCEL_FS_PM_16:
-			config->accelSensitivity = 0.488f;
+			accelSensitivity = 0.488f;
 	}
 
 	switch (config->gyroFullScale)
 	{
 		case LSM6DSL_GYRO_FS_PM_125:
-			config->gyroSensitivity = 4.375f;
+			gyroSensitivity = 4.375f;
 			break;
 		case LSM6DSL_GYRO_FS_PM_250:	
-			config->gyroSensitivity = 8.75f;
+			gyroSensitivity = 8.75f;
 			break;
 		case LSM6DSL_GYRO_FS_PM_500:	
-			config->gyroSensitivity = 17.50f;
+			gyroSensitivity = 17.50f;
 			break;
 		case LSM6DSL_GYRO_FS_PM_1000:	
-			config->gyroSensitivity = 35.0f;
+			gyroSensitivity = 35.0f;
 			break;
 		case LSM6DSL_GYRO_FS_PM_2000:	
-			config->gyroSensitivity = 70.0f;
+			gyroSensitivity = 70.0f;
 	}
 }
 
@@ -65,9 +68,9 @@ void LSM6DSL_updateAccel()
 	int16_t ayRaw = LSM6DSL_readMeasurement(LSM6DSL_ACCEL_Y_L);
 	int16_t azRaw = LSM6DSL_readMeasurement(LSM6DSL_ACCEL_Z_L);
 
-	accel[0] = (int16_t)(axRaw * config->accelSensitivity);
-	accel[1] = (int16_t)(ayRaw * config->accelSensitivity);
-	accel[2] = (int16_t)(azRaw * config->accelSensitivity);
+	accel[0] = (int16_t)(axRaw * accelSensitivity);
+	accel[1] = (int16_t)(ayRaw * accelSensitivity);
+	accel[2] = (int16_t)(azRaw * accelSensitivity);
 }
 
 void LSM6DSL_updateGyro()
@@ -76,9 +79,9 @@ void LSM6DSL_updateGyro()
 	int16_t gyRaw = LSM6DSL_readMeasurement(LSM6DSL_GYRO_Y_L);
 	int16_t gzRaw = LSM6DSL_readMeasurement(LSM6DSL_GYRO_Z_L);
 
-	gyro[0] = (int16_t)(gxRaw * config->gyroSensitivity);
-	gyro[1] = (int16_t)(gyRaw * config->gyroSensitivity);
-	gyro[2] = (int16_t)(gzRaw * config->gyroSensitivity);
+	gyro[0] = (int16_t)(gxRaw * gyroSensitivity);
+	gyro[1] = (int16_t)(gyRaw * gyroSensitivity);
+	gyro[2] = (int16_t)(gzRaw * gyroSensitivity);
 }
 
 void LSM6DSL_writeRegister(uint8_t reg, uint8_t val)

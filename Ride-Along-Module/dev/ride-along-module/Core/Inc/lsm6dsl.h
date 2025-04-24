@@ -76,8 +76,6 @@ typedef struct {
 	uint8_t outputDataRate;
 	uint8_t accelFullScale;
 	uint8_t gyroFullScale;
-	float accelSensitivity;
-	float gyroSensitivity;
 } LSM6DSL_HandleTypeDef;
 
 // Configure LSM6DSL

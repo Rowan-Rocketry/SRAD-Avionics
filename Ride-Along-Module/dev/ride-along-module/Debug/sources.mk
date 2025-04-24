@@ -25,4 +25,7 @@ SUBDIRS := \
 Core/Src \
 Core/Startup \
 Drivers/STM32U5xx_HAL_Driver/Src \
+FATFS/App \
+FATFS/Target \
+Libraries/Third_Party/FatFs/src \
 

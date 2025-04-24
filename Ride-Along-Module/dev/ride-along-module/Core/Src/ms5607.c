@@ -52,6 +52,8 @@ void MS5607_init()
 	HAL_SPI_Transmit(config->spi, &CMD_MS5607_RESET, 1, 100);
 	MS5607_disable();
 
+	MS5607_readProm();
+
 	state = MS5607_STARTUP;
 }
 

@@ -66,6 +66,9 @@ void MS5607_config(MS5607_HandleTypeDef* MS5607_initStruct);
 // Pulse chip select and reset
 void MS5607_init();
 
+// Read the prom contents
+void MS5607_readProm();
+
 // Measure the uncompensated pressure from the MS5607
 void MS5607_readUncompPres();
 
