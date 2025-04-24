@@ -76,6 +76,7 @@
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
 		(tenting front back)
+		(aux_axis_origin 115.316 89.916)
 		(grid_origin 115.316 89.916)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
@@ -6166,7 +6167,7 @@
 		(path "/b41619a2-11a0-4fcf-9c2d-b1ec93f6b99c/06f3d666-0362-4be7-b132-32a5e77ada71")
 		(sheetname "/USB/")
 		(sheetfile "USB-C Port.kicad_sch")
-		(attr smd)
+		(attr smd dnp)
 		(fp_line
 			(start 4.67 -0.1)
 			(end 4.67 -1.8)
@@ -7753,7 +7754,7 @@
 		(path "/02a5c5f6-b4e2-435d-aca7-a6d22478aa51/d93d12a2-afef-494a-8870-29ff57d49b8b")
 		(sheetname "/MicroSD Card/")
 		(sheetfile "MicroSD Card.kicad_sch")
-		(attr smd)
+		(attr smd dnp)
 		(fp_line
 			(start -6.91 -7.36)
 			(end -6.91 -5.96)
@@ -9411,7 +9412,7 @@
 		(path "/646bb59c-dea9-4304-8415-d4c1819f029f/cba11862-52f7-4510-b823-6c429ddd12dc")
 		(sheetname "/MCU/")
 		(sheetfile "STM32U545RETxQ.kicad_sch")
-		(attr smd)
+		(attr smd dnp)
 		(fp_line
 			(start -3.34 -1.315)
 			(end -2.76 -1.315)
