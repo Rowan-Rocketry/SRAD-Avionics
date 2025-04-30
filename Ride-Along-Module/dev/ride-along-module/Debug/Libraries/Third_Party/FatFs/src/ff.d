@@ -36,9 +36,6 @@ Libraries/Third_Party/FatFs/src/ff.o: \
  ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_tim_ex.h \
  ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_uart.h \
  ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_uart_ex.h \
- ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_pcd.h \
- ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_ll_usb.h \
- ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_pcd_ex.h \
  ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_exti.h \
  /home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Ride-Along-Module/dev/ride-along-module/FATFS/Target/bsp_driver_sd.h \
  ../Libraries/Third_Party/FatFs/src/diskio.h
@@ -78,9 +75,6 @@ Libraries/Third_Party/FatFs/src/ff.o: \
 ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_tim_ex.h:
 ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_uart.h:
 ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_uart_ex.h:
-../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_pcd.h:
-../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_ll_usb.h:
-../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_pcd_ex.h:
 ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_exti.h:
 /home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Ride-Along-Module/dev/ride-along-module/FATFS/Target/bsp_driver_sd.h:
 ../Libraries/Third_Party/FatFs/src/diskio.h:

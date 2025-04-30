@@ -54,8 +54,6 @@ TIM_HandleTypeDef htim16;
 
 UART_HandleTypeDef huart1;
 
-PCD_HandleTypeDef hpcd_USB_DRD_FS;
-
 /* USER CODE BEGIN PV */
 
 uint32_t pressure;
@@ -70,7 +68,6 @@ static void MX_SPI1_Init(void);
 static void MX_SPI2_Init(void);
 static void MX_USART1_UART_Init(void);
 static void MX_SDMMC1_SD_Init(void);
-static void MX_USB_PCD_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -136,13 +133,12 @@ int main(void)
   MX_SPI2_Init();
   MX_USART1_UART_Init();
   MX_SDMMC1_SD_Init();
-  MX_USB_PCD_Init();
   /* USER CODE BEGIN 2 */
 
-  	MS5607_init();
-	LSM6DSL_init();
+  	//MS5607_init();
+	//LSM6DSL_init();
 
-	MS5607_readUncompPres();
+	//MS5607_readUncompPres();
 
 	int16_t accel[3];
 	int16_t gyro[3];
@@ -153,12 +149,31 @@ int main(void)
 	FIL file;
 	FRESULT res;
 	UINT bytesWritten;
-	
-	res = f_mount(&fs, "", 1);
+	uint8_t sdBuffer[_MAX_SS];
+
+	//res = disk_initialize(0);
+
+	res = f_mkfs("", FM_ANY, 0, sdBuffer, sizeof(sdBuffer));
 	if (res != FR_OK)
 	{
 		Error_Handler();
 	}
+
+	res = f_mount(&fs, ":0", 1);
+	if (res != FR_OK)
+	{
+		Error_Handler();
+	}
+
+	char label[16];
+	res = f_getlabel("", label, 0);
+	if (res != FR_OK)
+	{
+		Error_Handler();
+	}
+
+	uartBufferLen = sprintf(uartBuffer, "%s\n", label);
+	HAL_UART_Transmit(&huart1, (uint8_t*)uartBuffer, uartBufferLen, 100);
 
 	res = f_open(&file, "hello.txt", FA_WRITE | FA_CREATE_ALWAYS);
 	if (res != FR_OK)
@@ -193,8 +208,6 @@ int main(void)
 		// Compensate digital reading
 		MS5607_CompVal compVals = MS5607_getCompValues(&rawVals);
 
-		LSM6DSL_getAccel(&accel);
-		LSM6DSL_getGyro(&gyro);
 
 		uartBufferLen = sprintf(uartBuffer, "Time: %d\n", HAL_GetTick());
 		HAL_UART_Transmit(&huart1, (uint8_t*)uartBuffer, uartBufferLen, 100);
@@ -211,6 +224,8 @@ int main(void)
 		// Measure again
 		MS5607_readUncompPres();
 	}
+	LSM6DSL_getAccel(accel);
+	LSM6DSL_getGyro(gyro);
 	
     /* USER CODE END WHILE */
 
@@ -244,9 +259,9 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
   RCC_OscInitStruct.PLL.PLLMBOOST = RCC_PLLMBOOST_DIV1;
   RCC_OscInitStruct.PLL.PLLM = 1;
-  RCC_OscInitStruct.PLL.PLLN = 12;
-  RCC_OscInitStruct.PLL.PLLP = 4;
-  RCC_OscInitStruct.PLL.PLLQ = 4;
+  RCC_OscInitStruct.PLL.PLLN = 30;
+  RCC_OscInitStruct.PLL.PLLP = 6;
+  RCC_OscInitStruct.PLL.PLLQ = 6;
   RCC_OscInitStruct.PLL.PLLR = 6;
   RCC_OscInitStruct.PLL.PLLRGE = RCC_PLLVCIRANGE_1;
   RCC_OscInitStruct.PLL.PLLFRACN = 0;
@@ -266,7 +281,7 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV16;
   RCC_ClkInitStruct.APB3CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
   {
     Error_Handler();
   }
@@ -290,13 +305,9 @@ static void MX_SDMMC1_SD_Init(void)
   hsd1.Instance = SDMMC1;
   hsd1.Init.ClockEdge = SDMMC_CLOCK_EDGE_RISING;
   hsd1.Init.ClockPowerSave = SDMMC_CLOCK_POWER_SAVE_DISABLE;
-  hsd1.Init.BusWide = SDMMC_BUS_WIDE_4B;
+  hsd1.Init.BusWide = SDMMC_BUS_WIDE_1B;
   hsd1.Init.HardwareFlowControl = SDMMC_HARDWARE_FLOW_CONTROL_DISABLE;
-  hsd1.Init.ClockDiv = 15;
-  if (HAL_SD_Init(&hsd1) != HAL_OK)
-  {
-    Error_Handler();
-  }
+  hsd1.Init.ClockDiv = 1;
   /* USER CODE BEGIN SDMMC1_Init 2 */
 
   /* USER CODE END SDMMC1_Init 2 */
@@ -433,7 +444,7 @@ static void MX_TIM16_Init(void)
 
   /* USER CODE END TIM16_Init 1 */
   htim16.Instance = TIM16;
-  htim16.Init.Prescaler = 240-1;
+  htim16.Init.Prescaler = 40-1;
   htim16.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim16.Init.Period = ms5607MeasurementDelay;
   htim16.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -498,40 +509,6 @@ static void MX_USART1_UART_Init(void)
 }
 
 /**
-  * @brief USB Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_USB_PCD_Init(void)
-{
-
-  /* USER CODE BEGIN USB_Init 0 */
-
-  /* USER CODE END USB_Init 0 */
-
-  /* USER CODE BEGIN USB_Init 1 */
-
-  /* USER CODE END USB_Init 1 */
-  hpcd_USB_DRD_FS.Instance = USB_DRD_FS;
-  hpcd_USB_DRD_FS.Init.dev_endpoints = 8;
-  hpcd_USB_DRD_FS.Init.speed = USBD_FS_SPEED;
-  hpcd_USB_DRD_FS.Init.phy_itface = PCD_PHY_EMBEDDED;
-  hpcd_USB_DRD_FS.Init.Sof_enable = DISABLE;
-  hpcd_USB_DRD_FS.Init.low_power_enable = DISABLE;
-  hpcd_USB_DRD_FS.Init.lpm_enable = DISABLE;
-  hpcd_USB_DRD_FS.Init.battery_charging_enable = DISABLE;
-  hpcd_USB_DRD_FS.Init.vbus_sensing_enable = DISABLE;
-  if (HAL_PCD_Init(&hpcd_USB_DRD_FS) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN USB_Init 2 */
-
-  /* USER CODE END USB_Init 2 */
-
-}
-
-/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -585,6 +562,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	if (htim == &htim16)
 	{
+		HAL_TIM_Base_Stop_IT(&htim16);
 		MS5607_TimerCallback();
 		//pressure = readMS5607ADC();
 	}

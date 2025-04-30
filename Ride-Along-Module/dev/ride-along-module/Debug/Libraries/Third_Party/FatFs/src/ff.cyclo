@@ -52,6 +52,8 @@ ff.c:4475:9:f_truncate	14
 ff.c:4525:9:f_unlink	15
 ff.c:4620:9:f_mkdir	16
 ff.c:4717:9:f_rename	18
+ff.c:4919:9:f_getlabel	14
+ff.c:5013:9:f_setlabel	23
 ff.c:5301:9:f_mkfs	70
 ff.c:5830:8:f_gets	6
 ff.c:5917:6:putc_bfd	5

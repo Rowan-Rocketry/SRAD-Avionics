@@ -105,14 +105,10 @@ void HAL_SD_MspInit(SD_HandleTypeDef* hsd)
     __HAL_RCC_GPIOD_CLK_ENABLE();
     /**SDMMC1 GPIO Configuration
     PC8     ------> SDMMC1_D0
-    PC9     ------> SDMMC1_D1
-    PC10     ------> SDMMC1_D2
-    PC11     ------> SDMMC1_D3
     PC12     ------> SDMMC1_CK
     PD2     ------> SDMMC1_CMD
     */
-    GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_9|GPIO_PIN_10|GPIO_PIN_11
-                          |GPIO_PIN_12;
+    GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_12;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
@@ -151,14 +147,10 @@ void HAL_SD_MspDeInit(SD_HandleTypeDef* hsd)
 
     /**SDMMC1 GPIO Configuration
     PC8     ------> SDMMC1_D0
-    PC9     ------> SDMMC1_D1
-    PC10     ------> SDMMC1_D2
-    PC11     ------> SDMMC1_D3
     PC12     ------> SDMMC1_CK
     PD2     ------> SDMMC1_CMD
     */
-    HAL_GPIO_DeInit(GPIOC, GPIO_PIN_8|GPIO_PIN_9|GPIO_PIN_10|GPIO_PIN_11
-                          |GPIO_PIN_12);
+    HAL_GPIO_DeInit(GPIOC, GPIO_PIN_8|GPIO_PIN_12);
 
     HAL_GPIO_DeInit(GPIOD, GPIO_PIN_2);
 
@@ -333,6 +325,9 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htim_base)
   /* USER CODE END TIM16_MspInit 0 */
     /* Peripheral clock enable */
     __HAL_RCC_TIM16_CLK_ENABLE();
+    /* TIM16 interrupt Init */
+    HAL_NVIC_SetPriority(TIM16_IRQn, 0, 0);
+    HAL_NVIC_EnableIRQ(TIM16_IRQn);
   /* USER CODE BEGIN TIM16_MspInit 1 */
 
   /* USER CODE END TIM16_MspInit 1 */
@@ -355,6 +350,9 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* htim_base)
   /* USER CODE END TIM16_MspDeInit 0 */
     /* Peripheral clock disable */
     __HAL_RCC_TIM16_CLK_DISABLE();
+
+    /* TIM16 interrupt DeInit */
+    HAL_NVIC_DisableIRQ(TIM16_IRQn);
   /* USER CODE BEGIN TIM16_MspDeInit 1 */
 
   /* USER CODE END TIM16_MspDeInit 1 */
@@ -434,103 +432,6 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* huart)
   /* USER CODE BEGIN USART1_MspDeInit 1 */
 
   /* USER CODE END USART1_MspDeInit 1 */
-  }
-
-}
-
-/**
-* @brief PCD MSP Initialization
-* This function configures the hardware resources used in this example
-* @param hpcd: PCD handle pointer
-* @retval None
-*/
-void HAL_PCD_MspInit(PCD_HandleTypeDef* hpcd)
-{
-  GPIO_InitTypeDef GPIO_InitStruct = {0};
-  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
-  if(hpcd->Instance==USB_DRD_FS)
-  {
-  /* USER CODE BEGIN USB_DRD_FS_MspInit 0 */
-
-  /* USER CODE END USB_DRD_FS_MspInit 0 */
-
-  /** Initializes the peripherals clock
-  */
-    PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_CLK48;
-    PeriphClkInit.IclkClockSelection = RCC_CLK48CLKSOURCE_PLL1;
-    if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
-    {
-      Error_Handler();
-    }
-
-    __HAL_RCC_GPIOA_CLK_ENABLE();
-    /**USB GPIO Configuration
-    PA11     ------> USB_DM
-    PA12     ------> USB_DP
-    */
-    GPIO_InitStruct.Pin = GPIO_PIN_11|GPIO_PIN_12;
-    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-    GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-    GPIO_InitStruct.Alternate = GPIO_AF10_USB;
-    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-    /* Enable VDDUSB */
-    if(__HAL_RCC_PWR_IS_CLK_DISABLED())
-    {
-      __HAL_RCC_PWR_CLK_ENABLE();
-      HAL_PWREx_EnableVddUSB();
-      __HAL_RCC_PWR_CLK_DISABLE();
-    }
-    else
-    {
-      HAL_PWREx_EnableVddUSB();
-    }
-    /* Peripheral clock enable */
-    __HAL_RCC_USB_FS_CLK_ENABLE();
-  /* USER CODE BEGIN USB_DRD_FS_MspInit 1 */
-
-  /* USER CODE END USB_DRD_FS_MspInit 1 */
-  }
-
-}
-
-/**
-* @brief PCD MSP De-Initialization
-* This function freeze the hardware resources used in this example
-* @param hpcd: PCD handle pointer
-* @retval None
-*/
-void HAL_PCD_MspDeInit(PCD_HandleTypeDef* hpcd)
-{
-  if(hpcd->Instance==USB_DRD_FS)
-  {
-  /* USER CODE BEGIN USB_DRD_FS_MspDeInit 0 */
-
-  /* USER CODE END USB_DRD_FS_MspDeInit 0 */
-    /* Peripheral clock disable */
-    __HAL_RCC_USB_FS_CLK_DISABLE();
-
-    /**USB GPIO Configuration
-    PA11     ------> USB_DM
-    PA12     ------> USB_DP
-    */
-    HAL_GPIO_DeInit(GPIOA, GPIO_PIN_11|GPIO_PIN_12);
-
-    /* Disable VDDUSB */
-    if(__HAL_RCC_PWR_IS_CLK_DISABLED())
-    {
-      __HAL_RCC_PWR_CLK_ENABLE();
-      HAL_PWREx_DisableVddUSB();
-      __HAL_RCC_PWR_CLK_DISABLE();
-    }
-    else
-    {
-      HAL_PWREx_DisableVddUSB();
-    }
-  /* USER CODE BEGIN USB_DRD_FS_MspDeInit 1 */
-
-  /* USER CODE END USB_DRD_FS_MspDeInit 1 */
   }
 
 }

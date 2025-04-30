@@ -1,0 +1,6 @@
+../Core/Src/sd_diskio.c:76:16:SD_CheckStatus	16	static
+../Core/Src/sd_diskio.c:93:9:SD_initialize	16	static
+../Core/Src/sd_diskio.c:114:9:SD_status	16	static
+../Core/Src/sd_diskio.c:127:9:SD_read	32	static
+../Core/Src/sd_diskio.c:154:9:SD_write	32	static
+../Core/Src/sd_diskio.c:181:9:SD_ioctl	56	static
