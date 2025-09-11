@@ -59,6 +59,12 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define SDMMC_D0_Pin GPIO_PIN_8
+#define SDMMC_D0_GPIO_Port GPIOC
+#define SDMMC_CK_Pin GPIO_PIN_12
+#define SDMMC_CK_GPIO_Port GPIOC
+#define SDMMC_CMD_Pin GPIO_PIN_2
+#define SDMMC_CMD_GPIO_Port GPIOD
 
 /* USER CODE BEGIN Private defines */
 

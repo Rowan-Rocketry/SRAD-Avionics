@@ -3,6 +3,7 @@
 #define MS5607_H
 
 #include "stm32u5xx_hal.h"
+#include "logging.h"
 
 /* MS5607 Barometric Pressure and Temperature Sensor Commands */
 #define MS5607_RESET			0x1E
@@ -82,7 +83,7 @@ uint32_t MS5607_readADC();
 void MS5607_TimerCallback();
 
 // Get the compensated pressure and temperature readings
-MS5607_CompVal MS5607_getCompValues(MS5607_RawVal*);
+MS5607_CompVal MS5607_getCompValues();
 
 MS5607_RawVal MS5607_getRawValues();
 

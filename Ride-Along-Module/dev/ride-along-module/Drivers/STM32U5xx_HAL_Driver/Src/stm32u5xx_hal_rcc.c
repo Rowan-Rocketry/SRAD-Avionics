@@ -361,21 +361,6 @@ HAL_StatusTypeDef HAL_RCC_DeInit(void)
 {
   uint32_t tickstart;
 
-  /* Increasing the CPU frequency */
-  if (FLASH_LATENCY_DEFAULT  > __HAL_FLASH_GET_LATENCY())
-  {
-    /* Program the new number of wait states to the LATENCY bits in the FLASH_ACR register */
-    __HAL_FLASH_SET_LATENCY(FLASH_LATENCY_DEFAULT);
-
-    /* Check that the new number of wait states is taken into account to access the Flash
-    memory by reading the FLASH_ACR register */
-    if (__HAL_FLASH_GET_LATENCY() != FLASH_LATENCY_DEFAULT)
-    {
-      return HAL_ERROR;
-    }
-
-  }
-
   tickstart = HAL_GetTick();
 
   /* Set MSION bit */
@@ -507,17 +492,15 @@ HAL_StatusTypeDef HAL_RCC_DeInit(void)
   SystemCoreClock = MSI_VALUE;
 
   /* Decreasing the number of wait states because of lower CPU frequency */
-  if (FLASH_LATENCY_DEFAULT  < __HAL_FLASH_GET_LATENCY())
-  {
-    /* Program the new number of wait states to the LATENCY bits in the FLASH_ACR register */
-    __HAL_FLASH_SET_LATENCY(FLASH_LATENCY_DEFAULT);
 
-    /* Check that the new number of wait states is taken into account to access the Flash
-    memory by reading the FLASH_ACR register */
-    if (__HAL_FLASH_GET_LATENCY() != FLASH_LATENCY_DEFAULT)
-    {
-      return HAL_ERROR;
-    }
+  /* Program the new number of wait states to the LATENCY bits in the FLASH_ACR register */
+  __HAL_FLASH_SET_LATENCY(FLASH_LATENCY_DEFAULT);
+
+  /* Check that the new number of wait states is taken into account to access the Flash
+  memory by reading the FLASH_ACR register */
+  if (__HAL_FLASH_GET_LATENCY() != FLASH_LATENCY_DEFAULT)
+  {
+    return HAL_ERROR;
   }
 
   /* Adapt Systick interrupt period */
@@ -1242,9 +1225,6 @@ HAL_StatusTypeDef HAL_RCC_OscConfig(const RCC_OscInitTypeDef  *pRCC_OscInitStruc
           __HAL_RCC_PWR_CLK_DISABLE();
         }
 
-        /* Enable PLL System Clock output */
-        __HAL_RCC_PLLCLKOUT_ENABLE(RCC_PLL1_DIVR);
-
         /* Enable the main PLL */
         __HAL_RCC_PLL_ENABLE();
 
@@ -1258,6 +1238,10 @@ HAL_StatusTypeDef HAL_RCC_OscConfig(const RCC_OscInitTypeDef  *pRCC_OscInitStruc
             return HAL_TIMEOUT;
           }
         }
+
+        /* Enable PLL System Clock output */
+        __HAL_RCC_PLLCLKOUT_ENABLE(RCC_PLL1_DIVR);
+
       }
       else
       {
@@ -1673,6 +1657,10 @@ HAL_StatusTypeDef HAL_RCC_ClockConfig(const RCC_ClkInitTypeDef   *const pRCC_Clk
 void HAL_RCC_MCOConfig(uint32_t RCC_MCOx, uint32_t RCC_MCOSource, uint32_t RCC_MCODiv)
 {
   GPIO_InitTypeDef gpio_initstruct;
+
+  /* Prevent unused argument(s) compilation warning */
+  UNUSED(RCC_MCOx);
+
   /* Check the parameters */
   assert_param(IS_RCC_MCO(RCC_MCOx));
   assert_param(IS_RCC_MCODIV(RCC_MCODiv));
@@ -1787,34 +1775,27 @@ uint32_t HAL_RCC_GetSysClockFreq(void)
     fracn1 = (float_t)(uint32_t)(pllfracen * ((RCC->PLL1FRACR & RCC_PLL1FRACR_PLL1FRACN) >> \
                                               RCC_PLL1FRACR_PLL1FRACN_Pos));
 
-    if (pllm != 0U)
+    switch (pllsource)
     {
-      switch (pllsource)
-      {
-        case RCC_PLLSOURCE_HSI:  /* HSI used as PLL clock source */
-          pllvco = ((float_t)HSI_VALUE / (float_t)pllm) * ((float_t)(uint32_t)(RCC->PLL1DIVR & RCC_PLL1DIVR_PLL1N) + \
-                                                           (fracn1 / (float_t)0x2000) + (float_t)1U);
-          break;
+      case RCC_PLLSOURCE_HSI:  /* HSI used as PLL clock source */
+        pllvco = ((float_t)HSI_VALUE / (float_t)pllm) * ((float_t)(uint32_t)(RCC->PLL1DIVR & RCC_PLL1DIVR_PLL1N) + \
+                                                         (fracn1 / (float_t)0x2000) + (float_t)1U);
+        break;
 
-        case RCC_PLLSOURCE_HSE:  /* HSE used as PLL clock source */
-          pllvco = ((float_t)HSE_VALUE / (float_t)pllm) * ((float_t)(uint32_t)(RCC->PLL1DIVR & RCC_PLL1DIVR_PLL1N) + \
-                                                           (fracn1 / (float_t)0x2000) + (float_t)1U);
-          break;
+      case RCC_PLLSOURCE_HSE:  /* HSE used as PLL clock source */
+        pllvco = ((float_t)HSE_VALUE / (float_t)pllm) * ((float_t)(uint32_t)(RCC->PLL1DIVR & RCC_PLL1DIVR_PLL1N) + \
+                                                         (fracn1 / (float_t)0x2000) + (float_t)1U);
+        break;
 
-        case RCC_PLLSOURCE_MSI:  /* MSI used as PLL clock source */
-        default:
-          pllvco = ((float_t) msirange / (float_t)pllm) * ((float_t)(uint32_t)(RCC->PLL1DIVR & RCC_PLL1DIVR_PLL1N) + \
-                                                           (fracn1 / (float_t)0x2000) + (float_t)1U);
-          break;
-      }
-
-      pllr = (((RCC->PLL1DIVR & RCC_PLL1DIVR_PLL1R) >> RCC_PLL1DIVR_PLL1R_Pos) + 1U);
-      sysclockfreq = (uint32_t)(float_t)((float_t)pllvco / (float_t)pllr);
+      case RCC_PLLSOURCE_MSI:  /* MSI used as PLL clock source */
+      default:
+        pllvco = ((float_t) msirange / (float_t)pllm) * ((float_t)(uint32_t)(RCC->PLL1DIVR & RCC_PLL1DIVR_PLL1N) + \
+                                                         (fracn1 / (float_t)0x2000) + (float_t)1U);
+        break;
     }
-    else
-    {
-      sysclockfreq = 0;
-    }
+
+    pllr = (((RCC->PLL1DIVR & RCC_PLL1DIVR_PLL1R) >> RCC_PLL1DIVR_PLL1R_Pos) + 1U);
+    sysclockfreq = (uint32_t)(float_t)((float_t)pllvco / (float_t)pllr);
   }
 
   return sysclockfreq;
@@ -2050,11 +2031,11 @@ void HAL_RCC_NMI_IRQHandler(void)
   /* Check RCC CSSF interrupt flag  */
   if (__HAL_RCC_GET_IT(RCC_IT_CSS))
   {
-    /* RCC Clock Security System interrupt user callback */
-    HAL_RCC_CSSCallback();
-
     /* Clear RCC CSS pending bit */
     __HAL_RCC_CLEAR_IT(RCC_IT_CSS);
+
+    /* RCC Clock Security System interrupt user callback */
+    HAL_RCC_CSSCallback();
   }
 }
 
@@ -2085,6 +2066,14 @@ __weak void HAL_RCC_CSSCallback(void)
 /**
   * @brief  Configure the RCC item attribute(s).
   * @note   Available attributes are to secure items and set RCC as privileged.
+  * @note   As the privileged attributes concern either all secure or all
+  *         non-secure RCC resources accesses and not each RCC individual items
+  *         access attribute, the application must ensure that the privilege
+  *         access attribute configurations are coherent amongst the security
+  *         level set on RCC individual items so not to overwrite a previous
+  *         more restricted access rule (consider either all secure and/or all
+  *         non-secure RCC resources accesses by privileged-only transactions or
+  *         privileged and unprivileged transactions).
   * @param  Item Item(s) to set attributes on.
   *         This parameter can be a one or a combination of @ref RCC_items
   * @param  Attributes specifies the RCC secure/privilege attributes.
@@ -2120,14 +2109,18 @@ void HAL_RCC_ConfigAttributes(uint32_t Item, uint32_t Attributes)
       CLEAR_BIT(RCC->SECCFGR, Item);
       CLEAR_BIT(RCC->PRIVCFGR, RCC_PRIVCFGR_NSPRIV);
       break;
-#else
+#else    
     /* Non-secure Privilege attribute */
     case RCC_NSEC_PRIV:
       SET_BIT(RCC->PRIVCFGR, RCC_PRIVCFGR_NSPRIV);
+      /* Prevent unused argument(s) compilation warning */
+      UNUSED(Item);
       break;
     /* Non-secure Non-Privilege attribute */
     case RCC_NSEC_NPRIV:
       CLEAR_BIT(RCC->PRIVCFGR, RCC_PRIVCFGR_NSPRIV);
+      /* Prevent unused argument(s) compilation warning */
+      UNUSED(Item);
       break;
 #endif /* __ARM_FEATURE_CMSE */
     default:
@@ -2177,6 +2170,9 @@ HAL_StatusTypeDef HAL_RCC_GetConfigAttributes(uint32_t Item, uint32_t *pAttribut
 #else
   /* Get Non-Secure privileges attribute */
   attributes = ((RCC->PRIVCFGR & RCC_PRIVCFGR_NSPRIV) == 0U) ? RCC_NSEC_NPRIV : RCC_NSEC_PRIV;
+  /* Prevent unused argument(s) compilation warning */
+  UNUSED(Item);
+
 #endif /* __ARM_FEATURE_CMSE */
 
   /* return value */

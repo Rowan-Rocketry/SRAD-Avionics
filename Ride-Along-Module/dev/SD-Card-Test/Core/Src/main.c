@@ -69,6 +69,7 @@ static void MX_SDMMC1_SD_Init(void);
   */
 int main(void)
 {
+
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -118,13 +119,13 @@ int main(void)
 		}
 
 		FIL file;
-		fileResult = f_open(&file, "0:hello2.txt", FA_WRITE | FA_CREATE_ALWAYS);
+		fileResult = f_open(&file, "0:hello69.txt", FA_WRITE | FA_CREATE_ALWAYS);
 		if (fileResult != FR_OK)
 		{
 			Error_Handler();
 		}
 
-		const char* fileContents = "Hello, Aidan!\n";
+		const char* fileContents = "NO FUCKING WAY\n";
 		fileResult = f_write(&file, fileContents, strlen(fileContents), &bytesWritten);
 		if (fileResult != FR_OK || bytesWritten != strlen(fileContents))
 		{
@@ -233,15 +234,15 @@ static void MX_SDMMC1_SD_Init(void)
   */
 static void MX_GPIO_Init(void)
 {
-/* USER CODE BEGIN MX_GPIO_Init_1 */
-/* USER CODE END MX_GPIO_Init_1 */
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+  /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
-/* USER CODE BEGIN MX_GPIO_Init_2 */
-/* USER CODE END MX_GPIO_Init_2 */
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
+  /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */

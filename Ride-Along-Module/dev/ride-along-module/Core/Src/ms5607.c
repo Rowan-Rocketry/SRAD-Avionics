@@ -52,9 +52,13 @@ void MS5607_init()
 	HAL_SPI_Transmit(config->spi, &CMD_MS5607_RESET, 1, 100);
 	MS5607_disable();
 
+	HAL_Delay(3);
+
 	MS5607_readProm();
 
 	state = MS5607_STARTUP;
+
+	log_status("INFO", "Initialized MS5607");
 }
 
 void MS5607_readProm()
@@ -74,17 +78,18 @@ void MS5607_readProm()
 		HAL_SPI_Receive(config->spi, (uint8_t*)responseBuffer, 2, 100);
 		MS5607_disable();
 		
+
 		// Load response into promData struct
-		promDataPtr[promAddr-1] = ((uint8_t)responseBuffer[0]<<8) | (uint8_t)responseBuffer[1];
+		promDataPtr[promAddr-1] = ((uint16_t)responseBuffer[0]<<8) | (uint16_t)responseBuffer[1];
 	}
 }
 
-MS5607_CompVal MS5607_getCompValues(MS5607_RawVal* rawVals)
+MS5607_CompVal MS5607_getCompValues()
 {
 	MS5607_CompVal compVals;
 
-	uint32_t digTemp = rawVals->temp;
-	uint32_t digPres = rawVals->pres;
+	uint32_t digTemp = rawValues.temp;
+	uint32_t digPres = rawValues.pres;
 
 	// dT = D2 - TREF
 	int32_t deltaTemp = digTemp - ((int32_t)promData.tRef << 8);
@@ -182,7 +187,6 @@ void MS5607_disable()
 void MS5607_TimerCallback()
 {
 	uint32_t adcReading = MS5607_readADC();
-	
 	if (state == MS5607_PRES_READ)
 	{
 		rawValues.pres = adcReading;

@@ -3004,7 +3004,6 @@ FRESULT find_volume (	/* FR_OK(0): successful, !=0: any error occurred */
 	FATFS *fs;
 	UINT i;
 
-
 	/* Get logical drive number */
 	*rfs = 0;
 	vol = get_ldnumber(path);
@@ -3014,8 +3013,10 @@ FRESULT find_volume (	/* FR_OK(0): successful, !=0: any error occurred */
 	fs = FatFs[vol];					/* Get pointer to the file system object */
 	if (!fs) return FR_NOT_ENABLED;		/* Is the file system object available? */
 
+
 	ENTER_FF(fs);						/* Lock the volume */
 	*rfs = fs;							/* Return pointer to the file system object */
+
 
 	mode &= (BYTE)~FA_READ;				/* Desired access mode, write access or not */
 	if (fs->fs_type) {					/* If the volume has been mounted */
@@ -3028,11 +3029,15 @@ FRESULT find_volume (	/* FR_OK(0): successful, !=0: any error occurred */
 		}
 	}
 
+
 	/* The file system object is not valid. */
 	/* Following code attempts to mount the volume. (analyze BPB and initialize the fs object) */
 
 	fs->fs_type = 0;					/* Clear the file system object */
 	fs->drv = LD2PD(vol);				/* Bind the logical drive and a physical drive */
+	/* DISK TEST START */
+	FRESULT fResult = disk_read(0, fs->win, 0, 1);
+	/* DISK TEST END */
 	stat = disk_initialize(fs->drv);	/* Initialize the physical drive */
 	if (stat & STA_NOINIT) { 			/* Check if the initialization succeeded */
 		return FR_NOT_READY;			/* Failed to initialize due to no medium or hard error */
@@ -3047,6 +3052,8 @@ FRESULT find_volume (	/* FR_OK(0): successful, !=0: any error occurred */
 
 	/* Find an FAT partition on the drive. Supports only generic partitioning rules, FDISK and SFD. */
 	bsect = 0;
+
+
 	fmt = check_fs(fs, bsect);			/* Load sector 0 and check if it is an FAT-VBR as SFD */
 	if (fmt == 2 || (fmt < 2 && LD2PT(vol) != 0)) {	/* Not an FAT-VBR or forced partition number */
 		for (i = 0; i < 4; i++) {		/* Get partition offset */

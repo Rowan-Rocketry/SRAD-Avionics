@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.0,
-          "height": 1.0,
-          "width": 1.0
+          "drill": 0.6,
+          "height": 2.794,
+          "width": 2.032
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -506,7 +506,7 @@
       "svg": "",
       "vrml": ""
     },
-    "page_layout_descr_file": ""
+    "page_layout_descr_file": "kicad-embed://Rowan-Rocketry.kicad_wks"
   },
   "schematic": {
     "annotate_start_num": 0,
@@ -633,7 +633,7 @@
       "version": 1
     },
     "net_format_name": "",
-    "page_layout_descr_file": "",
+    "page_layout_descr_file": "kicad-embed://Rowan-Rocketry.kicad_wks",
     "plot_directory": "",
     "space_save_all_events": true,
     "spice_current_sheet_as_root": false,

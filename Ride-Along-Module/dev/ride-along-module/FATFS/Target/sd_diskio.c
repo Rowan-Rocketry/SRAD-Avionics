@@ -1,12 +1,12 @@
-/* USER CODE BEGIN Header */
 /**
   ******************************************************************************
   * @file    sd_diskio.c
-  * @brief   SD Disk I/O driver
+  * @author  MCD Application Team
+  * @brief   SD Disk I/O driver.
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2025 STMicroelectronics.
+  * Copyright (c) 2017 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -15,18 +15,11 @@
   *
   ******************************************************************************
   */
-/* USER CODE END Header */
-
-/* Note: code generation based on sd_diskio_template_bspv1.c v2.1.4
-   as "Use dma template" is disabled. */
-
-/* USER CODE BEGIN firstSection */
-/* can be used to modify / undefine following code or add new definitions */
-/* USER CODE END firstSection*/
 
 /* Includes ------------------------------------------------------------------*/
 #include "ff_gen_drv.h"
 #include "sd_diskio.h"
+
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -42,14 +35,12 @@
 #define SD_DEFAULT_BLOCK_SIZE 512
 
 /*
- * Depending on the use case, the SD card initialization could be done at the
- * application level: if it is the case define the flag below to disable
- * the BSP_SD_Init() call in the SD_Initialize() and add a call to
- * BSP_SD_Init() elsewhere in the application.
+ * Depending on the usecase, the SD card initialization could be done at the
+ * application level, if it is the case define the flag below to disable
+ * the BSP_SD_Init() call in the SD_Initialize().
  */
-/* USER CODE BEGIN disableSDInit */
+
 /* #define DISABLE_SD_INIT */
-/* USER CODE END disableSDInit */
 
 /* Private variables ---------------------------------------------------------*/
 /* Disk status */
@@ -61,10 +52,10 @@ DSTATUS SD_initialize (BYTE);
 DSTATUS SD_status (BYTE);
 DRESULT SD_read (BYTE, BYTE*, DWORD, UINT);
 #if _USE_WRITE == 1
-DRESULT SD_write (BYTE, const BYTE*, DWORD, UINT);
+  DRESULT SD_write (BYTE, const BYTE*, DWORD, UINT);
 #endif /* _USE_WRITE == 1 */
 #if _USE_IOCTL == 1
-DRESULT SD_ioctl (BYTE, BYTE, void*);
+  DRESULT SD_ioctl (BYTE, BYTE, void*);
 #endif  /* _USE_IOCTL == 1 */
 
 const Diskio_drvTypeDef  SD_Driver =
@@ -81,12 +72,7 @@ const Diskio_drvTypeDef  SD_Driver =
 #endif /* _USE_IOCTL == 1 */
 };
 
-/* USER CODE BEGIN beforeFunctionSection */
-/* can be used to modify / undefine following code or add new code */
-/* USER CODE END beforeFunctionSection */
-
 /* Private functions ---------------------------------------------------------*/
-
 static DSTATUS SD_CheckStatus(BYTE lun)
 {
   Stat = STA_NOINIT;
@@ -106,8 +92,7 @@ static DSTATUS SD_CheckStatus(BYTE lun)
   */
 DSTATUS SD_initialize(BYTE lun)
 {
-Stat = STA_NOINIT;
-
+  Stat = STA_NOINIT;
 #if !defined(DISABLE_SD_INIT)
 
   if(BSP_SD_Init() == MSD_OK)
@@ -118,7 +103,6 @@ Stat = STA_NOINIT;
 #else
   Stat = SD_CheckStatus(lun);
 #endif
-
   return Stat;
 }
 
@@ -132,9 +116,6 @@ DSTATUS SD_status(BYTE lun)
   return SD_CheckStatus(lun);
 }
 
-/* USER CODE BEGIN beforeReadSection */
-/* can be used to modify previous code / undefine following code / add new code */
-/* USER CODE END beforeReadSection */
 /**
   * @brief  Reads Sector(s)
   * @param  lun : not used
@@ -143,12 +124,11 @@ DSTATUS SD_status(BYTE lun)
   * @param  count: Number of sectors to read (1..128)
   * @retval DRESULT: Operation result
   */
-
 DRESULT SD_read(BYTE lun, BYTE *buff, DWORD sector, UINT count)
 {
   DRESULT res = RES_ERROR;
 
-  if(BSP_SD_ReadBlocks((uint32_t*)buff,
+  if(BSP_SD_ReadBlocks((uint8_t*)buff,
                        (uint32_t) (sector),
                        count, SD_TIMEOUT) == MSD_OK)
   {
@@ -162,9 +142,6 @@ DRESULT SD_read(BYTE lun, BYTE *buff, DWORD sector, UINT count)
   return res;
 }
 
-/* USER CODE BEGIN beforeWriteSection */
-/* can be used to modify previous code / undefine following code / add new code */
-/* USER CODE END beforeWriteSection */
 /**
   * @brief  Writes Sector(s)
   * @param  lun : not used
@@ -174,12 +151,11 @@ DRESULT SD_read(BYTE lun, BYTE *buff, DWORD sector, UINT count)
   * @retval DRESULT: Operation result
   */
 #if _USE_WRITE == 1
-
 DRESULT SD_write(BYTE lun, const BYTE *buff, DWORD sector, UINT count)
 {
   DRESULT res = RES_ERROR;
 
-  if(BSP_SD_WriteBlocks((uint32_t*)buff,
+  if(BSP_SD_WriteBlocks((uint8_t*)buff,
                         (uint32_t)(sector),
                         count, SD_TIMEOUT) == MSD_OK)
   {
@@ -194,9 +170,6 @@ DRESULT SD_write(BYTE lun, const BYTE *buff, DWORD sector, UINT count)
 }
 #endif /* _USE_WRITE == 1 */
 
-/* USER CODE BEGIN beforeIoctlSection */
-/* can be used to modify previous code / undefine following code / add new code */
-/* USER CODE END beforeIoctlSection */
 /**
   * @brief  I/O control operation
   * @param  lun : not used
@@ -237,7 +210,7 @@ DRESULT SD_ioctl(BYTE lun, BYTE cmd, void *buff)
   case GET_BLOCK_SIZE :
     BSP_SD_GetCardInfo(&CardInfo);
     *(DWORD*)buff = CardInfo.LogBlockSize / SD_DEFAULT_BLOCK_SIZE;
-    res = RES_OK;
+	res = RES_OK;
     break;
 
   default:
@@ -247,11 +220,3 @@ DRESULT SD_ioctl(BYTE lun, BYTE cmd, void *buff)
   return res;
 }
 #endif /* _USE_IOCTL == 1 */
-
-/* USER CODE BEGIN afterIoctlSection */
-/* can be used to modify previous code / undefine following code / add new code */
-/* USER CODE END afterIoctlSection */
-
-/* USER CODE BEGIN lastSection */
-/* can be used to modify / undefine previous code or add new code */
-/* USER CODE END lastSection */

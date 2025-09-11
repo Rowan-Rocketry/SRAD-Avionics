@@ -33,7 +33,12 @@ extern "C" {
 /* USER CODE BEGIN Includes */
 #include "fatfs.h"
 #include <string.h>
+#include <stdio.h>
 
+#include "ms5607.h"
+#include "lsm6dsl.h"
+
+#include "fileio.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -59,10 +64,16 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define VALVE_FIRE_Pin GPIO_PIN_13
+#define VALVE_FIRE_GPIO_Port GPIOC
+#define PYRO1_FIRE_Pin GPIO_PIN_0
+#define PYRO1_FIRE_GPIO_Port GPIOH
 #define IMU_INT1_Pin GPIO_PIN_0
 #define IMU_INT1_GPIO_Port GPIOC
 #define IMU_INT2_Pin GPIO_PIN_3
 #define IMU_INT2_GPIO_Port GPIOC
+#define PYRO2_FIRE_Pin GPIO_PIN_2
+#define PYRO2_FIRE_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 

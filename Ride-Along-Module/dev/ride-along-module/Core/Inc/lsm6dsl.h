@@ -3,6 +3,7 @@
 #define LSM6DSL_H
 
 #include "bool.h"
+#include "logging.h"
 
 // LSM6DSL Output Register Addresses
 #define LSM6DSL_GYRO_X_L		0x22
@@ -68,6 +69,8 @@
 
 #define LSM6DSL_SW_RESET		0x01
 
+#define LSM6DSL_WHO_AM_I		0x0F
+
 // Initialization struct for LSM6DSL
 typedef struct {
 	SPI_HandleTypeDef* spi;
@@ -98,6 +101,9 @@ void LSM6DSL_getGyro(int16_t* dest);
 
 // Write a value to a specific register
 void LSM6DSL_writeRegister(uint8_t reg, uint8_t val);
+
+// Read a value from a specific register
+uint8_t LSM6DSL_readRegister(uint8_t reg);
 
 // Read a 16-bit measurement value from LSM6DSL
 int16_t LSM6DSL_readMeasurement(uint8_t addrLow);
