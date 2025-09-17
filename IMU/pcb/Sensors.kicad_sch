@@ -1304,7 +1304,7 @@
 	)
 	(hierarchical_label "imu_mosi"
 		(shape input)
-		(at 162.56 90.17 180)
+		(at 162.56 100.33 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1326,7 +1326,7 @@
 	)
 	(hierarchical_label "imu_miso"
 		(shape output)
-		(at 162.56 100.33 180)
+		(at 162.56 90.17 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2505,7 +2505,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A_Pad1.58x1.35mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 218.1352 101.6 0)
 			(effects
 				(font

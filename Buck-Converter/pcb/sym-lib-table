@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Rowan_Rocketry")(type "KiCad")(uri "/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Common/Rowan_Rocketry.kicad_sym")(options "")(descr ""))
+)

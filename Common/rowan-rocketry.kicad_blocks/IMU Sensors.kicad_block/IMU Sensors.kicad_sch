@@ -960,12 +960,6 @@
 		(uuid "64dddbc1-68bc-4a78-a917-def571935e26")
 	)
 	(junction
-		(at 167.64 115.57)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4237ca3d-39a4-4cb9-8562-5500fce9f543")
-	)
-	(junction
 		(at 185.42 82.55)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -978,7 +972,7 @@
 		(uuid "84cae324-e8f0-411b-bd70-5688822440da")
 	)
 	(junction
-		(at 92.71 85.09)
+		(at 78.74 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b3cd09f0-0da1-4e59-947b-1e7810bf92fe")
@@ -997,7 +991,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 115.57) (xy 167.64 115.57)
+			(xy 160.02 115.57) (xy 182.88 115.57)
 		)
 		(stroke
 			(width 0)
@@ -1017,7 +1011,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 85.09) (xy 92.71 91.44)
+			(xy 78.74 83.82) (xy 78.74 90.17)
 		)
 		(stroke
 			(width 0)
@@ -1027,7 +1021,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 101.6) (xy 82.55 101.6)
+			(xy 60.96 100.33) (xy 68.58 100.33)
 		)
 		(stroke
 			(width 0)
@@ -1037,17 +1031,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 106.68) (xy 82.55 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3b2a4799-27d4-4210-8e7f-142283a136c9")
-	)
-	(wire
-		(pts
-			(xy 74.93 99.06) (xy 82.55 99.06)
+			(xy 60.96 97.79) (xy 68.58 97.79)
 		)
 		(stroke
 			(width 0)
@@ -1087,16 +1071,6 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 105.41) (xy 167.64 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5d2b5580-7026-4408-b542-132d98b7fa87")
-	)
-	(wire
-		(pts
 			(xy 223.52 91.44) (xy 223.52 93.98)
 		)
 		(stroke
@@ -1127,23 +1101,13 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 82.55) (xy 92.71 85.09)
+			(xy 78.74 81.28) (xy 78.74 83.82)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "807c3476-9546-4814-8728-167b2e261fb6")
-	)
-	(wire
-		(pts
-			(xy 167.64 115.57) (xy 182.88 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "81b2cb18-8b27-4f8c-b3ef-aa3bb5a9d0d9")
 	)
 	(wire
 		(pts
@@ -1164,6 +1128,16 @@
 			(type default)
 		)
 		(uuid "8c88c402-8738-47db-a9ea-f28e112ca2fc")
+	)
+	(wire
+		(pts
+			(xy 60.96 105.41) (xy 68.58 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96812c2e-a0f0-4ecb-997d-188f87832320")
 	)
 	(wire
 		(pts
@@ -1207,13 +1181,23 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 96.52) (xy 82.55 96.52)
+			(xy 60.96 95.25) (xy 68.58 95.25)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "cdfe5488-3c89-4fcb-b45d-6039c91c379f")
+	)
+	(wire
+		(pts
+			(xy 162.56 105.41) (xy 167.64 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6e52116-956d-49d7-a486-25b63cbfd603")
 	)
 	(wire
 		(pts
@@ -1227,7 +1211,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 85.09) (xy 104.14 85.09)
+			(xy 78.74 83.82) (xy 90.17 83.82)
 		)
 		(stroke
 			(width 0)
@@ -1267,7 +1251,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 104.14) (xy 82.55 104.14)
+			(xy 60.96 102.87) (xy 68.58 102.87)
 		)
 		(stroke
 			(width 0)
@@ -1287,7 +1271,7 @@
 	)
 	(hierarchical_label "pres_sclk"
 		(shape bidirectional)
-		(at 74.93 104.14 180)
+		(at 60.96 102.87 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1307,6 +1291,17 @@
 		)
 		(uuid "2c821d0a-f4a9-4f5d-a54d-50e8742a3ee2")
 	)
+	(hierarchical_label "pres_cs"
+		(shape input)
+		(at 60.96 105.41 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "410a3f95-a129-4130-9a52-f5b2e4852b97")
+	)
 	(hierarchical_label "imu_mosi"
 		(shape input)
 		(at 162.56 90.17 180)
@@ -1320,7 +1315,7 @@
 	)
 	(hierarchical_label "pres_mosi"
 		(shape input)
-		(at 74.93 101.6 180)
+		(at 60.96 100.33 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1351,9 +1346,20 @@
 		)
 		(uuid "a24031ee-ee4c-4426-8fa0-c1d6c62321ff")
 	)
+	(hierarchical_label "imu_cs"
+		(shape input)
+		(at 162.56 105.41 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "afbe28d1-ad9c-46c6-962d-8b9174e39a45")
+	)
 	(hierarchical_label "pres_miso"
 		(shape output)
-		(at 74.93 99.06 180)
+		(at 60.96 97.79 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1375,7 +1381,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDD")
-		(at 74.93 96.52 270)
+		(at 60.96 95.25 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1384,7 +1390,7 @@
 		(fields_autoplaced yes)
 		(uuid "00eb75d6-f938-4bf0-915d-69b00692e707")
 		(property "Reference" "#PWR?"
-			(at 68.58 96.52 0)
+			(at 54.61 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1393,7 +1399,7 @@
 			)
 		)
 		(property "Value" "GNDD"
-			(at 71.12 96.5199 90)
+			(at 57.15 95.2499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1402,7 +1408,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 74.93 96.52 0)
+			(at 60.96 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1411,7 +1417,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 74.93 96.52 0)
+			(at 60.96 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1420,7 +1426,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
-			(at 74.93 96.52 0)
+			(at 60.96 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1622,7 +1628,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 104.14 88.9 0)
+		(at 90.17 87.63 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1631,7 +1637,7 @@
 		(fields_autoplaced yes)
 		(uuid "36c0a021-0b7e-4e9a-9b8c-8fe5dfc60f89")
 		(property "Reference" "C?"
-			(at 107.95 87.6299 0)
+			(at 93.98 86.3599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1640,7 +1646,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 107.95 90.1699 0)
+			(at 93.98 88.8999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1649,7 +1655,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 105.1052 92.71 0)
+			(at 91.1352 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1658,7 +1664,7 @@
 			)
 		)
 		(property "Datasheet" "https://content.kemet.com/datasheets/KEM_C1002_X7R_SMD.pdf"
-			(at 104.14 88.9 0)
+			(at 90.17 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1667,7 +1673,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 104.14 88.9 0)
+			(at 90.17 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1676,7 +1682,7 @@
 			)
 		)
 		(property "Purchase" "https://www.digikey.com/en/products/detail/kemet/C0603C104M5RACTU/2199782"
-			(at 104.14 88.9 0)
+			(at 90.17 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1719,7 +1725,7 @@
 	)
 	(symbol
 		(lib_id "Sensor_Pressure:MS5607-02BA")
-		(at 92.71 101.6 0)
+		(at 78.74 100.33 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1728,7 +1734,7 @@
 		(fields_autoplaced yes)
 		(uuid "43899c72-fa1a-4de5-9963-1fc012c8d0f4")
 		(property "Reference" "U?"
-			(at 101.6 100.3299 0)
+			(at 87.63 99.0599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1737,7 +1743,7 @@
 			)
 		)
 		(property "Value" "MS5607-02BA"
-			(at 101.6 102.8699 0)
+			(at 87.63 101.5999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1746,7 +1752,7 @@
 			)
 		)
 		(property "Footprint" "Package_LGA:LGA-8_3x5mm_P1.25mm"
-			(at 92.71 101.6 0)
+			(at 78.74 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1755,7 +1761,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FMS5607-02BA03%7FB2%7Fpdf%7FEnglish%7FENG_DS_MS5607-02BA03_B2.pdf%7FCAT-BLPS0035"
-			(at 92.71 101.6 0)
+			(at 78.74 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1764,7 +1770,7 @@
 			)
 		)
 		(property "Description" "Barometric pressure sensor, 20cm resolution, 10 to 1200 mbar, I2C and SPI interface up to 20MHz, LGA-8"
-			(at 92.71 101.6 0)
+			(at 78.74 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1773,7 +1779,7 @@
 			)
 		)
 		(property "Purchase" "https://www.digikey.com/en/products/detail/te-connectivity-measurement-specialties/MS560702BA03-50/4700931"
-			(at 92.71 101.6 0)
+			(at 78.74 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2002,7 +2008,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 92.71 82.55 0)
+		(at 78.74 81.28 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2011,7 +2017,7 @@
 		(fields_autoplaced yes)
 		(uuid "6ae9220b-98a5-4a05-a5ae-5fbbfde69c20")
 		(property "Reference" "#PWR?"
-			(at 92.71 86.36 0)
+			(at 78.74 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2020,7 +2026,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 92.71 77.47 0)
+			(at 78.74 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2028,7 +2034,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 92.71 82.55 0)
+			(at 78.74 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2037,7 +2043,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 92.71 82.55 0)
+			(at 78.74 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2046,7 +2052,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 92.71 82.55 0)
+			(at 78.74 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2086,7 +2092,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDD")
-		(at 92.71 111.76 0)
+		(at 78.74 110.49 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2095,7 +2101,7 @@
 		(fields_autoplaced yes)
 		(uuid "6fc61ee8-fa8f-4f1d-b862-0d5f942a41a2")
 		(property "Reference" "#PWR?"
-			(at 92.71 118.11 0)
+			(at 78.74 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2104,7 +2110,7 @@
 			)
 		)
 		(property "Value" "GNDD"
-			(at 92.71 115.57 0)
+			(at 78.74 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2112,7 +2118,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 92.71 111.76 0)
+			(at 78.74 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2121,7 +2127,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 92.71 111.76 0)
+			(at 78.74 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2130,7 +2136,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
-			(at 92.71 111.76 0)
+			(at 78.74 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2170,92 +2176,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDD")
-		(at 74.93 106.68 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7b42620a-8074-49e3-808c-5adb9228a7fe")
-		(property "Reference" "#PWR?"
-			(at 68.58 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GNDD"
-			(at 71.12 106.6799 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 74.93 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 74.93 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
-			(at 74.93 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a3d88afa-c003-4bed-be87-b4d0a96a6be1")
-		)
-		(instances
-			(project "Sensors"
-				(path "/04726338-8258-4417-8ea7-791ae2c338e8"
-					(reference "#PWR?")
-					(unit 1)
-				)
-			)
-			(project "IMU"
-				(path "/92f0fe4f-546b-4686-ae0e-a4b165f18304/c3114460-f6cc-4ee1-8b3c-73f44fd0a812"
-					(reference "#PWR0107")
-					(unit 1)
-				)
-			)
-			(project "ride-along-module"
-				(path "/ba7b4294-8d75-4b9e-892f-fb52727887ec/ffb7e00e-75c4-4410-97cc-7d6f2fac0025"
-					(reference "#PWR022")
-					(unit 1)
-				)
-			)
-			(project "Recovery-Module"
-				(path "/c41b490b-5ab6-4438-aea0-388670bb08f4/3e9e0b47-da2c-4332-b911-05c7ab3ede69"
-					(reference "#PWR043")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GNDD")
-		(at 104.14 92.71 0)
+		(at 90.17 91.44 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2264,7 +2185,7 @@
 		(fields_autoplaced yes)
 		(uuid "922a06cf-91f4-47a0-a6dd-6002ec477fbb")
 		(property "Reference" "#PWR?"
-			(at 104.14 99.06 0)
+			(at 90.17 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2273,7 +2194,7 @@
 			)
 		)
 		(property "Value" "GNDD"
-			(at 104.14 96.52 0)
+			(at 90.17 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2281,7 +2202,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 104.14 92.71 0)
+			(at 90.17 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2290,7 +2211,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 104.14 92.71 0)
+			(at 90.17 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2299,7 +2220,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
-			(at 104.14 92.71 0)
+			(at 90.17 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)

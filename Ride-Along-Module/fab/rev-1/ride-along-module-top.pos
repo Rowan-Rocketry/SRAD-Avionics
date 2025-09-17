@@ -1,43 +1,45 @@
-### Footprint positions - created on 2025-04-10T01:01:44-0400 ###
+### Footprint positions - created on 2025-04-24T12:37:48-0400 ###
 ### Printed by KiCad version 9.0.1
 ## Unit = mm, Angle = deg.
 ## Side : top
-# Ref     Val               Package                                                       PosX       PosY       Rot  Side
-C1        10uF              C_0402_1005Metric                                         143.2810   -81.2770  180.0000  top
-C2        10uF              C_0402_1005Metric                                         138.1760   -66.5480    0.0000  top
-C3        2.2uF             C_0402_1005Metric                                         140.2080   -66.5480    0.0000  top
-C4        100nF             C_0603_1608Metric                                         129.4160   -62.5160    0.0000  top
-C5        100nF             C_0402_1005Metric                                         143.2560   -82.2960  180.0000  top
-C6        100nF             C_0402_1005Metric                                         136.1720   -66.5480  180.0000  top
-C7        2.2uF             C_0402_1005Metric                                         145.2880   -81.2800    0.0000  top
-C8        1uF               C_0402_1005Metric                                         134.1120   -77.8510  -90.0000  top
-C9        100nF             C_0402_1005Metric                                         138.6840   -81.2800  180.0000  top
-C10       100nF             C_0402_1005Metric                                         134.1120   -70.5840  -90.0000  top
-C11       100nF             C_0402_1005Metric                                         134.1370   -75.7170   90.0000  top
-C12       100nF             C_0402_1005Metric                                         148.8440   -77.2160   90.0000  top
-C13       100nF             C_0402_1005Metric                                         148.8440   -69.7230   90.0000  top
-C14       100nF             C_0603_1608Metric                                         132.8660   -62.5160    0.0000  top
-C15       10u               C_0603_1608Metric                                         140.2080   -57.9120  -90.0000  top
-C16       1uF               C_0603_1608Metric                                         121.7930   -76.5940  -90.0000  top
-C17       0.01uF            C_0603_1608Metric                                         125.7300   -80.0100  -90.0000  top
-C18       1uF               C_0603_1608Metric                                         125.7300   -73.5330   90.0000  top
-C19       100nF             C_0603_1608Metric                                         131.0640   -82.1690  -90.0000  top
-C20       10uF              CP_EIA-3216-18_Kemet-A                                    129.1590   -70.9930   90.0000  top
-C21       100nF             C_0603_1608Metric                                         128.6245   -74.9300  180.0000  top
-D1        LED               LED_0603_1608Metric                                       155.0670   -68.8340  180.0000  top
-D2        VS5V0UA1LAMTR     D_SOD-128                                                 153.6700   -75.3110  180.0000  top
-D3        LED               LED_0603_1608Metric                                       125.7300   -66.8020  -90.0000  top
-L1        2.2uH             L_0402_1005Metric                                         145.3110   -82.2960    0.0000  top
-R1        1k                R_0603_1608Metric                                         151.6380   -68.8340    0.0000  top
-R2        5.1k              R_0603_1608Metric                                         159.6390   -78.1050  180.0000  top
-R3        5.1k              R_0603_1608Metric                                         159.6390   -65.7860  180.0000  top
-R4        10k               R_0603_1608Metric                                         129.4160   -64.1350    0.0000  top
-R5        10k               R_0603_1608Metric                                         132.8660   -64.1160  180.0000  top
-R6        1k                R_0603_1608Metric                                         125.7300   -70.2545   90.0000  top
-SW1       SW_DPST           SW_DIP_SPSTx02_Slide_Copal_CHS-02A_W5.08mm_P1.27mm_JPin   131.0640   -59.1820    0.0000  top
-U1        USBLC6-2SC6       SOT-23-6                                                  153.5883   -71.9480  180.0000  top
-U2        STM32U545RETxQ    LQFP-64_10x10mm_P0.5mm                                    141.4990   -73.9510    0.0000  top
-U3        TC2185-3.3VxCTTR  SOT-23-5                                                  124.5870   -76.7740    0.0000  top
-U4        MS5607-02BA       LGA-8_3x5mm_P1.25mm                                       133.6720   -83.1850    0.0000  top
-U5        LSM6DSL           LGA-14_3x2.5mm_P0.5mm_LayoutBorder3x4y                    131.8140   -73.2595  -90.0000  top
+# Ref     Val               Package                                      PosX       PosY       Rot  Side
+C1        10uF              C_0402_1005Metric                         27.9650     8.6390  180.0000  top
+C2        10uF              C_0402_1005Metric                         22.8600    23.3680    0.0000  top
+C3        2.2uF             C_0402_1005Metric                         24.8920    23.3680    0.0000  top
+C4        100nF             C_0603_1608Metric                         14.1000    27.4000    0.0000  top
+C5        100nF             C_0402_1005Metric                         27.9400     7.6200  180.0000  top
+C6        100nF             C_0402_1005Metric                         20.8560    23.3680  180.0000  top
+C7        2.2uF             C_0402_1005Metric                         29.9720     8.6360    0.0000  top
+C8        1uF               C_0402_1005Metric                         18.7960    12.0650  -90.0000  top
+C9        100nF             C_0402_1005Metric                         23.3680     8.6360  180.0000  top
+C10       100nF             C_0402_1005Metric                         18.7960    19.3320  -90.0000  top
+C11       100nF             C_0402_1005Metric                         18.8210    14.1990   90.0000  top
+C12       100nF             C_0402_1005Metric                         33.5280    12.7000   90.0000  top
+C13       100nF             C_0402_1005Metric                         33.5280    20.1930   90.0000  top
+C14       100nF             C_0603_1608Metric                         17.5500    27.4000    0.0000  top
+C15       10u               C_0603_1608Metric                         24.8920    32.0040  -90.0000  top
+C16       1uF               C_0603_1608Metric                          6.4770    13.3220  -90.0000  top
+C17       0.01uF            C_0603_1608Metric                         10.4140     9.9060  -90.0000  top
+C18       1uF               C_0603_1608Metric                         10.4140    16.3830   90.0000  top
+C19       100nF             C_0603_1608Metric                         15.7480     7.7470  -90.0000  top
+C20       10uF              CP_EIA-3216-18_Kemet-A                    13.8430    18.9230   90.0000  top
+C21       100nF             C_0603_1608Metric                         13.3085    14.9860  180.0000  top
+D1        LED               LED_0603_1608Metric                       39.7510    21.0820  180.0000  top
+D2        VS5V0UA1LAMTR     D_SOD-128                                 38.3540    14.6050  180.0000  top
+D3        LED               LED_0603_1608Metric                       10.4140    23.1140  -90.0000  top
+FID1      Fiducial          Fiducial_1mm_Mask3mm                       8.7630    28.4480    0.0000  top
+FID2      Fiducial          Fiducial_1mm_Mask3mm                      12.0650     5.4610  180.0000  top
+FID3      Fiducial          Fiducial_1mm_Mask3mm                      43.3070    27.8130    0.0000  top
+L1        2.2uH             L_0402_1005Metric                         29.9950     7.6200    0.0000  top
+R1        1k                R_0603_1608Metric                         36.3220    21.0820    0.0000  top
+R2        5.1k              R_0603_1608Metric                         44.3230    11.8110  180.0000  top
+R3        5.1k              R_0603_1608Metric                         44.3230    24.1300  180.0000  top
+R4        10k               R_0603_1608Metric                         14.1000    25.7810    0.0000  top
+R5        10k               R_0603_1608Metric                         17.5500    25.8000  180.0000  top
+R6        1k                R_0603_1608Metric                         10.4140    19.6615   90.0000  top
+U1        USBLC6-2SC6       SOT-23-6                                  38.2723    17.9680  180.0000  top
+U2        STM32U545RETxQ    LQFP-64_10x10mm_P0.5mm                    26.1830    15.9650    0.0000  top
+U3        TC2185-3.3VxCTTR  SOT-23-5                                   9.2710    13.1420    0.0000  top
+U4        MS5607-02BA       LGA-8_3x5mm_P1.25mm                       18.3560     6.7310    0.0000  top
+U5        LSM6DSL           LGA-14_3x2.5mm_P0.5mm_LayoutBorder3x4y    16.4980    16.6565  -90.0000  top
 ## End
