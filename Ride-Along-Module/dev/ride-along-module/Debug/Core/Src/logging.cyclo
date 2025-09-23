@@ -1,0 +1,3 @@
+../Core/Src/logging.c:5:9:log_init	1
+../Core/Src/logging.c:10:9:log_deinit	1
+../Core/Src/logging.c:15:9:log_status	1

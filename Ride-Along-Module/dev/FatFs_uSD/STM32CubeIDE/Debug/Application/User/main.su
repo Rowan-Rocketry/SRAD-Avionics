@@ -1,0 +1,4 @@
+/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Ride-Along-Module/dev/FatFs_uSD/Src/main.c:49:5:main	176	static
+/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Ride-Along-Module/dev/FatFs_uSD/Src/main.c:197:13:SystemClock_Config	96	static
+/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Ride-Along-Module/dev/FatFs_uSD/Src/main.c:251:21:TFT_ShieldDetect	32	static
+/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Ride-Along-Module/dev/FatFs_uSD/Src/main.c:280:13:Error_Handler	4	static

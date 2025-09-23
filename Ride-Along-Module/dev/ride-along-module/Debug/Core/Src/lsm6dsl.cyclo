@@ -1,0 +1,11 @@
+../Core/Src/lsm6dsl.c:11:6:LSM6DSL_config	10
+../Core/Src/lsm6dsl.c:49:6:LSM6DSL_init	2
+../Core/Src/lsm6dsl.c:77:6:LSM6DSL_updateAccel	1
+../Core/Src/lsm6dsl.c:92:6:LSM6DSL_updateGyro	1
+../Core/Src/lsm6dsl.c:106:6:LSM6DSL_writeRegister	1
+../Core/Src/lsm6dsl.c:118:9:LSM6DSL_readRegister	1
+../Core/Src/lsm6dsl.c:130:9:LSM6DSL_readMeasurement	1
+../Core/Src/lsm6dsl.c:144:6:LSM6DSL_getAccel	1
+../Core/Src/lsm6dsl.c:151:6:LSM6DSL_getGyro	1
+../Core/Src/lsm6dsl.c:158:6:LSM6DSL_enable	1
+../Core/Src/lsm6dsl.c:164:6:LSM6DSL_disable	1

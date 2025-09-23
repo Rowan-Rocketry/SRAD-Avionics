@@ -1,0 +1,14 @@
+### Footprint positions - created on 2025-04-15T12:40:07-0400 ###
+### Printed by KiCad version 9.0.1
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val          Package                                                PosX       PosY       Rot  Side
+C1        100nF        C_0603_1608Metric_Pad1.08x0.95mm_HandSolder        133.6140   -96.1180    0.0000  top
+C2        10uF         CP_EIA-3216-18_Kemet-A_Pad1.58x1.35mm_HandSolder   129.3125  -101.0920  -90.0000  top
+C3        100nF        C_0603_1608Metric_Pad1.08x0.95mm_HandSolder        133.9950   -99.0390    0.0000  top
+FID1      Fiducial     Fiducial_1mm_Mask2mm                               138.6940  -102.9760    0.0000  top
+FID2      Fiducial     Fiducial_1mm_Mask2mm                               136.0270   -91.6730    0.0000  top
+FID3      Fiducial     Fiducial_1mm_Mask2mm                               127.1370   -98.0230    0.0000  top
+U1        MS5607-02BA  LGA-8_3x5mm_P1.25mm                                129.6180   -94.2230  180.0000  top
+U2        LSM6DSL      LGA-14_3x2.5mm_P0.5mm_LayoutBorder3x4y             132.6145  -101.4640  180.0000  top
+## End

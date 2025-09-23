@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;syscall.c&apos; to &apos;option&apos;" description="Move &apos;syscall.c&apos; to &apos;option&apos;" destination="Core/Src/option" element1="Core/Src/syscall.c" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1745530362509" updateReferences="true"/>
+</session>

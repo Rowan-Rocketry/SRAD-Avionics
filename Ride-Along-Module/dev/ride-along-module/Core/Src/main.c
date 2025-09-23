@@ -21,8 +21,6 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <stdio.h>
-#include "ms5607.h"
 
 /* USER CODE END Includes */
 
@@ -43,13 +41,14 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+ADC_HandleTypeDef hadc1;
+
+SD_HandleTypeDef hsd1;
 
 SPI_HandleTypeDef hspi1;
 SPI_HandleTypeDef hspi2;
 
 TIM_HandleTypeDef htim16;
-
-UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
 
@@ -63,10 +62,9 @@ static void MX_GPIO_Init(void);
 static void MX_TIM16_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_SPI2_Init(void);
-static void MX_USART1_UART_Init(void);
+static void MX_SDMMC1_SD_Init(void);
+static void MX_ADC1_Init(void);
 /* USER CODE BEGIN PFP */
-
-void writePressure(); 
 
 /* USER CODE END PFP */
 
@@ -81,12 +79,11 @@ void writePressure();
   */
 int main(void)
 {
+
   /* USER CODE BEGIN 1 */
 
-	// Configure UART for communicating back over serial
-	char uart_buffer[50];
-	int uart_buffer_length;
-	char spi_buffer[20];
+	char dataMessage[50];
+	uint8_t dataMessageLen;
 
   /* USER CODE END 1 */
 
@@ -96,6 +93,25 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
+  __HAL_RCC_PWR_CLK_ENABLE();
+
+  // Configure MS5607
+	MS5607_HandleTypeDef ms5607Config = {0};
+  	ms5607Config.spi = &hspi1;
+  	ms5607Config.timer = &htim16;
+  	ms5607Config.csPort = GPIOA;
+  	ms5607Config.csPin = GPIO_PIN_3;
+  	ms5607Config.osr = MS5607_OSR_1024;
+	MS5607_config(&ms5607Config);
+
+	LSM6DSL_HandleTypeDef lsm6dslConfig = {0};
+	lsm6dslConfig.spi = &hspi2;
+	lsm6dslConfig.csPort = GPIOH;
+	lsm6dslConfig.csPin = GPIO_PIN_1;
+	lsm6dslConfig.outputDataRate = LSM6DSL_ODR_104_HZ;
+	lsm6dslConfig.accelFullScale = LSM6DSL_ACCEL_FS_PM_16;
+	lsm6dslConfig.gyroFullScale = LSM6DSL_GYRO_FS_PM_500;
+	LSM6DSL_config(&lsm6dslConfig);
 
   /* USER CODE END Init */
 
@@ -111,14 +127,68 @@ int main(void)
   MX_TIM16_Init();
   MX_SPI1_Init();
   MX_SPI2_Init();
-  MX_USART1_UART_Init();
+  //MX_SDMMC1_SD_Init();
+  MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
 
-  // Test UART VCP
-  uart_buffer_length = sprintf(uart_buffer, "UART VCP Test!\n");
-  HAL_UART_Transmit(&huart1, (uint8_t *)uart_buffer, uart_buffer_length, 100);
+  	//MS5607_init();
+	//LSM6DSL_init();
 
-	configureMS5607(&hspi1);
+	//MS5607_readUncompPres();
+
+//	HAL_Delay(500);
+//  	HAL_GPIO_WritePin(PYRO1_FIRE_GPIO_Port, PYRO1_FIRE_Pin, GPIO_PIN_SET);
+//  	HAL_Delay(200);
+//  	HAL_GPIO_WritePin(PYRO1_FIRE_GPIO_Port, PYRO1_FIRE_Pin, GPIO_PIN_RESET);
+//
+//  	HAL_Delay(500);
+//	HAL_GPIO_WritePin(PYRO2_FIRE_GPIO_Port, PYRO2_FIRE_Pin, GPIO_PIN_SET);
+//	HAL_Delay(200);
+//	HAL_GPIO_WritePin(PYRO2_FIRE_GPIO_Port, PYRO2_FIRE_Pin, GPIO_PIN_RESET);
+
+
+	int16_t accel[3];
+	int16_t gyro[3];
+	
+	// Test MicroSD card write
+	MX_FATFS_Init();
+
+	FRESULT res;
+	FATFS fs;
+
+	res = f_mount(&fs, "", 1);
+	if (res != FR_OK)
+	{
+		Error_Handler();
+	}
+	res = log_init();
+
+	res = log_status("INFO", "Mounted successfully.");
+	if (res != FR_OK)
+	{
+		Error_Handler();
+	}
+	
+	MS5607_init();
+	//LSM6DSL_init();
+
+	//uint8_t whoami = LSM6DSL_readRegister(LSM6DSL_CTRL2_G);
+
+	FIL csv;
+	res = f_open_append(&csv, "flight0.csv");
+	if (res != FR_OK)
+	{
+		Error_Handler();
+	}
+
+	f_printf(&csv, "Tick, Pressure, AccelX, AccelY, AccelZ, GyroX, GyroY, GyroZ\n");
+	res = f_sync(&csv);
+	if (res != FR_OK)
+	{
+		Error_Handler();
+	}
+
+	MS5607_readUncompPres();
 
   /* USER CODE END 2 */
 
@@ -127,8 +197,22 @@ int main(void)
   while (1)
   {
 	
-	pressure = measurePressure();
-	writePressure();
+	//writePressure();
+	if (MS5607_getState() == MS5607_IDLE)
+	{
+		// Compensate digital reading
+		MS5607_CompVal compVals = MS5607_getCompValues();
+
+		//LSM6DSL_getAccel(accel);
+		//LSM6DSL_getGyro(gyro);
+		
+		f_printf(&csv, "%d, %d\n", HAL_GetTick(), compVals.pres); 
+		f_sync(&csv);
+
+
+		// Measure again
+		MS5607_readUncompPres();
+	}
 	
     /* USER CODE END WHILE */
 
@@ -148,14 +232,18 @@ void SystemClock_Config(void)
 
   /** Configure the main internal regulator output voltage
   */
-  if (HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE4) != HAL_OK)
+  if (HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE2) != HAL_OK)
   {
     Error_Handler();
   }
 
   /** Initializes the CPU, AHB and APB buses clocks
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_MSI;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI48|RCC_OSCILLATORTYPE_HSI
+                              |RCC_OSCILLATORTYPE_MSI;
+  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  RCC_OscInitStruct.HSI48State = RCC_HSI48_ON;
+  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.MSIState = RCC_MSI_ON;
   RCC_OscInitStruct.MSICalibrationValue = RCC_MSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_4;
@@ -183,6 +271,99 @@ void SystemClock_Config(void)
 }
 
 /**
+  * @brief ADC1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_ADC1_Init(void)
+{
+
+  /* USER CODE BEGIN ADC1_Init 0 */
+
+  /* USER CODE END ADC1_Init 0 */
+
+  ADC_ChannelConfTypeDef sConfig = {0};
+
+  /* USER CODE BEGIN ADC1_Init 1 */
+
+  /* USER CODE END ADC1_Init 1 */
+
+  /** Common config
+  */
+  hadc1.Instance = ADC1;
+  hadc1.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
+  hadc1.Init.Resolution = ADC_RESOLUTION_14B;
+  hadc1.Init.GainCompensation = 0;
+  hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
+  hadc1.Init.ScanConvMode = ADC_SCAN_DISABLE;
+  hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
+  hadc1.Init.LowPowerAutoWait = DISABLE;
+  hadc1.Init.ContinuousConvMode = DISABLE;
+  hadc1.Init.NbrOfConversion = 1;
+  hadc1.Init.DiscontinuousConvMode = DISABLE;
+  hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
+  hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
+  hadc1.Init.DMAContinuousRequests = DISABLE;
+  hadc1.Init.TriggerFrequencyMode = ADC_TRIGGER_FREQ_HIGH;
+  hadc1.Init.Overrun = ADC_OVR_DATA_PRESERVED;
+  hadc1.Init.LeftBitShift = ADC_LEFTBITSHIFT_NONE;
+  hadc1.Init.ConversionDataManagement = ADC_CONVERSIONDATA_DR;
+  hadc1.Init.OversamplingMode = DISABLE;
+  if (HAL_ADC_Init(&hadc1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Regular Channel
+  */
+  sConfig.Channel = ADC_CHANNEL_15;
+  sConfig.Rank = ADC_REGULAR_RANK_1;
+  sConfig.SamplingTime = ADC_SAMPLETIME_5CYCLE;
+  sConfig.SingleDiff = ADC_SINGLE_ENDED;
+  sConfig.OffsetNumber = ADC_OFFSET_NONE;
+  sConfig.Offset = 0;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN ADC1_Init 2 */
+
+  /* USER CODE END ADC1_Init 2 */
+
+}
+
+/**
+  * @brief SDMMC1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_SDMMC1_SD_Init(void)
+{
+
+  /* USER CODE BEGIN SDMMC1_Init 0 */
+
+  /* USER CODE END SDMMC1_Init 0 */
+
+  /* USER CODE BEGIN SDMMC1_Init 1 */
+
+  /* USER CODE END SDMMC1_Init 1 */
+  hsd1.Instance = SDMMC1;
+  hsd1.Init.ClockEdge = SDMMC_CLOCK_EDGE_RISING;
+  hsd1.Init.ClockPowerSave = SDMMC_CLOCK_POWER_SAVE_DISABLE;
+  hsd1.Init.BusWide = SDMMC_BUS_WIDE_1B;
+  hsd1.Init.HardwareFlowControl = SDMMC_HARDWARE_FLOW_CONTROL_DISABLE;
+  hsd1.Init.ClockDiv = 59;
+  if (HAL_SD_Init(&hsd1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN SDMMC1_Init 2 */
+
+  /* USER CODE END SDMMC1_Init 2 */
+
+}
+
+/**
   * @brief SPI1 Initialization Function
   * @param None
   * @retval None
@@ -203,7 +384,7 @@ static void MX_SPI1_Init(void)
   hspi1.Instance = SPI1;
   hspi1.Init.Mode = SPI_MODE_MASTER;
   hspi1.Init.Direction = SPI_DIRECTION_2LINES;
-  hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
+  hspi1.Init.DataSize = SPI_DATASIZE_4BIT;
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
@@ -212,7 +393,7 @@ static void MX_SPI1_Init(void)
   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
   hspi1.Init.CRCPolynomial = 0x7;
-  hspi1.Init.NSSPMode = SPI_NSS_PULSE_DISABLE;
+  hspi1.Init.NSSPMode = SPI_NSS_PULSE_ENABLE;
   hspi1.Init.NSSPolarity = SPI_NSS_POLARITY_LOW;
   hspi1.Init.FifoThreshold = SPI_FIFO_THRESHOLD_01DATA;
   hspi1.Init.MasterSSIdleness = SPI_MASTER_SS_IDLENESS_00CYCLE;
@@ -305,16 +486,16 @@ static void MX_TIM16_Init(void)
 {
 
   /* USER CODE BEGIN TIM16_Init 0 */
-
+	uint16_t ms5607MeasurementDelay = MS5607_getMeasurementDelay();
   /* USER CODE END TIM16_Init 0 */
 
   /* USER CODE BEGIN TIM16_Init 1 */
 
   /* USER CODE END TIM16_Init 1 */
   htim16.Instance = TIM16;
-  htim16.Init.Prescaler = 4-1;
+  htim16.Init.Prescaler = 40-1;
   htim16.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim16.Init.Period = 8219;
+  htim16.Init.Period = ms5607MeasurementDelay;
   htim16.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim16.Init.RepetitionCounter = 0;
   htim16.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -329,54 +510,6 @@ static void MX_TIM16_Init(void)
 }
 
 /**
-  * @brief USART1 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_USART1_UART_Init(void)
-{
-
-  /* USER CODE BEGIN USART1_Init 0 */
-
-  /* USER CODE END USART1_Init 0 */
-
-  /* USER CODE BEGIN USART1_Init 1 */
-
-  /* USER CODE END USART1_Init 1 */
-  huart1.Instance = USART1;
-  huart1.Init.BaudRate = 9600;
-  huart1.Init.WordLength = UART_WORDLENGTH_8B;
-  huart1.Init.StopBits = UART_STOPBITS_1;
-  huart1.Init.Parity = UART_PARITY_NONE;
-  huart1.Init.Mode = UART_MODE_TX_RX;
-  huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-  huart1.Init.OverSampling = UART_OVERSAMPLING_16;
-  huart1.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
-  huart1.Init.ClockPrescaler = UART_PRESCALER_DIV1;
-  huart1.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
-  if (HAL_UART_Init(&huart1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  if (HAL_UARTEx_SetTxFifoThreshold(&huart1, UART_TXFIFO_THRESHOLD_1_8) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  if (HAL_UARTEx_SetRxFifoThreshold(&huart1, UART_RXFIFO_THRESHOLD_1_8) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  if (HAL_UARTEx_DisableFifoMode(&huart1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN USART1_Init 2 */
-
-  /* USER CODE END USART1_Init 2 */
-
-}
-
-/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -384,43 +517,54 @@ static void MX_USART1_UART_Init(void)
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-/* USER CODE BEGIN MX_GPIO_Init_1 */
-/* USER CODE END MX_GPIO_Init_1 */
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+  /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
-  __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOC_CLK_ENABLE();
+  __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOH, GPIO_PIN_1, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(VALVE_FIRE_GPIO_Port, VALVE_FIRE_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOH, PYRO1_FIRE_Pin|GPIO_PIN_1, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : PH1 */
-  GPIO_InitStruct.Pin = GPIO_PIN_1;
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOA, PYRO2_FIRE_Pin|GPIO_PIN_3, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin : VALVE_FIRE_Pin */
+  GPIO_InitStruct.Pin = VALVE_FIRE_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(VALVE_FIRE_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PYRO1_FIRE_Pin PH1 */
+  GPIO_InitStruct.Pin = PYRO1_FIRE_Pin|GPIO_PIN_1;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOH, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PC0 PC3 */
-  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_3;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  /*Configure GPIO pins : IMU_INT1_Pin IMU_INT2_Pin */
+  GPIO_InitStruct.Pin = IMU_INT1_Pin|IMU_INT2_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PA3 */
-  GPIO_InitStruct.Pin = GPIO_PIN_3;
+  /*Configure GPIO pins : PYRO2_FIRE_Pin PA3 */
+  GPIO_InitStruct.Pin = PYRO2_FIRE_Pin|GPIO_PIN_3;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-/* USER CODE BEGIN MX_GPIO_Init_2 */
-/* USER CODE END MX_GPIO_Init_2 */
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
+  /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
@@ -429,19 +573,24 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	if (htim == &htim16)
 	{
+		HAL_TIM_Base_Stop_IT(&htim16);
+		MS5607_TimerCallback();
 		//pressure = readMS5607ADC();
-		//writePressure();
 	}
 }
 
-void writePressure()
+void HAL_GPIO_EXTI_Callback(uint16_t gpioPin)
 {
-	char uart_buffer[50];
-	int uart_buffer_length;
-
-	uart_buffer_length = sprintf(uart_buffer, "%d\n", pressure);
-	HAL_UART_Transmit(&huart1, (uint8_t *)uart_buffer, uart_buffer_length, 100);
+	log_status("INFO", "LSM6DSL data ready");
+	switch (gpioPin)
+	{
+		case IMU_INT1_Pin:
+			//LSM6DSL_updateAccel();
+		case IMU_INT2_Pin:
+			//LSM6DSL_updateGyro();
+	}
 }
+
 
 /* USER CODE END 4 */
 

@@ -1,7 +1,10 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ride-along-module Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ride-along-module Release,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SD-Card-Test Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ride-along-module Debug
 eclipse.preferences.version=1
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SD-Card-Test\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SD-Card-Test\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ride-along-module\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ride-along-module\ Debug/activeLaunchTarget=null\:---
+org.eclipse.launchbar.core.descriptorType.default\:ride-along-module\ Release/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
