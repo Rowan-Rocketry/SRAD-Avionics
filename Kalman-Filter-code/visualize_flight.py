@@ -103,8 +103,23 @@ class KalmanFilter(object):
                 label="sensor values",
             )
             plt.plot(
-                range(len(self.sensor_values)), e, "-k", color="blue", label="Kalman estimate"
+                range(len(self.sensor_values)), e, "-k", color="green", label="Kalman estimate"
             )
+            
+            # Find and mark the highest altitude
+            max_altitude = max(self.sensor_values)
+            max_index = self.sensor_values.index(max_altitude)
+            
+            # Mark the time when highest altitude occurs with a vertical red line
+            plt.axvline(x=max_index, color='red', linestyle='--', linewidth=2, label=f"Max Altitude Time: {max_index}")
+            
+            # Add annotation at the right edge of the graph
+            plt.annotate(f'Max: {max_altitude:.1f}', 
+                        xy=(len(self.sensor_values) - 1, max_altitude),
+                        xytext=(len(self.sensor_values) - 10, max_altitude + 50),
+                        bbox=dict(boxstyle="round,pad=0.3", facecolor="yellow", alpha=0.8),
+                        arrowprops=dict(arrowstyle="->", color="red"))
+            
             plt.legend(loc="upper left")
             # Dynamically set y-axis limits based on data range
             min_val = min(min(self.sensor_values), min(e))
@@ -134,9 +149,9 @@ if __name__ == "__main__":
     
     kf = KalmanFilter(
         initial_estimate=0.0,
-        # Aggressive (more responsive)
-        initial_est_error=2.0,
-        initial_measure_error=4.0,  
+        # Tune for closer tracking of sensor values
+        initial_est_error=10.0,      # Less confident in our estimates
+        initial_measure_error=1.0,   # More confident in measurements
         csv_file=str(csv_path),
         csv_column="altimeter",  # Change to other columns like 'kalman_velocity' as needed
         logging=True,
