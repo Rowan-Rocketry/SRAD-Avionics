@@ -58,6 +58,7 @@ axs[2].legend()
 def fetch_data():
     """Fetch JSON data from ESP sender."""
     try:
+      ui_utils.add_separator()
         response = requests.get(SENDER_URL, timeout=2)
         response.raise_for_status()
         data = response.json()

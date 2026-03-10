@@ -12,6 +12,7 @@ class KalmanFilter(object):
         initial_estimate: float = random(),
         initial_est_error: float = random(),
         initial_measure_error: float = random(),
+        process_noise: float = 0.1,
         sensor_values: list = [],
         csv_file: str = None,
         csv_column: str = "altimeter",
@@ -22,6 +23,7 @@ class KalmanFilter(object):
         self.gain = random()
         self.est_error = initial_est_error
         self.measure_error = initial_measure_error
+        self.process_noise = process_noise
         self.logging = logging
         self.plotting = plotting
 
@@ -82,7 +84,7 @@ class KalmanFilter(object):
 
     def calculate_estimate_error(self) -> None:
         """calculates error of the updated estimate"""
-        self.est_error = (1 - self.gain) * self.est_error
+        self.est_error = (1 - self.gain) * self.est_error + self.process_noise
 
     def iterative_updates(self) -> None:
         e = []
@@ -149,9 +151,10 @@ if __name__ == "__main__":
     
     kf = KalmanFilter(
         initial_estimate=0.0,
-        # Tune for closer tracking of sensor values
-        initial_est_error=10.0,      # Less confident in our estimates
-        initial_measure_error=1.0,   # More confident in measurements
+        # Tune for balanced filtering: trust flight data but avoid overcorrection
+        initial_est_error=1.0,      # Moderate confidence in initial estimate
+        initial_measure_error=1.0,  # Moderate confidence in measurements
+        process_noise=0.1,          # Small process noise to prevent overconfidence
         csv_file=str(csv_path),
         csv_column="altimeter",  # Change to other columns like 'kalman_velocity' as needed
         logging=True,
