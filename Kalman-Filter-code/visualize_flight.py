@@ -84,7 +84,7 @@ class KalmanFilter(object):
 
     def calculate_estimate_error(self) -> None:
         """calculates error of the updated estimate"""
-        self.est_error = (1 - self.gain) * self.est_error + self.process_noise
+        self.est_error = (1 - self.gain) * self.est_error
 
     def iterative_updates(self) -> None:
         e = []
@@ -116,9 +116,9 @@ class KalmanFilter(object):
             plt.axvline(x=max_index, color='red', linestyle='--', linewidth=2, label=f"Max Altitude Time: {max_index}")
             
             # Add annotation at the right edge of the graph
-            plt.annotate(f'Max: {max_altitude:.1f}', 
+            plt.annotate(f'Max: {max_altitude:.1f} ft', 
                         xy=(len(self.sensor_values) - 1, max_altitude),
-                        xytext=(len(self.sensor_values) - 10, max_altitude + 50),
+                        xytext=(len(self.sensor_values) - 15, max_altitude - 1000),
                         bbox=dict(boxstyle="round,pad=0.3", facecolor="yellow", alpha=0.8),
                         arrowprops=dict(arrowstyle="->", color="red"))
             
@@ -128,9 +128,9 @@ class KalmanFilter(object):
             max_val = max(max(self.sensor_values), max(e))
             margin = (max_val - min_val) * 0.1  # 10% margin
             plt.ylim(min_val - margin, max_val + margin)
-            plt.xlabel("Time Index")
-            plt.ylabel("Value")
-            plt.title("Kalman Filter Estimation")
+            plt.xlabel("Time Index (seconds)")
+            plt.ylabel("Altitude (feet)")
+            plt.title("Flight Altitude - Kalman Filter Estimation")
             plt.tight_layout()
             plt.show()
 
@@ -151,10 +151,9 @@ if __name__ == "__main__":
     
     kf = KalmanFilter(
         initial_estimate=0.0,
-        # Tune for balanced filtering: trust flight data but avoid overcorrection
+        # Tune for more smoothing: trust the model more than noisy measurements
         initial_est_error=1.0,      # Moderate confidence in initial estimate
-        initial_measure_error=1.0,  # Moderate confidence in measurements
-        process_noise=0.1,          # Small process noise to prevent overconfidence
+        initial_measure_error=10.0, # Lower confidence in measurements (more noise)
         csv_file=str(csv_path),
         csv_column="altimeter",  # Change to other columns like 'kalman_velocity' as needed
         logging=True,
