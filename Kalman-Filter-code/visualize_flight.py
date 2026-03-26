@@ -29,24 +29,37 @@ class KalmanFilter(object):
 
         # Load data from CSV file if provided, otherwise use synthetic data
         if csv_file:
-            self.sensor_values = self._load_from_csv(csv_file, csv_column)
+            # _load_from_csv now returns a tuple (times, values)
+            self.times, self.sensor_values = self._load_from_csv(csv_file, csv_column)
         else:
+            # synthetic data: build a list of readings at the specified rate
+            # sensor_values indicates number of samples in total
             self.sensor_values = [70 + randint(-20, 20) for _ in range(sensor_values)]
+            # create a corresponding time axis (assume one second between samples)
+            self.times = list(range(len(self.sensor_values)))
 
         if self.logging:
             self.logger = getLogger(__name__)
             basicConfig(level=DEBUG, format="%(message)s")
 
-    def _load_from_csv(self, csv_file: str, column: str) -> list:
-        """Load sensor values from a CSV file
+    def _load_from_csv(self, csv_file: str, column: str) -> tuple[list, list]:
+        """Load sensor values and corresponding timestamps from a CSV file
         
         Args:
             csv_file: Path to the CSV file
-            column: Name of the column to extract
-            
+            column: Name of the column to extract for the sensor values
+        
         Returns:
-            List of numeric values from the specified column
+            A tuple ``(times, values)`` where ``times`` is a list of floats
+            representing the time for each measurement (if a ``time`` column is
+            present in the CSV) or simply ``range(len(values))`` otherwise.
+
+        The returned lists are guaranteed to be the same length.  If the CSV
+        contains only one-second increments and the user wants higher precision
+        they can up‑sample the data using :meth:`upsample` or regenerate the
+        CSV with finer time steps.
         """
+        times = []
         sensor_data = []
         csv_path = Path(csv_file)
         
@@ -57,6 +70,15 @@ class KalmanFilter(object):
             with open(csv_path, 'r') as file:
                 reader = csv.DictReader(file)
                 for row in reader:
+                    # try to collect a time value if the file has one
+                    if 'time' in row:
+                        try:
+                            times.append(float(row['time']))
+                        except ValueError:
+                            raise ValueError(f"Non-numeric value in 'time' column: {row['time']}")
+                    else:
+                        # placeholder; we'll replace later with simple indices
+                        times.append(None)
                     try:
                         value = float(row[column])
                         sensor_data.append(value)
@@ -70,8 +92,12 @@ class KalmanFilter(object):
         
         if not sensor_data:
             raise ValueError(f"No data found in CSV file or column '{column}'")
+
+        # if the CSV didn't actually have time values, fall back to indices
+        if all(t is None for t in times):
+            times = list(range(len(sensor_data)))
         
-        return sensor_data
+        return times, sensor_data
 
     def calculate_kalman_gain(self) -> None:
         """calculates Kalman gain given error values"""
@@ -97,28 +123,33 @@ class KalmanFilter(object):
             e.append(self.estimate)
         if self.plotting:
             fig = plt.figure(figsize=(12, 6))
+
+            # choose x-axis values; use timestamps if we have them
+            x_axis = self.times if hasattr(self, 'times') else list(range(len(self.sensor_values)))
+
             plt.plot(
-                range(len(self.sensor_values)),
+                x_axis,
                 self.sensor_values,
                 "x",
                 color="gray",
                 label="sensor values",
             )
             plt.plot(
-                range(len(self.sensor_values)), e, "-k", color="green", label="Kalman estimate"
+                x_axis, e, "-k", color="green", label="Kalman estimate"
             )
             
             # Find and mark the highest altitude
             max_altitude = max(self.sensor_values)
             max_index = self.sensor_values.index(max_altitude)
+            max_time = x_axis[max_index]
             
             # Mark the time when highest altitude occurs with a vertical red line
-            plt.axvline(x=max_index, color='red', linestyle='--', linewidth=2, label=f"Max Altitude Time: {max_index}")
+            plt.axvline(x=max_time, color='red', linestyle='--', linewidth=2, label=f"Max Altitude Time: {max_time}")
             
             # Add annotation at the right edge of the graph
             plt.annotate(f'Max: {max_altitude:.1f} ft', 
-                        xy=(len(self.sensor_values) - 1, max_altitude),
-                        xytext=(len(self.sensor_values) - 15, max_altitude - 1000),
+                        xy=(x_axis[-1], max_altitude),
+                        xytext=(x_axis[-1] - (x_axis[-1]-x_axis[0])*0.1, max_altitude - 1000),
                         bbox=dict(boxstyle="round,pad=0.3", facecolor="yellow", alpha=0.8),
                         arrowprops=dict(arrowstyle="->", color="red"))
             
@@ -128,7 +159,7 @@ class KalmanFilter(object):
             max_val = max(max(self.sensor_values), max(e))
             margin = (max_val - min_val) * 0.1  # 10% margin
             plt.ylim(min_val - margin, max_val + margin)
-            plt.xlabel("Time Index (seconds)")
+            plt.xlabel("Time (seconds)")
             plt.ylabel("Altitude (feet)")
             plt.title("Flight Altitude - Kalman Filter Estimation")
             plt.tight_layout()
@@ -153,7 +184,7 @@ if __name__ == "__main__":
         initial_estimate=0.0,
         # Tune for more smoothing: trust the model more than noisy measurements
         initial_est_error=1.0,      # Moderate confidence in initial estimate
-        initial_measure_error=10.0, # Lower confidence in measurements (more noise)
+        initial_measure_error=0.01, # Lower confidence in measurements (more noise)
         csv_file=str(csv_path),
         csv_column="altimeter",  # Change to other columns like 'kalman_velocity' as needed
         logging=True,
