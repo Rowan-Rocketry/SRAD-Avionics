@@ -52,12 +52,12 @@ void LSM6DSL_init()
 
 	if (LSM6DSL_readRegister(LSM6DSL_WHO_AM_I) != 0x6A)
 	{
-		log_status("ERROR", "Failed to confirm identity of LSM6DSL");
+//		log_status("ERROR", "Failed to confirm identity of LSM6DSL");
 		Error_Handler();
 	}
 	else
 	{
-		log_status("INFO", "Successfully recognized LSM6DSL");
+//		log_status("INFO", "Successfully recognized LSM6DSL");
 	}
 
 	// Send software reset
@@ -71,74 +71,115 @@ void LSM6DSL_init()
 	LSM6DSL_writeRegister(LSM6DSL_CTRL1_XL, config->outputDataRate | config->accelFullScale);
 	LSM6DSL_writeRegister(LSM6DSL_CTRL2_G, config->outputDataRate | config->gyroFullScale);
 
-	log_status("INFO", "Initialized LSM6DSL");
+//	log_status("INFO", "Initialized LSM6DSL");
 }
 
 void LSM6DSL_updateAccel()
 {
-	int16_t axRaw = LSM6DSL_readMeasurement(LSM6DSL_ACCEL_X_L);
-	int16_t ayRaw = LSM6DSL_readMeasurement(LSM6DSL_ACCEL_Y_L);
-	int16_t azRaw = LSM6DSL_readMeasurement(LSM6DSL_ACCEL_Z_L);
+
+	//Least significant word
+	int16_t axRawL = LSM6DSL_readMeasurement(LSM6DSL_ACCEL_X_L);
+	int16_t ayRawL = LSM6DSL_readMeasurement(LSM6DSL_ACCEL_Y_L);
+	int16_t azRawL = LSM6DSL_readMeasurement(LSM6DSL_ACCEL_Z_L);
+
+	//Most significant word
+	int16_t axRawH = LSM6DSL_readMeasurement(LSM6DSL_ACCEL_X_H);
+	int16_t ayRawH = LSM6DSL_readMeasurement(LSM6DSL_ACCEL_Y_H);
+	int16_t azRawH = LSM6DSL_readMeasurement(LSM6DSL_ACCEL_Z_H);
+
+	//combine most and least significant words for full precision
+	int16_t axRaw = (axRawH << 8) | axRawL;
+	int16_t ayRaw = (ayRawH << 8) | ayRawL;
+	int16_t azRaw = (azRawH << 8) | azRawL;
+
 
 	accel[0] = (int16_t)(axRaw * accelSensitivity);
 	accel[1] = (int16_t)(ayRaw * accelSensitivity);
 	accel[2] = (int16_t)(azRaw * accelSensitivity);
 
 	char message[50];
-	sprintf(message, "Acceleration measurement: %d, %d, %d", axRaw, ayRaw, azRaw);
-	log_status("DEBUG", message);
+//	sprintf(message, "Acceleration measurement: %d, %d, %d", axRaw, ayRaw, azRaw);
+//	log_status("DEBUG", message);
+//	log_status("DEBUG", "TEST");
 }
 
 void LSM6DSL_updateGyro()
 {	
-	int16_t gxRaw = LSM6DSL_readMeasurement(LSM6DSL_GYRO_X_L);
-	int16_t gyRaw = LSM6DSL_readMeasurement(LSM6DSL_GYRO_Y_L);
-	int16_t gzRaw = LSM6DSL_readMeasurement(LSM6DSL_GYRO_Z_L);
+	//Least significant word
+	int16_t gxRawL = LSM6DSL_readMeasurement(LSM6DSL_GYRO_X_L);
+	int16_t gyRawL = LSM6DSL_readMeasurement(LSM6DSL_GYRO_Y_L);
+	int16_t gzRawL = LSM6DSL_readMeasurement(LSM6DSL_GYRO_Z_L);
+
+	//Most significant word
+	int16_t gxRawH = LSM6DSL_readMeasurement(LSM6DSL_GYRO_X_H);
+	int16_t gyRawH = LSM6DSL_readMeasurement(LSM6DSL_GYRO_Y_H);
+	int16_t gzRawH = LSM6DSL_readMeasurement(LSM6DSL_GYRO_Z_H);
+
+	//combine most and least significant words for full precision
+	int16_t gxRaw = (gxRawH << 8) | gxRawL;
+	int16_t gyRaw = (gyRawH << 8) | gyRawL;
+	int16_t gzRaw = (gzRawH << 8) | gzRawL;
 
 	gyro[0] = (int16_t)(gxRaw * gyroSensitivity);
 	gyro[1] = (int16_t)(gyRaw * gyroSensitivity);
 	gyro[2] = (int16_t)(gzRaw * gyroSensitivity);
 	char message[50];
-	sprintf(message, "Gyro measurement: %d, %d, %d", gxRaw, gyRaw, gzRaw);
-	log_status("DEBUG", message);
+//	sprintf(message, "Gyro measurement: %d, %d, %d", gxRaw, gyRaw, gzRaw);
+//	log_status("DEBUG", message);
 }
 
 void LSM6DSL_writeRegister(uint8_t reg, uint8_t val)
 {
-	uint8_t buffer[] = {
-		reg & LSM6DSL_WRITE,
-		val
-	};
+//	uint8_t buffer[] = {
+//		reg & LSM6DSL_WRITE,
+//		val
+//	};
+
+		uint16_t buffer = (reg & LSM6DSL_WRITE) << 8 | val;
 
 	LSM6DSL_enable();
-	HAL_SPI_Transmit(config->spi, &buffer, 2, 100);
+	HAL_SPI_Transmit(config->spi, &buffer, 1, 100);
 	LSM6DSL_disable();
 }
 
 uint8_t LSM6DSL_readRegister(uint8_t reg)
 {
-	uint8_t val;
-	uint8_t readCmd = reg | LSM6DSL_READ;
+	uint16_t val;
+	uint16_t readCmd = (reg | LSM6DSL_READ) << 8;
 
 	LSM6DSL_enable();
-	HAL_SPI_TransmitReceive(config->spi, &readCmd, &val, 1, 100);
+							//hspi		  txData   RxData  size   timeout
+	HAL_SPI_TransmitReceive(config->spi, &readCmd, &val,     1,   100);
+//	HAL_SPI_Transmit(config->spi, &readCmd, 1, 100);
+//	HAL_SPI_Receive(config->spi, &val, 1, 100);
 	LSM6DSL_disable();
 
 	return val;
+
+//	  * @brief  Transmit and Receive an amount of data in blocking mode.
+//	  * @param  hspi   : pointer to a SPI_HandleTypeDef structure that contains
+//	  *                  the configuration information for SPI module.
+//	  * @param  pTxData: pointer to transmission data buffer
+//	  * @param  pRxData: pointer to reception data buffer
+//	  * @param  Size   : amount of data to be sent and received
+//	  * @param  Timeout: Timeout duration
+//	  * @retval HAL status
+
 }
 
 int16_t LSM6DSL_readMeasurement(uint8_t addrLow)
 {
-	uint8_t readCommand = LSM6DSL_READ | addrLow;
+	uint16_t readCommand = (LSM6DSL_READ | addrLow) << 8;
 	
-	uint8_t buffer[2];
+	uint16_t buffer;
 
 	LSM6DSL_enable();
-	HAL_SPI_Transmit(config->spi, &readCommand, 1, 100);
-	HAL_SPI_Receive(config->spi, buffer, 2, 100);
+	HAL_SPI_TransmitReceive(config->spi, &readCommand, &buffer,     1,   100);
+//	HAL_SPI_Transmit(config->spi, &readCommand, 1, 100);
+//	HAL_SPI_Receive(config->spi, buffer, 2, 100);
 	LSM6DSL_disable();
 	
-	return ((uint16_t)buffer[0]<<8) | (uint16_t)buffer[1];
+	return buffer;
 }
 
 void LSM6DSL_getAccel(int16_t* dest)
