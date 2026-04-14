@@ -47,18 +47,20 @@ void MS5607_config(MS5607_HandleTypeDef* MS5607_initStruct)
 void MS5607_init()
 {
 	MS5607_disable();
-
+//	log_status("INFO", "MS5607 Disabled.");
 	MS5607_enable();
+//	log_status("INFO", "MS5607 Enabled.");
 	HAL_SPI_Transmit(config->spi, &CMD_MS5607_RESET, 1, 100);
+//	log_status("INFO", "MS5607 SPI transmit.");
 	MS5607_disable();
-
+//	log_status("INFO", "MS5607 Disabled.");
 	HAL_Delay(3);
-
+//	log_status("INFO", "MS5607 HAL Delay.");
 	MS5607_readProm();
-
-	state = MS5607_STARTUP;
-
-	log_status("INFO", "Initialized MS5607");
+//	log_status("INFO", "MS5607 PROM Read.");
+	state = MS5607_IDLE; //MS5607_STARTUP
+//	log_status("INFO", "MS5607 Get State.");
+//	log_status("INFO", "Initialized MS5607");
 }
 
 void MS5607_readProm()
@@ -70,6 +72,15 @@ void MS5607_readProm()
 	// Loop over PROM registers C1 through C6
 	for (uint8_t promAddr = 1; promAddr <= 6; ++promAddr)
 	{
+		//10100000 - A0
+		//10100010 - A2
+		//10100100 - A4
+		//10100110 - A6
+		//10101000 - A8
+		//10101010 - AA
+		//10101100 - AC
+		//10101110 - AE
+
 		// Prom Read Sequence: 1 0 1 0 Ad2 Ad1 Ad0 0
 		cmdReadPromAddress = MS5607_READ_PROM | (promAddr<<1);
 		
@@ -106,24 +117,24 @@ MS5607_CompVal MS5607_getCompValues()
 						+ (((int64_t)promData.tcs*deltaTemp) >> 7);
 
 	// Second order compensation
-	if (temp1 < 2000)
-	{
-		int32_t temp2 = (deltaTemp*deltaTemp) >> 31;
-		int32_t temp2000 = temp1 - 2000;
-		int64_t offset2 = 61*((int64_t)temp2000 * (int64_t)temp2000) >> 4;
-		int64_t sense2 = ((int64_t)temp2000 * (int64_t)temp2000) << 1;
-
-		if (temp1 < -1500)
-		{
-			int32_t temp1500 = temp1 + 1500;
-			offset2 += 15 * ((int64_t)temp1500 * (int64_t)temp1500);
-			sense2 += ((int64_t)temp1500 * (int64_t)temp1500) << 3;
-		}
-
-		temp1 -= temp2;
-		offset -= offset2;
-		sensitivity -= sense2;
-	}
+//	if (temp1 < 2000)
+//	{
+//		int32_t temp2 = (deltaTemp*deltaTemp) >> 31;
+//		int32_t temp2000 = temp1 - 2000;
+//		int64_t offset2 = 61*((int64_t)temp2000 * (int64_t)temp2000) >> 4;
+//		int64_t sense2 = ((int64_t)temp2000 * (int64_t)temp2000) << 1;
+//
+//		if (temp1 < -1500)
+//		{
+//			int32_t temp1500 = temp1 + 1500;
+//			offset2 += 15 * ((int64_t)temp1500 * (int64_t)temp1500);
+//			sense2 += ((int64_t)temp1500 * (int64_t)temp1500) << 3;
+//		}
+//
+//		temp1 -= temp2;
+//		offset -= offset2;
+//		sensitivity -= sense2;
+//	}
 
 	// Populate and return the compensated values
 	compVals.pres = (((int64_t)(digPres*sensitivity) >> 21) - offset) >> 15;
@@ -136,7 +147,7 @@ void MS5607_readUncompPres()
 {
 	state = MS5607_PRES_READ;
 
-	// Send convert command over SPI1
+	// Send D1 convert command over SPI1
 	MS5607_enable();
 	HAL_SPI_Transmit(config->spi, &cmdMeasurePres, 1, 100);
 	MS5607_disable();
@@ -149,7 +160,7 @@ void MS5607_readUncompTemp()
 {
 	state = MS5607_TEMP_READ;
 
-	// Send convert command over SPI1
+	// Send D2 convert command over SPI1
 	MS5607_enable();
 	HAL_SPI_Transmit(config->spi, &cmdMeasureTemp, 1, 100);
 	MS5607_disable();
@@ -182,6 +193,7 @@ void MS5607_disable()
 {
 	// Set the CSB pin of the MS5607 high to disable
 	HAL_GPIO_WritePin(config->csPort, config->csPin, GPIO_PIN_SET);
+//	log_status("INFO", "MS5067_disable CSB pin high to disable");
 }
 
 void MS5607_TimerCallback()

@@ -54,6 +54,8 @@ TIM_HandleTypeDef htim16;
 
 uint32_t pressure;
 
+MS5607_MeasureState state_check;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -95,7 +97,7 @@ int main(void)
   /* USER CODE BEGIN Init */
   __HAL_RCC_PWR_CLK_ENABLE();
 
-  // Configure MS5607
+//    Configure MS5607
 	MS5607_HandleTypeDef ms5607Config = {0};
   	ms5607Config.spi = &hspi1;
   	ms5607Config.timer = &htim16;
@@ -110,7 +112,7 @@ int main(void)
 	lsm6dslConfig.csPin = GPIO_PIN_1;
 	lsm6dslConfig.outputDataRate = LSM6DSL_ODR_104_HZ;
 	lsm6dslConfig.accelFullScale = LSM6DSL_ACCEL_FS_PM_16;
-	lsm6dslConfig.gyroFullScale = LSM6DSL_GYRO_FS_PM_500;
+	lsm6dslConfig.gyroFullScale = LSM6DSL_GYRO_FS_PM_2000;
 	LSM6DSL_config(&lsm6dslConfig);
 
   /* USER CODE END Init */
@@ -127,53 +129,54 @@ int main(void)
   MX_TIM16_Init();
   MX_SPI1_Init();
   MX_SPI2_Init();
-  //MX_SDMMC1_SD_Init();
+  MX_SDMMC1_SD_Init();
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
 
-  	//MS5607_init();
+//  MS5607_init();
 	//LSM6DSL_init();
 
 	//MS5607_readUncompPres();
 
-//	HAL_Delay(500);
-//  	HAL_GPIO_WritePin(PYRO1_FIRE_GPIO_Port, PYRO1_FIRE_Pin, GPIO_PIN_SET);
-//  	HAL_Delay(200);
-//  	HAL_GPIO_WritePin(PYRO1_FIRE_GPIO_Port, PYRO1_FIRE_Pin, GPIO_PIN_RESET);
-//
-//  	HAL_Delay(500);
-//	HAL_GPIO_WritePin(PYRO2_FIRE_GPIO_Port, PYRO2_FIRE_Pin, GPIO_PIN_SET);
-//	HAL_Delay(200);
-//	HAL_GPIO_WritePin(PYRO2_FIRE_GPIO_Port, PYRO2_FIRE_Pin, GPIO_PIN_RESET);
+
 
 
 	int16_t accel[3];
 	int16_t gyro[3];
-	
-	// Test MicroSD card write
+//
+// Test MicroSD card write
+  	//Linking SD Card
 	MX_FATFS_Init();
-
+//
 	FRESULT res;
 	FATFS fs;
-
+//
 	res = f_mount(&fs, "", 1);
 	if (res != FR_OK)
 	{
 		Error_Handler();
 	}
-	res = log_init();
-
-	res = log_status("INFO", "Mounted successfully.");
-	if (res != FR_OK)
-	{
-		Error_Handler();
-	}
-	
+//	res = log_init();
+//
+//	res = log_status("INFO", "Mounted successfully.");
+//	if (res != FR_OK)
+//	{
+//		Error_Handler();
+//	}
+////
+//	res = log_status("INFO", "Beginning MS506777 INIT");
+//	if (res != FR_OK)
+//		{
+//			Error_Handler();
+//		}
 	MS5607_init();
-	//LSM6DSL_init();
 
-	//uint8_t whoami = LSM6DSL_readRegister(LSM6DSL_CTRL2_G);
 
+//	log_status("INFO", "Beginning LSM6DSL INIT");
+	LSM6DSL_init();
+//
+//	uint8_t whoami = LSM6DSL_readRegister(LSM6DSL_CTRL2_G);
+//
 	FIL csv;
 	res = f_open_append(&csv, "flight0.csv");
 	if (res != FR_OK)
@@ -181,38 +184,101 @@ int main(void)
 		Error_Handler();
 	}
 
-	f_printf(&csv, "Tick, Pressure, AccelX, AccelY, AccelZ, GyroX, GyroY, GyroZ\n");
+	f_printf(&csv, "Tick, rawPressure, Pressure, AccelX, AccelY, AccelZ, GyroX, GyroY, GyroZ\n");
 	res = f_sync(&csv);
 	if (res != FR_OK)
 	{
 		Error_Handler();
 	}
-
-	MS5607_readUncompPres();
+//
+//	MS5607_readUncompPres();
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+//	GPIO_PinState pinmode;
+
+	uint16_t raw;
+
+
   while (1)
   {
-	
-	//writePressure();
-	if (MS5607_getState() == MS5607_IDLE)
+
+
+	  //Write pyro trigger pin high
+	  //Write pyro trigger pin Low
+	  //ADC read continuity
+	  //Decide action based on continuity (Write SD card success or fail, retry if fail)
+
+
+
+	  /////////////////////////Pyro1
+//		HAL_Delay(1000); //Pyro01 Fire = PH0, ADCin1 = PA0
+//	  	HAL_GPIO_WritePin(PYRO1_FIRE_GPIO_Port, PYRO1_FIRE_Pin, GPIO_PIN_SET);
+//	  	log_status("INFO", "PYRO1 Set HIGH");
+//		// Get ADC value
+////		HAL_ADC_Start(&hadc1);
+////		HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+////		raw = HAL_ADC_GetValue(&hadc1);
+//
+//	  	HAL_Delay(1000);
+//	  	HAL_GPIO_WritePin(PYRO1_FIRE_GPIO_Port, PYRO1_FIRE_Pin, GPIO_PIN_RESET);
+//	  	log_status("INFO", "PYRO1 Set LOW");
+//
+//	  	////////////////////////Pyro 2
+//	  	HAL_Delay(1000); //Pyro02 Fire = PA2, ADCin2 = PA1
+//		HAL_GPIO_WritePin(PYRO2_FIRE_GPIO_Port, PYRO2_FIRE_Pin, GPIO_PIN_SET);
+//		log_status("INFO", "PYRO2 Set HIGH");
+//		// Get ADC value
+////		HAL_ADC_Start(&hadc1);
+////		HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+////		raw = HAL_ADC_GetValue(&hadc1);
+//		HAL_Delay(1000);
+//		HAL_GPIO_WritePin(PYRO2_FIRE_GPIO_Port, PYRO2_FIRE_Pin, GPIO_PIN_RESET);
+//		log_status("INFO", "PYRO1 Set LOW");
+////
+//	  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+//	  pinmode = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_5);
+//	  if(pinmode == GPIO_PIN_SET){
+//		  f_printf(&csv, "%d, LED Pin set:, High\n", HAL_GetTick());
+//		  res = f_sync(&csv);
+//		  	if (res != FR_OK)
+//		  	{
+//		  		Error_Handler();
+//		  	}
+//	  }else{
+//		  f_printf(&csv, "%d, LED Pin set:, Low\n", HAL_GetTick());
+//		  res = f_sync(&csv);
+//		  	if (res != FR_OK)
+//		  	{
+//		  		Error_Handler();
+//		  	}
+//	  }
+
+//////////////////////////////////////////////////////////////////
+	  state_check = MS5607_getState();
+//	//writePressure();
+	if (state_check == MS5607_IDLE)
 	{
-		// Compensate digital reading
+//		 Compensate digital reading
 		MS5607_CompVal compVals = MS5607_getCompValues();
+		MS5607_RawVal rawVals = MS5607_getRawValues();
+//		log_status("INFO", "Got altimeter values");
+	  	LSM6DSL_updateAccel();
+	  	LSM6DSL_updateGyro();
+		LSM6DSL_getAccel(accel);
+		LSM6DSL_getGyro(gyro);
 
-		//LSM6DSL_getAccel(accel);
-		//LSM6DSL_getGyro(gyro);
-		
-		f_printf(&csv, "%d, %d\n", HAL_GetTick(), compVals.pres); 
+//		f_printf(&csv, "%d, %d, %d\n", HAL_GetTick(), rawVals.pres, compVals.pres);
+		f_printf(&csv, "%d, %d, %d, %d, %d, %d, %d, %d, %d\n", HAL_GetTick(), rawVals.pres, compVals.pres, accel[0], accel[1], accel[2], gyro[0], gyro[1], gyro[2]);
 		f_sync(&csv);
-
+		HAL_Delay(100);
 
 		// Measure again
 		MS5607_readUncompPres();
 	}
+//////////////////////////////////////////////////////////////////
 	
     /* USER CODE END WHILE */
 
@@ -384,7 +450,7 @@ static void MX_SPI1_Init(void)
   hspi1.Instance = SPI1;
   hspi1.Init.Mode = SPI_MODE_MASTER;
   hspi1.Init.Direction = SPI_DIRECTION_2LINES;
-  hspi1.Init.DataSize = SPI_DATASIZE_4BIT;
+  hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
@@ -441,7 +507,7 @@ static void MX_SPI2_Init(void)
   hspi2.Instance = SPI2;
   hspi2.Init.Mode = SPI_MODE_MASTER;
   hspi2.Init.Direction = SPI_DIRECTION_2LINES;
-  hspi2.Init.DataSize = SPI_DATASIZE_4BIT;
+  hspi2.Init.DataSize = SPI_DATASIZE_16BIT;
   hspi2.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi2.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi2.Init.NSS = SPI_NSS_SOFT;
@@ -518,6 +584,8 @@ static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
   /* USER CODE BEGIN MX_GPIO_Init_1 */
+
+
   /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
@@ -543,25 +611,39 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(VALVE_FIRE_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PYRO1_FIRE_Pin PH1 */
+  /*Configure GPIO pins : PYRO1_FIRE_Pin PH1 and IMU_CS *//////////////////
   GPIO_InitStruct.Pin = PYRO1_FIRE_Pin|GPIO_PIN_1;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOH, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : IMU_INT1_Pin IMU_INT2_Pin */
+  /*Configure GPIO pins : IMU_INT1_Pin IMU_INT2_Pin *//////////////////////////
   GPIO_InitStruct.Pin = IMU_INT1_Pin|IMU_INT2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PYRO2_FIRE_Pin PA3 */
+  /*Configure GPIO pins : PYRO2_FIRE_Pin PA2 and PRES_CS*/
   GPIO_InitStruct.Pin = PYRO2_FIRE_Pin|GPIO_PIN_3;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+
+  /*Configure GPIO pins : PYRO1_ADC_Pin PA0 *///////////////////////////////////
+  GPIO_InitStruct.Pin = PYRO1_ADC_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(PYRO1_ADC_Port, &GPIO_InitStruct);
+  /*Configure GPIO pins : PYRO2_ADC_Pin PA1 *///////////////////////////////////
+  GPIO_InitStruct.Pin = PYRO2_ADC_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(PYRO2_ADC_Port, &GPIO_InitStruct);
+
+
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
   /* USER CODE END MX_GPIO_Init_2 */

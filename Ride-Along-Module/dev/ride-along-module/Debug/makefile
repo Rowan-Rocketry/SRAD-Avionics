@@ -55,6 +55,9 @@ default.size.stdout \
 OBJDUMP_LIST += \
 ride-along-module.list \
 
+OBJCOPY_HEX += \
+ride-along-module.hex \
+
 
 # All Target
 all: main-build
@@ -63,8 +66,8 @@ all: main-build
 main-build: ride-along-module.elf secondary-outputs
 
 # Tool invocations
-ride-along-module.elf ride-along-module.map: $(OBJS) $(USER_OBJS) /home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Ride-Along-Module/dev/ride-along-module/STM32U545RETXQ_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "ride-along-module.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m33 -T"/home/sharpe/Documents/Rowan/Rowan-Projects/Rowan-Rocketry/SRAD-Avionics/Ride-Along-Module/dev/ride-along-module/STM32U545RETXQ_FLASH.ld" --specs=nosys.specs -Wl,-Map="ride-along-module.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+ride-along-module.elf ride-along-module.map: $(OBJS) $(USER_OBJS) C:\Users\Tommy\Documents\Projects\IREC_25_26\SRAD-Avionics\Ride-Along-Module\dev\ride-along-module\STM32U545RETXQ_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "ride-along-module.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m33 -T"C:\Users\Tommy\Documents\Projects\IREC_25_26\SRAD-Avionics\Ride-Along-Module\dev\ride-along-module\STM32U545RETXQ_FLASH.ld" --specs=nosys.specs -Wl,-Map="ride-along-module.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -78,12 +81,17 @@ ride-along-module.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEP
 	@echo 'Finished building: $@'
 	@echo ' '
 
+ride-along-module.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "ride-along-module.hex"
+	@echo 'Finished building: $@'
+	@echo ' '
+
 # Other Targets
 clean:
-	-$(RM) default.size.stdout ride-along-module.elf ride-along-module.list ride-along-module.map
+	-$(RM) default.size.stdout ride-along-module.elf ride-along-module.hex ride-along-module.list ride-along-module.map
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_HEX)
 
 fail-specified-linker-script-missing:
 	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'

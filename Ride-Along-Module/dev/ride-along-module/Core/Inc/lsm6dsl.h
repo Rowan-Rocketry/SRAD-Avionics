@@ -20,7 +20,7 @@
 #define LSM6DSL_ACCEL_Z_L		0x2c
 #define LSM6DSL_ACCEL_Z_H		0x2d
 
-// ODR Configuration
+// ODR (output data rate) Configuration
 #define LSM6DSL_POWER_DOWN		0x00
 #define LSM6DSL_ODR_12_5_HZ		0x10
 #define LSM6DSL_ODR_26_HZ		0x20

@@ -66,14 +66,18 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define VALVE_FIRE_Pin GPIO_PIN_13
 #define VALVE_FIRE_GPIO_Port GPIOC
-#define PYRO1_FIRE_Pin GPIO_PIN_0
+#define PYRO1_FIRE_Pin GPIO_PIN_0 //PH0
 #define PYRO1_FIRE_GPIO_Port GPIOH
 #define IMU_INT1_Pin GPIO_PIN_0
 #define IMU_INT1_GPIO_Port GPIOC
 #define IMU_INT2_Pin GPIO_PIN_3
 #define IMU_INT2_GPIO_Port GPIOC
-#define PYRO2_FIRE_Pin GPIO_PIN_2
+#define PYRO2_FIRE_Pin GPIO_PIN_2 //PA2
 #define PYRO2_FIRE_GPIO_Port GPIOA
+#define PYRO1_ADC_Pin GPIO_PIN_0  //PA0
+#define PYRO1_ADC_Port GPIOA
+#define PYRO2_ADC_Pin GPIO_PIN_1   //PA1
+#define PYRO2_ADC_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 
