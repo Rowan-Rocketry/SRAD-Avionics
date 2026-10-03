@@ -47,6 +47,8 @@ SD_HandleTypeDef hsd1;
 
 SPI_HandleTypeDef hspi1;
 SPI_HandleTypeDef hspi2;
+SPI_HandleTypeDef hspi3;
+
 
 TIM_HandleTypeDef htim16;
 
@@ -64,14 +66,20 @@ static void MX_GPIO_Init(void);
 static void MX_TIM16_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_SPI2_Init(void);
+static void MX_SPI3_Init(void);
 static void MX_SDMMC1_SD_Init(void);
 static void MX_ADC1_Init(void);
+//static void fetch_GPS(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+typedef enum {IDLE, PAD, ASCENT, EMATCH, DESCENT, LANDED} rocketState;
+
+rocketState stateTrack = IDLE;
 
 /* USER CODE END 0 */
 
@@ -97,7 +105,7 @@ int main(void)
   /* USER CODE BEGIN Init */
   __HAL_RCC_PWR_CLK_ENABLE();
 
-//    Configure MS5607
+  	// Configure MS5607
 	MS5607_HandleTypeDef ms5607Config = {0};
   	ms5607Config.spi = &hspi1;
   	ms5607Config.timer = &htim16;
@@ -106,6 +114,7 @@ int main(void)
   	ms5607Config.osr = MS5607_OSR_1024;
 	MS5607_config(&ms5607Config);
 
+	//Configure LSMDSR
 	LSM6DSL_HandleTypeDef lsm6dslConfig = {0};
 	lsm6dslConfig.spi = &hspi2;
 	lsm6dslConfig.csPort = GPIOH;
@@ -114,6 +123,13 @@ int main(void)
 	lsm6dslConfig.accelFullScale = LSM6DSL_ACCEL_FS_PM_16;
 	lsm6dslConfig.gyroFullScale = LSM6DSL_GYRO_FS_PM_2000;
 	LSM6DSL_config(&lsm6dslConfig);
+
+	//Configure Radio
+	radio_HandleTypeDef radioConfig = {};
+	radioConfig.spi = &hspi3;
+	radioConfig.csPort = GPIOB;
+	radioConfig.csPin = GPIO_PIN_4;
+	radio_config(&radioConfig);
 
   /* USER CODE END Init */
 
@@ -129,6 +145,7 @@ int main(void)
   MX_TIM16_Init();
   MX_SPI1_Init();
   MX_SPI2_Init();
+  MX_SPI3_Init();
   MX_SDMMC1_SD_Init();
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
@@ -174,6 +191,8 @@ int main(void)
 
 //	log_status("INFO", "Beginning LSM6DSL INIT");
 	LSM6DSL_init();
+
+	radio_init();
 //
 //	uint8_t whoami = LSM6DSL_readRegister(LSM6DSL_CTRL2_G);
 //
@@ -200,65 +219,34 @@ int main(void)
 //	GPIO_PinState pinmode;
 
 	uint16_t raw;
-
+	uint32_t camera_cntr = 0;
 
   while (1)
   {
 
-
-	  //Write pyro trigger pin high
-	  //Write pyro trigger pin Low
-	  //ADC read continuity
-	  //Decide action based on continuity (Write SD card success or fail, retry if fail)
-
-
-
-	  /////////////////////////Pyro1
-//		HAL_Delay(1000); //Pyro01 Fire = PH0, ADCin1 = PA0
-//	  	HAL_GPIO_WritePin(PYRO1_FIRE_GPIO_Port, PYRO1_FIRE_Pin, GPIO_PIN_SET);
-//	  	log_status("INFO", "PYRO1 Set HIGH");
-//		// Get ADC value
-////		HAL_ADC_Start(&hadc1);
-////		HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
-////		raw = HAL_ADC_GetValue(&hadc1);
+//typedef enum {IDLE, PAD, ASCENT, EMATCH, DESCENT} rocketState;
 //
-//	  	HAL_Delay(1000);
-//	  	HAL_GPIO_WritePin(PYRO1_FIRE_GPIO_Port, PYRO1_FIRE_Pin, GPIO_PIN_RESET);
-//	  	log_status("INFO", "PYRO1 Set LOW");
-//
-//	  	////////////////////////Pyro 2
-//	  	HAL_Delay(1000); //Pyro02 Fire = PA2, ADCin2 = PA1
-//		HAL_GPIO_WritePin(PYRO2_FIRE_GPIO_Port, PYRO2_FIRE_Pin, GPIO_PIN_SET);
-//		log_status("INFO", "PYRO2 Set HIGH");
-//		// Get ADC value
-////		HAL_ADC_Start(&hadc1);
-////		HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
-////		raw = HAL_ADC_GetValue(&hadc1);
-//		HAL_Delay(1000);
-//		HAL_GPIO_WritePin(PYRO2_FIRE_GPIO_Port, PYRO2_FIRE_Pin, GPIO_PIN_RESET);
-//		log_status("INFO", "PYRO1 Set LOW");
-////
-//	  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-//	  pinmode = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_5);
-//	  if(pinmode == GPIO_PIN_SET){
-//		  f_printf(&csv, "%d, LED Pin set:, High\n", HAL_GetTick());
-//		  res = f_sync(&csv);
-//		  	if (res != FR_OK)
-//		  	{
-//		  		Error_Handler();
-//		  	}
-//	  }else{
-//		  f_printf(&csv, "%d, LED Pin set:, Low\n", HAL_GetTick());
-//		  res = f_sync(&csv);
-//		  	if (res != FR_OK)
-//		  	{
-//		  		Error_Handler();
-//		  	}
-//	  }
+//	switch (stateTrack) {
+//		case IDLE: //default state, set at stateTrack variable definition
+//			if (rocket_Idle() == 1) stateTrack = PAD; //In IDLE state only the main MCU is powered.
+//			break;					//Transitions to PAD state when radio module is powered at the same time (and rocket accelerometer is pointed up?
+//		case PAD:// When rocket is sensed as upright and Main + Radio MCUs are powered simultaneously
+//			if (rocket_PAD() == 1) stateTrack = ASCENT; //In PAD state, accelerometer data is being monitored and buffered (but not saved to SD)
+//			break;					   //when accelerometer data is above [insert number]g for [insert number] samples transition to ascent
+//		case ASCENT://Starting when rocket is in powered flight, determines the moment of apogee, also triggers data writing to SD card
+//			if(rocket_ASCENT() == 1) stateTrack = DESCENT;
+//			break;
+//		case DESCENT:
+//			if(rocket_DESCENT() == 2){stateTrack = EMATCH;}
+//			else if(rocket_descent == 1){stateTrack = LANDED;}
+//		case EMATCH:
+//			if(rocket_EMATCH() == 1) stateTrack = DESCENT;
+//		case LANDED:
+//			break;
+//		}
 
-//////////////////////////////////////////////////////////////////
+
 	  state_check = MS5607_getState();
-//	//writePressure();
 	if (state_check == MS5607_IDLE)
 	{
 //		 Compensate digital reading
@@ -273,7 +261,7 @@ int main(void)
 //		f_printf(&csv, "%d, %d, %d\n", HAL_GetTick(), rawVals.pres, compVals.pres);
 		f_printf(&csv, "%d, %d, %d, %d, %d, %d, %d, %d, %d\n", HAL_GetTick(), rawVals.pres, compVals.pres, accel[0], accel[1], accel[2], gyro[0], gyro[1], gyro[2]);
 		f_sync(&csv);
-		HAL_Delay(100);
+		HAL_Delay(5);
 
 		// Measure again
 		MS5607_readUncompPres();
@@ -544,6 +532,65 @@ static void MX_SPI2_Init(void)
 }
 
 /**
+  * @brief SPI3 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_SPI3_Init(void)
+{
+
+  /* USER CODE BEGIN SPI3_Init 0 */
+
+  /* USER CODE END SPI3_Init 0 */
+
+  SPI_AutonomousModeConfTypeDef HAL_SPI_AutonomousMode_Cfg_Struct = {0};
+
+  /* USER CODE BEGIN SPI3_Init 1 */
+
+  /* USER CODE END SPI3_Init 1 */
+  /* SPI3 parameter configuration*/
+  hspi3.Instance = SPI3;
+  hspi3.Init.Mode = SPI_MODE_MASTER;
+  hspi3.Init.Direction = SPI_DIRECTION_2LINES;
+  hspi3.Init.DataSize = SPI_DATASIZE_8BIT;
+  hspi3.Init.CLKPolarity = SPI_POLARITY_LOW;
+  hspi3.Init.CLKPhase = SPI_PHASE_1EDGE;
+  hspi3.Init.NSS = SPI_NSS_SOFT;
+  hspi3.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
+  hspi3.Init.FirstBit = SPI_FIRSTBIT_MSB;
+  hspi3.Init.TIMode = SPI_TIMODE_DISABLE;
+  hspi3.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
+  hspi3.Init.CRCPolynomial = 0x7;
+  hspi3.Init.NSSPMode = SPI_NSS_PULSE_ENABLE;
+  hspi3.Init.NSSPolarity = SPI_NSS_POLARITY_LOW;
+  hspi3.Init.FifoThreshold = SPI_FIFO_THRESHOLD_01DATA;
+  hspi3.Init.MasterSSIdleness = SPI_MASTER_SS_IDLENESS_00CYCLE;
+  hspi3.Init.MasterInterDataIdleness = SPI_MASTER_INTERDATA_IDLENESS_00CYCLE;
+  hspi3.Init.MasterReceiverAutoSusp = SPI_MASTER_RX_AUTOSUSP_DISABLE;
+  hspi3.Init.MasterKeepIOState = SPI_MASTER_KEEP_IO_STATE_DISABLE;
+  hspi3.Init.IOSwap = SPI_IO_SWAP_DISABLE;
+  hspi3.Init.ReadyMasterManagement = SPI_RDY_MASTER_MANAGEMENT_INTERNALLY;
+  hspi3.Init.ReadyPolarity = SPI_RDY_POLARITY_HIGH;
+  if (HAL_SPI_Init(&hspi3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  HAL_SPI_AutonomousMode_Cfg_Struct.TriggerState = SPI_AUTO_MODE_DISABLE;
+  HAL_SPI_AutonomousMode_Cfg_Struct.TriggerSelection = SPI_GRP2_LPDMA_CH0_TCF_TRG;
+  HAL_SPI_AutonomousMode_Cfg_Struct.TriggerPolarity = SPI_TRIG_POLARITY_RISING;
+  if (HAL_SPIEx_SetConfigAutonomousMode(&hspi3, &HAL_SPI_AutonomousMode_Cfg_Struct) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN SPI3_Init 2 */
+
+  /* USER CODE END SPI3_Init 2 */
+
+}
+
+
+
+/**
   * @brief TIM16 Initialization Function
   * @param None
   * @retval None
@@ -604,6 +651,11 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, PYRO2_FIRE_Pin|GPIO_PIN_3, GPIO_PIN_RESET);
 
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, CAMERA_Toggle_Pin, GPIO_PIN_RESET); //camera toggle pin
+
+
   /*Configure GPIO pin : VALVE_FIRE_Pin */
   GPIO_InitStruct.Pin = VALVE_FIRE_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -642,6 +694,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(PYRO2_ADC_Port, &GPIO_InitStruct);
+
+
+  GPIO_InitStruct.Pin = GPIO_PIN_4|GPIO_PIN_13;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
 
 
 
@@ -707,3 +766,61 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
+
+
+//old junk::
+
+//Write pyro trigger pin high
+//Write pyro trigger pin Low
+//ADC read continuity
+//Decide action based on continuity (Write SD card success or fail, retry if fail)
+
+
+
+/////////////////////////Pyro1
+//		HAL_Delay(1000); //Pyro01 Fire = PH0, ADCin1 = PA0
+//	  	HAL_GPIO_WritePin(PYRO1_FIRE_GPIO_Port, PYRO1_FIRE_Pin, GPIO_PIN_SET);
+//	  	log_status("INFO", "PYRO1 Set HIGH");
+//		// Get ADC value
+////		HAL_ADC_Start(&hadc1);
+////		HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+////		raw = HAL_ADC_GetValue(&hadc1);
+//
+//	  	HAL_Delay(1000);
+//	  	HAL_GPIO_WritePin(PYRO1_FIRE_GPIO_Port, PYRO1_FIRE_Pin, GPIO_PIN_RESET);
+//	  	log_status("INFO", "PYRO1 Set LOW");
+//
+//	  	////////////////////////Pyro 2
+//	  	HAL_Delay(1000); //Pyro02 Fire = PA2, ADCin2 = PA1
+//		HAL_GPIO_WritePin(PYRO2_FIRE_GPIO_Port, PYRO2_FIRE_Pin, GPIO_PIN_SET);
+//		log_status("INFO", "PYRO2 Set HIGH");
+//		// Get ADC value
+////		HAL_ADC_Start(&hadc1);
+////		HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+////		raw = HAL_ADC_GetValue(&hadc1);
+//		HAL_Delay(1000);
+//		HAL_GPIO_WritePin(PYRO2_FIRE_GPIO_Port, PYRO2_FIRE_Pin, GPIO_PIN_RESET);
+//		log_status("INFO", "PYRO1 Set LOW");
+////
+//	  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+//	  pinmode = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_5);
+//	  if(pinmode == GPIO_PIN_SET){
+//		  f_printf(&csv, "%d, LED Pin set:, High\n", HAL_GetTick());
+//		  res = f_sync(&csv);
+//		  	if (res != FR_OK)
+//		  	{
+//		  		Error_Handler();
+//		  	}
+//	  }else{
+//		  f_printf(&csv, "%d, LED Pin set:, Low\n", HAL_GetTick());
+//		  res = f_sync(&csv);
+//		  	if (res != FR_OK)
+//		  	{
+//		  		Error_Handler();
+//		  	}
+//	  }
+
+//////////////////////////////////////////////////////////////////
+
+
+

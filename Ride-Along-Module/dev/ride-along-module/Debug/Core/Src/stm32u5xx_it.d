@@ -44,7 +44,8 @@ Core/Src/stm32u5xx_it.o: ../Core/Src/stm32u5xx_it.c ../Core/Inc/main.h \
  C:/Users/Tommy/Documents/Projects/IREC_25_26/SRAD-Avionics/Ride-Along-Module/dev/ride-along-module/FATFS/Target/sd_diskio.h \
  C:/Users/Tommy/Documents/Projects/IREC_25_26/SRAD-Avionics/Ride-Along-Module/dev/ride-along-module/FATFS/Target/bsp_driver_sd.h \
  ../Core/Inc/ms5607.h ../Core/Inc/logging.h ../Core/Inc/fileio.h \
- ../Core/Inc/lsm6dsl.h ../Core/Inc/bool.h ../Core/Inc/stm32u5xx_it.h
+ ../Core/Inc/lsm6dsl.h ../Core/Inc/bool.h ../Core/Inc/radio.h \
+ ../Core/Inc/stm32u5xx_it.h
 ../Core/Inc/main.h:
 ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal.h:
 ../Core/Inc/stm32u5xx_hal_conf.h:
@@ -95,4 +96,5 @@ C:/Users/Tommy/Documents/Projects/IREC_25_26/SRAD-Avionics/Ride-Along-Module/dev
 ../Core/Inc/fileio.h:
 ../Core/Inc/lsm6dsl.h:
 ../Core/Inc/bool.h:
+../Core/Inc/radio.h:
 ../Core/Inc/stm32u5xx_it.h:

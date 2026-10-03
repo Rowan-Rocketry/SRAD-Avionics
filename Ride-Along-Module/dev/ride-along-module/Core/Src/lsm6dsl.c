@@ -50,7 +50,7 @@ void LSM6DSL_init()
 {
 	LSM6DSL_disable();
 
-	if (LSM6DSL_readRegister(LSM6DSL_WHO_AM_I) != 0x6A)
+	if (LSM6DSL_readRegister(LSM6DSL_WHO_AM_I) != 0x6B)
 	{
 //		log_status("ERROR", "Failed to confirm identity of LSM6DSL");
 		Error_Handler();

@@ -37,6 +37,7 @@ extern "C" {
 
 #include "ms5607.h"
 #include "lsm6dsl.h"
+#include "radio.h"
 
 #include "fileio.h"
 /* USER CODE END Includes */
@@ -78,6 +79,7 @@ void Error_Handler(void);
 #define PYRO1_ADC_Port GPIOA
 #define PYRO2_ADC_Pin GPIO_PIN_1   //PA1
 #define PYRO2_ADC_Port GPIOA
+#define CAMERA_Toggle_Pin GPIO_PIN_13
 
 /* USER CODE BEGIN Private defines */
 

@@ -1,0 +1,4 @@
+../Core/Src/radio.c:12:6:radio_config	1
+../Core/Src/radio.c:18:6:radio_init	1
+../Core/Src/radio.c:42:6:radio_enable	1
+../Core/Src/radio.c:48:6:radio_disable	1
